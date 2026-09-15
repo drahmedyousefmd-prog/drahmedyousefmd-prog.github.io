@@ -1,0 +1,229 @@
+1:"$Sreact.fragment"
+2:I[39756,["/rochetta/_next/static/chunks/3fntmmi971322.js"],"default"]
+3:I[37457,["/rochetta/_next/static/chunks/3fntmmi971322.js"],"default"]
+5:I[97367,["/rochetta/_next/static/chunks/3fntmmi971322.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+9:I[97367,["/rochetta/_next/static/chunks/3fntmmi971322.js"],"ViewportBoundary"]
+b:I[97367,["/rochetta/_next/static/chunks/3fntmmi971322.js"],"MetadataBoundary"]
+d:I[68027,["/rochetta/_next/static/chunks/3fntmmi971322.js"],"default",1]
+:HL["/rochetta/_next/static/chunks/0bmua0qrbktqn.css","style"]
+8:X
+0:{"P":null,"c":["","chapter","urinary"],"q":"","i":false,"f":[[["",{"children":["chapter",{"children":[["slug","urinary","d",[]],{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4624],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/rochetta/_next/static/chunks/0bmua0qrbktqn.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/rochetta/_next/static/chunks/3fntmmi971322.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"ar","dir":"ltr","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L4",[["$","script","script-0",{"src":"/rochetta/_next/static/chunks/0v0lwmy6to0xs.js","async":true,"nonce":"$undefined"}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],{},null,false,null]},null,false,"$8"]},null,false,"$8"]},null,false,null],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$6",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],null]}],false]],"m":"$undefined","G":["$d",[["$","link","0",{"rel":"stylesheet","href":"/rochetta/_next/static/chunks/0bmua0qrbktqn.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"CdMoamc7bpFs-gluc2FQo"}
+e:I[22016,["/rochetta/_next/static/chunks/3fntmmi971322.js","/rochetta/_next/static/chunks/0v0lwmy6to0xs.js"],""]
+f:I[1437,["/rochetta/_next/static/chunks/3fntmmi971322.js","/rochetta/_next/static/chunks/0v0lwmy6to0xs.js"],"ChapterPageApp"]
+8:C
+10:Tbf2,[DIAGNOSIS]
+- Dysuria, urinary frequency, urgency, suprapubic pain
+- Cloudy / malodorous urine
+- Urine dipstick: positive for leukocytes + nitrites
+- Uncomplicated — no fever, no flank pain
+
+[INVESTIGATIONS]
+- Urine analysis (routine urine): WBCs (pus cells), RBCs, bacteria — pyuria supports UTI
+- Urine dipstick: leukocyte esterase and nitrite — quick bedside screen; negative nitrite does NOT exclude UTI
+- Urine culture + sensitivity (MSU): for recurrent, complicated, pregnancy, pyelonephritis, treatment failure
+- Renal function (Urea, Creatinine): guides antibiotic choice and dose adjustment
+- CBC / CRP: if systemic infection or fever suspected
+- Blood cultures: if high fever, rigors, or sepsis suspected
+- Imaging (US KUB / CT): only if suspected obstruction, stone, abscess, recurrent complicated UTI, or no fever response at 48–72h
+
+[TREATMENT]
+- 1st line: Nitrofurantoin 100mg twice daily × 5 days
+- OR Fosfomycin 3g single dose — convenient option
+- Alternative (culture-guided): TMP-SMX if local resistance < 20%, or oral beta-lactam
+- Fluoroquinolones are NOT first-line for uncomplicated UTI — reserve for complicated cases after culture
+- Phenazopyridine: symptom relief only, ≤ 2–3 days
+- Complicated / systemic: Ciprofloxacin or Ceftriaxone — usually 10–14 days
+- Pregnancy: Nitrofurantoin (avoid near term ≥ 37 weeks and G6PD deficiency), Fosfomycin, or beta-lactam per culture
+
+[WARNING]
+Pyelonephritis in pregnancy → URGENT hospital admission + IV antibiotics. No clinical improvement in 48–72h → re-culture, re-examine, re-image — do not simply switch antibiotics. Nitrofurantoin and Fosfomycin have poor renal-tissue penetration — not for pyelonephritis.
+
+[RX-الروشتة — Uncomplicated]
+- Nitrofurantoin 100mg tab (Nitrofurantoin) | قرص مرتين يوميًا بعد الأكل لمدة 5 أيام | 2.4 ج.م
+- OR Fosfomycin 3g sachet (Fosfomycin Trometamol) | كيس واحد يذاب في ميه — جرعة واحدة | 39 ج.م
+- Phenazopyridine 100mg tab (Phenazopyridine HCl) | قرص 3 مرات يوميًا بعد الأكل لمدة 2-3 أيام — مسكن للحرقة | 5 ج.م
+
+[RX-الروشتة — Complicated / Systemic]
+- Ciprofloxacin 500mg tab (Ciprofloxacin) | قرص مرتين يوميًا لمدة 7-14 يومًا — حسب الحساسية | —
+- OR Ceftriaxone 1g inj (Ceftriaxone) | 1 جم حقن وريد يوميًا — بالمستشفى | —
+- OR Cefixime 400mg tab (Cefixime) | قرص مرة يوميًا لمدة 10 أيام | —
+
+[RX-الروشتة — Pregnancy]
+- Nitrofurantoin 100mg tab (Nitrofurantoin) | قرص 4 مرات يوميًا لمدة 5 أيام — يتجنب بعد 37 أسبوعًا وعند نقص G6PD | 2.4 ج.م
+- OR Fosfomycin 3g sachet (Fosfomycin Trometamol) | كيس واحد يذاب في ميه — جرعة واحدة | 39 ج.م
+- OR Amoxicillin-clavulanate 1g tab (Amoxicillin + Clavulanate) | قرص مرتين يوميًا لمدة 7 أيام — حسب المزرعة | —11:T4e7,[DIAGNOSIS]
+- Fever > 38.5°C, rigors, flank pain (CVA tenderness)
+- Nausea, vomiting, malaise
+- Blood cultures if sepsis suspected
+
+[INVESTIGATIONS]
+- Culture: Urine MC&S + blood cultures (if febrile/septic) before antibiotics
+- Lab: CBC, CRP, renal function, electrolytes — assess severity and guide therapy
+- Imaging: Renal ultrasound — exclude obstruction, renal abscess, calculi
+- Monitor: Temperature, CVA tenderness, response to antibiotics at 48h; repeat if refractory
+
+[TREATMENT]
+- Mild-Moderate: Oral antibiotics 10–14 days
+- Severe / Sepsis: IV antibiotics + admit
+- Oral (mild): Ciprofloxacin 500mg BID × 7-14 days
+- IV (severe): Ceftriaxone 1g OD IV
+
+[WARNING]
+Recurrent pyelonephritis: Investigate for structural abnormality (US renal, CT KUB) — rule out stones, obstruction, reflux.
+
+[RX]
+- Ciprofloxacin 500mg tab (Ciprofloxacin HCl) | قرص مرتين يوميًا لمدة 7-14 أيام | 53 ج.م
+- OR Cefuroxime 500mg tab (Cefuroxime Axetil) | قرص مرتين يوميًا لمدة 7-14 أيام | 39.5 ج.م
+- Brufen 400mg tab (Ibuprofen) | قرص 3 مرات يوميًا بعد الأكل | 78 ج.م
+- Drotaverine 40mg tab (Drotaverine HCl) | قرص 3 مرات يوميًا لل spasms | 6 ج.م12:T5d0,[DIAGNOSIS]
+- Severe colicky pain — comes in waves, intermits
+- Radiates from flank to groin (loin to groin)
+- Nausea, vomiting, hematuria
+
+[INVESTIGATIONS]
+- Imaging: CT KUB (non-contrast) — stone size, location, obstruction
+- Lab: CBC, CRP, renal function, electrolytes, serum urate/calcium; urine dipstick (haematuria)
+- Culture: Urine MC&S if infection suspected (obstructing infected stone = emergency)
+- Monitor: Pain score, urine output, stone passage; renal function if obstruction
+
+[TREATMENT]
+- IV fluids if vomiting / dehydrated
+- Strong analgesic — Ketorolac IM or Nalbuphine
+- Antispasmodic — Drotaverine or Hyoscine
+- Stone passage: Tamsulosin (medical expulsive therapy)
+
+[WARNING]
+Infected obstructing stone is a urological emergency — decompress with stent or percutaneous nephrostomy before antibiotics can work.
+
+[RX-الروشتة — ألم حاد]
+- Ketorolac 30mg IM (Ketorolac Tromethamine) | حقنة عضلية مرة واحدة — أقوى مسكن | 30 ج.م
+- OR Nalbuphine 20mg IM (Nalbuphine HCl) | حقنة عضلية عند عدم استجابة | 33 ج.م
+- Drotaverine 40mg tab (Drotaverine HCl) | قرص 3 مرات يوميًا | 6 ج.م
+
+[RX-الروشتة — تمرير الحجر]
+- Tamsulosin 0.4mg cap (Tamsulosin HCl) | كبسولة مرة واحدة يوميًا بعد العشاء | 105 ج.م
+- OR Silodosin 8mg cap (Silodosin) | كبسولة مرة واحدة يوميًا بعد الأكل | 100 ج.م13:T4ec,[DIAGNOSIS]
+- IPSS score ≥ 8
+- Urinary frequency, nocturia, weak stream, hesitancy
+- Digital rectal exam: smooth, enlarged, non-tender prostate
+
+[INVESTIGATIONS]
+- Lab: PSA level (with age reference), renal function; urinalysis to exclude UTI
+- Imaging: Renal USS + post-void residual volume (PVR) — assess obstruction
+- Special test: Uroflowmetry, IPSS symptom score
+- Monitor: IPSS score, PVR, PSA trend, response to medical therapy
+
+[TREATMENT]
+- Alpha-blocker: Tamsulosin 0.4mg — fast onset, first-line
+- 5-ARI: Finasteride — shrinks prostate, takes 3–6 months
+- Combo: Dutasteride + Tamsulosin — for large prostates
+
+[WARNING]
+Alpha-blockers can cause first-dose hypotension — take at bedtime. Avoid in patients on PDE5 inhibitors.
+
+[RX-الروشتة — علاج أول]
+- Tamsulosin 0.4mg cap (Tamsulosin HCl) | كبسولة مرة واحدة يوميًا بعد العشاء | 105 ج.م
+
+[RX-الروشتة — لتكبير البروستاتا الكبيرة]
+- Finasteride 5mg tab (Finasteride) | قرص مرة واحدة يوميًا — يحتاج 3-6 أشهر للنتيجة | 26.4 ج.م
+- OR Duodart cap (Dutasteride + Tamsulosin) | كبسولة مرة واحدة يوميًا بعد الأكل | 491 ج.م14:T4f8,[DIAGNOSIS]
+- Urgency — sudden compelling desire to void
+- Frequency — > 8 times per 24 hours
+- Nocturia — waking ≥ 2 times to void
+- Diagnosis of exclusion — rule out UTI, diabetes, BPH
+
+[INVESTIGATIONS]
+- Lab: Urinalysis + MSU culture; FBS/HbA1c, renal function, electrolytes
+- Special test: Bladder diary (frequency/volume), post-void residual, uroflowmetry
+- Monitor: Symptom score (urgency, frequency, nocturia), response to anticholinergic
+- Screen: BPH (PSA/DRE in men), diabetes, UTI as underlying causes
+
+[TREATMENT]
+- Step 1: Bladder training + fluid management
+- Step 2: Anticholinergic (Oxybutynin / Tolterodine)
+- Step 3: Switch to Solifenacin (better tolerated)
+- Step 4: Beta-3 agonist (Mirabegron) or Botulinum toxin
+
+[WARNING]
+Oxybutynin causes significant dry mouth, constipation, and cognitive side effects in elderly — prefer Tolterodine or Solifenacin.
+
+[RX]
+- Tolterodine 2mg tab (Tolterodine L-Tartrate) | قرص مرتين يوميًا | 9.5 ج.م
+- OR Oxybutynin 5mg tab (Oxybutynin HCl) | قرص مرتين يوميًا — أرخص لكن آثار جانبية أكتر | 26 ج.م
+- OR Solifenacin 5mg tab (Solifenacin Succinate) | قرص مرة واحدة يوميًا — أفضل تحملاً | 25.2 ج.م15:T471,[DIAGNOSIS]
+- Gonorrhea: Purulent discharge, dysuria
+- Chlamydia: Mucoid discharge, often asymptomatic
+- Herpes (HSV): Vesicles → ulcers, painful
+- Syphilis: Painless chancre → rash
+
+[INVESTIGATIONS]
+- Culture: NAAT (nucleic acid amplification) for gonorrhoea/chlamydia from first-void urine/swabs
+- Lab: HIV serology, RPR/VDRL (syphilis), HBsAg, hepatitis C, type-specific HSV serology
+- Special test: Test of cure at 2 weeks; repeat screen at 3 months
+- Monitor: Treatment completion, partner notification, symptom resolution
+
+[TREATMENT]
+- Treat empirically — don't wait for culture results
+- Always treat sexual partners
+- Screen for HIV and other STIs
+
+[RX-الروشتة — Gonorrhea/Chlamydia]
+- Ceftriaxone 250mg IM (Ceftriaxone) | حقنة عضلية مرة واحدة | 69 ج.م
+- Azithromycin 1g tab (Azithromycin) | 2 قرص مرة واحدة | 25 ج.م
+
+[RX-الروشتة — Herpes]
+- Acyclovir 400mg tab (Acyclovir) | قرص 3 مرات يوميًا لمدة 7 أيام | 50 ج.م
+- OR Valacyclovir 500mg tab (Valacyclovir HCl) | قرص مرتين يوميًا لمدة 3 أيام | 50 ج.م16:T485,[DIAGNOSIS]
+- Check cardiovascular risk factors first
+- Review medications (beta-blockers, SSRIs, antiandrogens)
+- Hormonal: check testosterone, prolactin, TSH
+
+[INVESTIGATIONS]
+- Lab: Total testosterone (morning), prolactin, TSH, FSH/LH, fasting lipids, FBS, HbA1c
+- ECG: Cardio risk assessment — coronary disease screen (stress test if risk factors)
+- Special test: Glucose tolerance; penile duplex/ultrasound if vascular or anatomical cause
+- Monitor: BP, lipid profile, cardiovascular risk, response to PDE5 inhibitors
+
+[TREATMENT]
+- Sildenafil: 50–100mg, 30–60 min before, with food
+- Tadalafil: 10–20mg PRN or 5mg daily
+- Start with lowest effective dose
+
+[WARNING]
+Absolute contraindication: PDE5 inhibitors + nitrates (GTN) = severe hypotension — potentially fatal.
+
+[RX]
+- Sildenafil 50mg tab (Sildenafil Citrate) | نصف قرص قبل الجماع بـ30-60 دقيقة | 63 ج.م
+- OR Tadalafil 10mg tab (Tadalafil) | قرص قبل الجماع بـ30 دقيقة — تأثير حتى 36 ساعة | 36 ج.م
+- OR Tadalafil 5mg daily (Tadalafil) | قرص مرة واحدة يوميًا — for daily use | 36 ج.م17:T572,[DIAGNOSIS]
+- Cardiac: Heart failure — pitting, bilateral, ankles
+- Hepatic: Liver cirrhosis — ascites + pedal edema
+- Renal: Nephrotic syndrome — periorbital + generalized
+- Drugs: CCBs, NSAIDs, steroids
+
+[INVESTIGATIONS]
+- Lab: Renal function, electrolytes, LFTs, albumin, urinalysis (proteinuria) — delineate cause
+- Imaging: Echocardiogram (cardiac), liver ultrasound (cirrhosis/ascites)
+- Special test: 24h urine protein if nephrotic syndrome; JVP assessment for cardiac cause
+- Monitor: Daily weight, fluid balance, electrolytes (Na+/K+), renal function on diuretics
+
+[TREATMENT]
+- Mild edema: Thiazides (HCTZ) or K-sparing (Spironolactone)
+- Moderate: Loop diuretics (Furosemide 20–40mg)
+- Severe: High-dose loop ± thiazide combination
+
+[WARNING]
+Spironolactone + ACE inhibitors → hyperkalemia risk. Furosemide + Digoxin → hypokalemia → toxicity.
+
+[RX-الروشتة — إدماء خفيفة إلى متوسطة]
+- Aldactone 25mg tab (Spironolactone) | قرص مرة واحدة يوميًا | 18 ج.م
+- OR Furosemide 40mg tab (Furosemide) | قرص مرة واحدة صباحًا | 13.5 ج.م
+
+[RX-الروشتة — إدماء شديدة]
+- Furosemide 40mg tab (Furosemide) | قرص مرتين يوميًا صباحًا وظهرًا | 13.5 ج.م
+- + Aldactazide tab (Spironolactone + HCTZ) | قرص مرة واحدة يوميًا | 5.9 ج.م4:["$","div",null,{"className":"flex min-h-dvh flex-col","style":{"backgroundColor":"#f5f1e8"},"children":[["$","header",null,{"className":"flex items-center gap-3 px-5 py-4","style":{"backgroundColor":"#6D4C52","color":"#FFFFFF"},"children":[["$","$Le",null,{"href":"/","className":"flex items-center justify-center rounded-full p-1 opacity-70 hover:opacity-100 transition","aria-label":"الرئيسية","children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":1.8,"strokeLinecap":"round","strokeLinejoin":"round","className":"h-6 w-6","children":["$","path",null,{"d":"m15 18-6-6 6-6"}]}]}],["$","h1",null,{"className":"flex-1 text-lg font-black","children":"Urinary"}],["$","span",null,{"className":"rounded-full bg-white/20 px-2.5 py-1 text-[11px] font-bold","children":"المسالك البولية"}]]}],["$","$Lf",null,{"name":"Urinary","arabicName":"المسالك البولية","accent":"#6D4C52","prescriptions":[{"id":"rochetta-048","title":"Lower UTI / Cystitis","subtitle":"Dysuria, frequency, urgency — most common in women","content":"$10","category":"Urinary","chapterAr":"المسالك البولية","alternatives":"","perDrugAlternatives":"Nitrofurantoin 100mg tab | 25 ج.م: Macrodantin 100mg tab | 90 ج.م, Nitrofurantoin Arrow 100mg tab | 20 ج.م, Nitrofurantoin GPO 100mg tab | 18 ج.م\r\nFosfomycin 3g sachet | 65 ج.م: Monurol 3g sachet | 140 ج.م, Fosfomycin Teva 3g sachet | 55 ج.م, Fosfomycin Sandoz 3g sachet | 50 ج.م\r\nPhenazopyridine 100mg tab | 40 ج.م: Pyridium 100mg tab | 95 ج.م, Phenazopyridine GPO 100mg tab | 35 ج.م, AZO 100mg tab | 110 ج.م\r","drugInstructions":"","drugInteractions":""},{"id":"rochetta-049","title":"Upper UTI / Pyelonephritis","subtitle":"Fever, flank pain, nausea — infection ascending to kidney","content":"$11","category":"Urinary","chapterAr":"المسالك البولية","alternatives":"","perDrugAlternatives":"Ciprofloxacin 500mg tab | 35 ج.م: Cipro 500mg tab | 90 ج.م, Ciprofloxacin Arrow 500mg tab | 30 ج.م, Ciproxina 500mg tab | 80 ج.م\r\nCefuroxime 500mg tab | 55 ج.م: Ceftin 500mg tab | 150 ج.م, Cefuroxime Arrow 500mg tab | 45 ج.م, Cefuroxime GPO 500mg tab | 40 ج.م\r\nBrufen 400mg tab | 30 ج.م: Ibuprofen 400mg tab | 15 ج.م, Advil 400mg tab | 35 ج.م, Brufen GPO 400mg tab | 25 ج.م\r\nDrotaverine 40mg tab | 12 ج.م: No-Spa 40mg tab | 40 ج.م, Drotaverine Arrow 40mg tab | 10 ج.م, Drotaverine GPO 40mg tab | 8 ج.م\r","drugInstructions":"","drugInteractions":""},{"id":"rochetta-050","title":"Renal Colic / Urolithiasis","subtitle":"Severe colicky flank pain radiating to groin — kidney stones","content":"$12","category":"Urinary","chapterAr":"المسالك البولية","alternatives":"","perDrugAlternatives":"Ketorolac 30mg IM | 45 ج.م: Toradol 30mg IM | 120 ج.م, Ketorolac Arrow 30mg IM | 35 ج.م, Ketorolac GPO 30mg IM | 30 ج.م\r\nNalbuphine 20mg IM | 55 ج.م: Nubain 20mg IM | 140 ج.م, Nalbuphine Arrow 20mg IM | 45 ج.م, Nalbuphine GPO 20mg IM | 40 ج.م\r\nDrotaverine 40mg tab | 12 ج.م: No-Spa 40mg tab | 40 ج.م, Drotaverine Arrow 40mg tab | 10 ج.م, Drotaverine GPO 40mg tab | 8 ج.م\r\nTamsulosin 0.4mg cap | 70 ج.م: Omnic 0.4mg cap | 180 ج.م, Tamsulosin Arrow 0.4mg cap | 65 ج.م, Flomax 0.4mg cap | 200 ج.م\r\nSilodosin 8mg cap | 130 ج.م: Rapaflo 8mg cap | 280 ج.م, Silodosin Arrow 8mg cap | 110 ج.م, Silodosin Sandoz 8mg cap | 100 ج.م\r","drugInstructions":"","drugInteractions":""},{"id":"rochetta-051","title":"Benign Prostatic Hyperplasia","subtitle":"Elderly male — nocturia, weak stream, urgency, retention","content":"$13","category":"Urinary","chapterAr":"المسالك البولية","alternatives":"Omnic 0.4mg cap | 75 ج.م\nProscar 5mg tab | 120 ج.م\nUroxal 0.4mg tab | 95 ج.م\nCernilton tab | 110 ج.م","perDrugAlternatives":"Tamsulosin 0.4mg cap | 105 ج.م: Omnic 0.4mg cap | 75 ج.م, Flomax 0.4mg tab | 95 ج.م, Uroxal 0.4mg tab | 65 ج.م\nFinasteride 5mg tab | 26.4 ج.م: Proscar 5mg tab | 120 ج.م, Finpecia 5mg tab | 55 ج.م, Propecia 1mg tab | 85 ج.م","drugInstructions":"⚠️ Tamsulosin: Take AFTER evening meal — reduces dizziness\r\n⚠️ First-dose hypotension: May feel dizzy — sit down\r\n⚠️ Finasteride: Takes 3-6 months for full effect\r\n⚠️ Finasteride: Pregnant women must NOT handle crushed tablets\r\n✅ Both can be taken long-term\r\n⚠️ Report difficulty urinating, blood in urine, or urinary retention\r\n❌ Do NOT use Sildenafil/Tadalafil without telling BPH doctor\r","drugInteractions":"Tamsulosin + PDE5 inhibitors (Sildenafil):\r\n⚠️↑ Risk of hypotension. Separate by 4 hours.\r\n\r\nAlpha-blockers + Other antihypertensives:\r\n⚠️ Additive BP lowering. First-dose hypotension risk.\r\n\r\nFinasteride + Donating blood:\r\n⚠️ Finasteride-contaminated blood harmful to pregnant women. Don't donate for 1 month after stopping.\r"},{"id":"rochetta-052","title":"Overactive Bladder","subtitle":"Urgency, frequency, nocturia, urge incontinence","content":"$14","category":"Urinary","chapterAr":"المسالك البولية","alternatives":"","perDrugAlternatives":"Tolterodine 2mg tab | 65 ج.م: Detrusitol 2mg tab | 160 ج.م, Tolterodine Arrow 2mg tab | 55 ج.م, Tolterodine GPO 2mg tab | 50 ج.م\r\nOxybutynin 5mg tab | 30 ج.م: Ditropan 5mg tab | 90 ج.م, Oxybutynin Arrow 5mg tab | 25 ج.م, Oxybutynin GPO 5mg tab | 20 ج.م\r\nSolifenacin 5mg tab | 80 ج.م: Vesicare 5mg tab | 220 ج.م, Solifenacin Arrow 5mg tab | 70 ج.م, Solifenacin Sandoz 5mg tab | 60 ج.م\r","drugInstructions":"⚠️ Avoid alcohol — worsens urgency\r\n⚠️ Take with or without food\r\n⚠️ If dry mouth occurs: sugar-free gum, frequent sips of water\r\n⚠️ Urinate on schedule (timed voiding) for best results\r","drugInteractions":"Anticholinergics + Anticholinergics:\r\n❌↑↑ Additive effects — dry mouth, constipation, urinary retention, confusion.\r\n\r\nAnticholinergics + CYP3A4 inhibitors (Ketoconazole, Erythromycin):\r\n⚠️↑ Increased anticholinergic side effects.\r\n\r\nTolterodine + CYP2D6 inhibitors (Fluoxetine, Paroxetine):\r\n⚠️↑ Tolterodine levels — reduce dose or switch.\r\n\r\nAnticholinergics + Opioids:\r\n⚠️↑↑ Severe constipation risk.\r"},{"id":"rochetta-053","title":"Sexually Transmitted Infections","subtitle":"Urethritis, discharge, genital lesions — sexual health","content":"$15","category":"Urinary","chapterAr":"المسالك البولية","alternatives":"","perDrugAlternatives":"Ceftriaxone 250mg IM | 30 ج.م: Rocephin 250mg IM | 80 ج.م, Ceftriaxone Arrow 250mg IM | 25 ج.م, Ceftriaxone GPO 250mg IM | 20 ج.م\r\nAzithromycin 1g tab | 90 ج.م: Zithromax 1g tab | 250 ج.م, Azee 1g tab | 120 ج.م, Azithromycin GPO 1g tab | 75 ج.م\r\nAcyclovir 400mg tab | 25 ج.م: Zovirax 400mg tab | 80 ج.م, Acyclovir Arrow 400mg tab | 20 ج.م, Acyclovir GPO 400mg tab | 18 ج.م\r\nValacyclovir 500mg tab | 80 ج.م: Valtrex 500mg tab | 220 ج.م, Valacyclovir Arrow 500mg tab | 70 ج.م, Valacyclovir Sandoz 500mg tab | 60 ج.م\r","drugInstructions":"","drugInteractions":""},{"id":"rochetta-054","title":"Erectile Dysfunction","subtitle":"Inability to achieve/maintain erection — assess cardiovascular risk","content":"$16","category":"Urinary","chapterAr":"المسالك البولية","alternatives":"Viagra 50mg tab | 120 ج.م\nCialis 20mg tab | 150 ج.م\nLevitra 20mg tab | 130 ج.م\nSildenafil 50mg tab | 45 ج.م","perDrugAlternatives":"Sildenafil 50mg tab | 63 ج.م: Viagra 50mg tab | 120 ج.م, Sildenafil Teva 50mg tab | 45 ج.م, Kamagra 50mg tab | 35 ج.م\nTadalafil 10mg tab | 36 ج.م: Cialis 20mg tab | 150 ج.م, Tadacip 10mg tab | 25 ج.م, Tadalafil Arrow 10mg tab | 20 ج.م","drugInstructions":"⚠️⚠️⚠️ NEVER take with ANY form of Nitrates (GTN, Isosorbide) — FATAL\r\n⚠️ Tell doctor about ALL medications before starting PDE5 inhibitor\r\n⚠️ Sildenafil: Take 30-60 min before, empty stomach for faster effect\r\n⚠️ Tadalafil: Can be taken with food. Effect lasts up to 36h\r\n⚠️ Start with lowest dose\r\n⚠️ Sexual stimulation is required — not automatic\r\n⚠️ If erection >4h (priapism) → go to ER immediately\r\n⚠️ Alcohol reduces effectiveness\r\n❌ Avoid grapefruit juice\r\n⚠️ Report sudden vision or hearing loss → stop and seek care\r","drugInteractions":"PDE5 inhibitors (Sildenafil/Tadalafil) + Nitrates (GTN, Isosorbide):\r\n❌❌❌ ABSOLUTELY CONTRAINDICATED — Fatal hypotension. NO exceptions.\r\n\r\nPDE5 inhibitors + Alpha-blockers:\r\n⚠️ Additive hypotension. Separate by 4 hours or use lowest doses.\r\n\r\nPDE5 inhibitors + CYP3A4 inhibitors (Ketoconazole, Erythromycin):\r\n⚠️ Increased levels. Reduce dose.\r"},{"id":"rochetta-055","title":"Edema / Diuretic Therapy","subtitle":"Peripheral edema, heart failure, liver disease, nephrotic syndrome","content":"$17","category":"Urinary","chapterAr":"المسالك البولية","alternatives":"","perDrugAlternatives":"Aldactone 25mg tab | 50 ج.م: Spironolactone Arrow 25mg tab | 35 ج.م, Spironolactone GPO 25mg tab | 30 ج.م, Spirotone 25mg tab | 65 ج.م\r\nFurosemide 40mg tab | 15 ج.م: Lasix 40mg tab | 50 ج.م, Furosemide Arrow 40mg tab | 12 ج.م, Furosemide GPO 40mg tab | 10 ج.م\r\nAldactazide tab | 45 ج.م: Spironolactone+Hydrochlorothiazide | 30 ج.م, Aldactazide GPO | 35 ج.م, Spirotide tab | 55 ج.م\r","drugInstructions":"⚠️ Furosemide: Take in the MORNING — prevents nighttime urination\r\n⚠️ Spironolactone: Take at the same time daily\r\n⚠️ Monitor daily weight — stable weight = good fluid balance\r\n⚠️ Report weight gain >1kg/day or >2kg/week\r\n⚠️ Monitor for muscle cramps, weakness (electrolyte imbalance)\r\n✅ Furosemide: Best on empty stomach\r\n⚠️ Regular blood tests: electrolytes, kidney function\r\n❌ Do NOT take potassium supplements unless prescribed\r\n❌ Avoid NSAIDs — reduce diuretic effect\r\n⚠️ Report irregular heartbeat, muscle weakness\r","drugInteractions":"Spironolactone + ACE Inhibitors:\r\n⚠️↑ Hyperkalemia risk. Monitor K+.\r\n\r\nFurosemide + Digoxin:\r\n⚠️ Hypokalemia increases Digoxin toxicity. Monitor K+.\r\n\r\nSpironolactone + Potassium supplements:\r\n❌ Dangerous hyperkalemia. Do NOT combine.\r\n\r\nLoop diuretics + NSAIDs:\r\n⚠️ Reduced diuretic effect + renal damage.\r"}]}]]}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+18:I[27201,["/rochetta/_next/static/chunks/3fntmmi971322.js"],"IconMark"]
+7:null
+c:[["$","title","0",{"children":"Urinary — Rochetta"}],["$","meta","1",{"name":"description","content":"Medical prescriptions and treatment guide"}],["$","link","2",{"rel":"icon","href":"/rochetta/favicon.ico?favicon.2vob68tjqpejf.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L18","3",{}]]
