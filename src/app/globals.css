@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-lg: 900px;
+  --color-cream: #f5f1e8;
+  --color-ink: #2a1e18;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Geist", -apple-system, "Segoe UI", Roboto, "Noto Sans Arabic", Arial, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+/* Global warm cream override */
+@media (min-width: 900px) {
+  body {
+    background: var(--color-cream);
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white !important;
+  }
+
+  nav,
+  header,
+  .no-print,
+  footer {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  .print-area {
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}
