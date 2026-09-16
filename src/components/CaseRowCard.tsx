@@ -1,19 +1,8 @@
 import Link from "next/link";
-import type { MouseEvent } from "react";
 import type { Prescription } from "@/lib/types";
 import { getChapterByCategory } from "@/lib/chapters";
 import { PillIcon } from "./icons";
-import { navigateWithTransition } from "@/lib/transition";
-
-function handleNav(e: MouseEvent<HTMLAnchorElement>) {
-  if (
-    typeof document !== "undefined" &&
-    typeof document.startViewTransition === "function"
-  ) {
-    e.preventDefault();
-    navigateWithTransition(e.currentTarget.href);
-  }
-}
+import { handleTransitionNav } from "@/lib/transition";
 
 export function CaseRowCard({
   rx,
@@ -25,9 +14,9 @@ export function CaseRowCard({
   const chapter = getChapterByCategory(rx.category);
   return (
     <Link
-      href={`/case/${rx.id}`}
-      className="case-row-card"
-      onClick={handleNav}
+      href={`/doctor/case/${rx.id}`}
+      className="case-row-card card"
+      onClick={handleTransitionNav}
     >
       <span
         className="chip-badge"

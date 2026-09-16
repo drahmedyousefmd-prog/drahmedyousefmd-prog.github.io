@@ -1,12 +1,17 @@
+import type { Metadata } from "next";
 import type { Prescription } from "@/lib/types";
 import { buildChapters } from "@/lib/chapters";
 import { parseContent, parseRxLines } from "@/lib/content";
 import { HomeApp } from "@/components/HomeApp";
 
-// Import data directly — bundled at build time
+// Public landing — hero + services + reference content, no login required.
 import data from "@/data/prescriptions.json";
 
 const prescriptions = data as unknown as Prescription[];
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const counts: Record<string, number> = {};
 const drugCounts: Record<string, number> = {};
@@ -21,16 +26,12 @@ for (const p of prescriptions) {
 
 const chapters = buildChapters(counts);
 
-// Newest additions assumed to be appended last in the data file.
-const recent = prescriptions.slice(-6);
-
 export default function HomePage() {
   return (
     <HomeApp
       chapters={chapters}
       prescriptions={prescriptions}
       drugCounts={drugCounts}
-      recent={recent}
     />
   );
 }

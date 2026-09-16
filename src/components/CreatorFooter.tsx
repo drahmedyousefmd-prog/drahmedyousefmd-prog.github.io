@@ -1,28 +1,26 @@
-import { MailIcon, LinkedinIcon, StethoscopeIcon } from "./icons";
+import { MailIcon, LinkedinIcon, LogoGlyph } from "./icons";
+import { CONTACT, SITE } from "@/lib/site";
 
 export function CreatorFooter() {
   return (
     <footer className="creator-footer">
       <div className="creator-info">
         <div className="creator-avatar" aria-hidden="true">
-          <StethoscopeIcon />
+          <LogoGlyph className="h-[18px] w-[18px]" />
         </div>
         <div>
-          <p className="creator-name">د. أحمد يوسف</p>
-          <p className="creator-role">منشئ ومطوّر Rochetta</p>
+          <p className="creator-name">{CONTACT.creatorName}</p>
+          <p className="creator-role">{CONTACT.creatorRole}</p>
         </div>
       </div>
       <div className="creator-links">
-        <a
-          className="creator-link"
-          href="mailto:Dr.ahmed.yousef.md@gmail.com"
-        >
+        <a className="creator-link" href={`mailto:${CONTACT.email}`}>
           <MailIcon />
           تواصل عبر البريد
         </a>
         <a
           className="creator-link"
-          href="https://www.linkedin.com/in/dr-ahmed-yousef/"
+          href={CONTACT.linkedin}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -30,7 +28,9 @@ export function CreatorFooter() {
           LinkedIn
         </a>
       </div>
-      <p className="creator-copyright">© 2026 Rochetta — دليل روشتات مصر</p>
+      <p className="creator-copyright">
+        © 2026 {SITE.name} — {SITE.brandLine}
+      </p>
     </footer>
   );
 }

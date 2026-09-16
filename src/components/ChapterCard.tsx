@@ -1,18 +1,8 @@
 import Link from "next/link";
-import type { Ref, CSSProperties, MouseEvent } from "react";
+import type { Ref, CSSProperties } from "react";
 import type { Chapter } from "@/lib/types";
 import { ChapterIcon } from "./icons";
-import { navigateWithTransition } from "@/lib/transition";
-
-function handleNav(e: MouseEvent<HTMLAnchorElement>) {
-  if (
-    typeof document !== "undefined" &&
-    typeof document.startViewTransition === "function"
-  ) {
-    e.preventDefault();
-    navigateWithTransition(e.currentTarget.href);
-  }
-}
+import { handleTransitionNav } from "@/lib/transition";
 
 export function ChapterCard({
   chapter,
@@ -24,10 +14,10 @@ export function ChapterCard({
   return (
     <Link
       ref={ref}
-      href={`/chapter/${chapter.slug}`}
-      className="category-card"
+      href={`/doctor/chapter/${chapter.slug}`}
+      className="category-card card"
       style={{ "--cat": chapter.colorHex } as CSSProperties}
-      onClick={handleNav}
+      onClick={handleTransitionNav}
     >
       <div className="cat-icon">
         <ChapterIcon name={chapter.icon} className="h-6 w-6" />

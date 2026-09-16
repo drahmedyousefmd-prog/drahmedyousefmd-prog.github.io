@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import type { Prescription } from "@/lib/types";
 import { CaseCard } from "./CaseCard";
-import { SearchBar } from "./SearchBar";
+import { SearchBar } from "./ui/SearchBar";
 import { ChevronDown } from "lucide-react";
 
 export function ChapterPageApp({
@@ -32,7 +32,7 @@ export function ChapterPageApp({
   return (
     <main className="mx-auto w-full max-w-[1100px] flex-1 px-4 py-6 sm:px-6">
       <div className="mb-4 flex items-center gap-2 text-[13px] text-[var(--text-muted)]">
-        <Link href="/" className="transition hover:text-[var(--brand)]">
+        <Link href="/" className="transition hover:text-[var(--accent)]">
           الرئيسية
         </Link>
         <ChevronDown className="h-3.5 w-3.5 -rotate-90" strokeWidth={2} />
@@ -43,6 +43,11 @@ export function ChapterPageApp({
         onChange={setQuery}
         placeholder={`بحث داخل ${arabicName}…`}
       />
+      <p aria-live="polite" className="sr-only">
+        {results.length === 0
+          ? "لا توجد نتائج للبحث في هذا التصنيف"
+          : `تم العثور على ${results.length} نتيجة في ${name}`}
+      </p>
       {results.length === 0 ? (
         <div className="mt-12 flex flex-col items-center text-[var(--text-muted)]">
           <span className="text-sm">لا توجد نتائج</span>

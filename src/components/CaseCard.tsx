@@ -5,7 +5,7 @@ import { getChapterByCategory } from "@/lib/chapters";
 export function CaseCard({ rx }: { rx: Prescription }) {
   const chapter = getChapterByCategory(rx.category);
   return (
-    <Link href={`/case/${rx.id}`} className="case-card">
+    <Link href={`/doctor/case/${rx.id}`} className="case-card card">
       <span
         className="inline-flex w-fit items-center rounded-full px-2.5 py-1 text-[11px] font-bold"
         style={{

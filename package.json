@@ -4,9 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/validate-data.mjs && node scripts/generate-icons.mjs && node scripts/generate-og.mjs && node scripts/hero-doctor.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "validate": "node scripts/validate-data.mjs",
+    "icons": "node scripts/generate-icons.mjs",
+    "hero": "node scripts/hero-doctor.mjs",
+    "generate-og": "node scripts/generate-og.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.46.0",
@@ -21,6 +26,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

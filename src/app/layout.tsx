@@ -1,5 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cairo, Tajawal, Inter } from "next/font/google";
+import { SITE, SITE_URL, CONTACT } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
+import { ModeProvider } from "@/lib/mode";
+import "../../assets/css/design-tokens.css";
 import "./globals.css";
 
 const cairo = Cairo({
@@ -24,8 +28,45 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Rochetta — دليل روشتات",
-  description: "Medical prescriptions and treatment guide",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE.name} — ${SITE.brandLine}`,
+    template: `%s — ${SITE.name}`,
+  },
+  description: SITE.description,
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: SITE.name,
+    title: `${SITE.name} — ${SITE.taglineAr}`,
+    description: SITE.description,
+    locale: "ar_EG",
+    alternateLocale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: `${SITE.name} — ${SITE.taglineAr} | ${SITE.taglineEn}`,
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE.name} — ${SITE.taglineAr}`,
+    description: SITE.descriptionEn,
+    images: ["/og-image.png"],
+  },
+  icons: {
+    apple: "/apple-touch-icon.png",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: SITE.themeColor,
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -39,7 +80,35 @@ export default function RootLayout({
       dir="rtl"
       className={`${cairo.variable} ${tajawal.variable} ${inter.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <ModeProvider>
+          <JsonLd
+            data={{
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  "@id": `${SITE_URL}/#website`,
+                  name: SITE.name,
+                  alternateName: SITE.brandLine,
+                  url: SITE_URL,
+                  inLanguage: "ar-EG",
+                  description: SITE.descriptionEn,
+                },
+                {
+                  "@type": "Organization",
+                  "@id": `${SITE_URL}/#organization`,
+                  name: CONTACT.creatorName,
+                  url: SITE_URL,
+                  email: CONTACT.email,
+                  sameAs: [CONTACT.linkedin, SITE_URL],
+                },
+              ],
+            }}
+          />
+          {children}
+        </ModeProvider>
+      </body>
     </html>
   );
 }

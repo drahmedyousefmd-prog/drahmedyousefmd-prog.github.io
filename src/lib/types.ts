@@ -9,6 +9,10 @@ export interface Prescription {
   perDrugAlternatives: string;
   drugInstructions: string;
   drugInteractions: string;
+  /** Round-3: patient-mode content (authored manually, may be absent). */
+  patient_diagnosis_summary?: string;
+  patient_interactions_summary?: string;
+  alarm_signs_patient?: string[];
 }
 
 export type ChapterIconKey =

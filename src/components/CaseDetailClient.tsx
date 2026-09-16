@@ -2,8 +2,9 @@
 
 import { useEffect, useState, type CSSProperties } from "react";
 import Link from "next/link";
-import { X, ChevronDown } from "lucide-react";
+import { ChevronDown, Siren } from "lucide-react";
 import { addRecent } from "@/lib/recents";
+import { useMode } from "@/lib/mode";
 import type { ChapterIconKey } from "@/lib/types";
 import type {
   RxLine,
@@ -21,7 +22,13 @@ import {
   TriangleAlertIcon,
   CircleCheckIcon,
 } from "./icons";
-import { navigateWithTransition } from "@/lib/transition";
+import { handleTransitionNav } from "@/lib/transition";
+import { Tabs, type TabItem } from "./ui/Tabs";
+import { ModeSwitch } from "./ModeSwitch";
+import { Sheet } from "./ui/Sheet";
+import { Alert } from "./ui/Alert";
+import { Table } from "./ui/Table";
+import { RxCard } from "./ui/RxCard";
 
 export interface ClinicalTab {
   type: "DIAGNOSIS" | "INVESTIGATIONS" | "TREATMENT";
@@ -34,13 +41,17 @@ export interface RxGroup {
   rows: RxLine[];
 }
 
-type RxTabKey = "rx" | "instructions" | "interactions";
-
 const CLINICAL_TAB_COLOR: Record<ClinicalTab["type"], string> = {
-  DIAGNOSIS: "var(--brand)",
-  INVESTIGATIONS: "#3E7EA6",
-  TREATMENT: "#4A8B7C",
+  DIAGNOSIS: "var(--accent)",
+  INVESTIGATIONS: "var(--tab-clinical)",
+  TREATMENT: "var(--tab-rx)",
 };
+
+const RX_TABS: ("rx" | "instructions" | "interactions")[] = [
+  "rx",
+  "instructions",
+  "interactions",
+];
 
 export function CaseDetailClient({
   id,
@@ -53,6 +64,7 @@ export function CaseDetailClient({
   perDrug,
   interactions,
   instructions,
+  patient,
 }: {
   id: string;
   title: string;
@@ -70,11 +82,18 @@ export function CaseDetailClient({
   perDrug: PerDrugAlternatives[];
   interactions: InteractionGroup[];
   instructions: BulletLine[];
+  patient: {
+    diagnosisSummary: string;
+    interactionsSummary: string;
+    alarmSigns: string[];
+  };
 }) {
   const [activeTab, setActiveTab] = useState(0);
-  const [rxTab, setRxTab] = useState<RxTabKey>("rx");
+  const [rxTab, setRxTab] = useState(0);
   const [openAcc, setOpenAcc] = useState<Record<string, boolean>>({});
   const [sheetOpen, setSheetOpen] = useState(false);
+  const { mode } = useMode();
+  const isPatient = mode !== "doctor";
 
   useEffect(() => {
     const timer = setTimeout(() => addRecent(id, title), 0);
@@ -83,137 +102,213 @@ export function CaseDetailClient({
 
   const tabs = clinical;
   const rxDrugCount = rxGroups.reduce((n, g) => n + g.rows.length, 0);
+  const activeRxKey = RX_TABS[rxTab] ?? "rx";
+
+  const PATIENT_DIAGNOSIS_PLACEHOLDER =
+    "هذا الشرح المبسّط قيد الإضافة — لا تتردد في سؤال طبيبك مباشرة عن حالتك.";
+  const PATIENT_INVESTIGATIONS_TEXT =
+    "قد يوصي طبيبك ببعض الفحوصات لتأكيد التشخيص أو متابعة علاجك، وسيشرح لك ما تحتاجه وقت الزيارة.";
+  const PATIENT_INTERACTIONS_PLACEHOLDER =
+    "إلى أن يُضاف الشرح المبسّط، استشر طبيبك أو الصيدلي قبل إضافة أي دواء جديد إلى علاجك الحالي.";
+
+  const clinicalItems: TabItem[] = (() => {
+    if (!isPatient) {
+      return tabs.map((t) => ({
+        key: t.type,
+        label: t.label,
+        color: CLINICAL_TAB_COLOR[t.type],
+        content: (
+          <div className="mt-5">
+            <ul className="clinical-list">
+              {t.lines.map((l) => (
+                <li key={l}>{l}</li>
+              ))}
+            </ul>
+          </div>
+        ),
+      }));
+    }
+
+    const items: TabItem[] = [
+      {
+        key: "DIAGNOSIS",
+        label: "الشرح",
+        color: CLINICAL_TAB_COLOR.DIAGNOSIS,
+        content: (
+          <p className="patient-paragraph">
+            {patient.diagnosisSummary || PATIENT_DIAGNOSIS_PLACEHOLDER}
+          </p>
+        ),
+      },
+    ];
+    if (tabs.some((t) => t.type === "INVESTIGATIONS")) {
+      items.push({
+        key: "INVESTIGATIONS",
+        label: "الفحوصات",
+        color: CLINICAL_TAB_COLOR.INVESTIGATIONS,
+        content: <p className="patient-paragraph">{PATIENT_INVESTIGATIONS_TEXT}</p>,
+      });
+    }
+    return items;
+  })();
 
   const rxCol = (
     <div>
-      <div className="rx-tabs" role="tablist" aria-label="الروشتة">
-        <TabButton
-          tab="rx"
-          color="var(--brand)"
-          rxTab={rxTab}
-          setRxTab={setRxTab}
-          label="الروشتة"
-          badge={rxDrugCount}
-        >
-          <PillIcon className="h-4 w-4" />
-        </TabButton>
-        <TabButton
-          tab="instructions"
-          color="#8A6D3B"
-          rxTab={rxTab}
-          setRxTab={setRxTab}
-          label="تعليمات الاستخدام"
-          badge={instructions.length}
-        >
-          <ClipboardListIcon className="h-4 w-4" />
-        </TabButton>
-        <TabButton
-          tab="interactions"
-          color="var(--status-danger)"
-          rxTab={rxTab}
-          setRxTab={setRxTab}
-          label="التفاعلات"
-          badge={interactions.length}
-        >
-          <TriangleAlertIcon className="h-4 w-4" />
-        </TabButton>
-      </div>
-
-      {/* RX panel — drugs + alternatives only */}
-      <div className="rx-panel" data-panel="rx" hidden={rxTab !== "rx"}>
-        {rxGroups.length === 0 && (
-          <p className="text-[14px] text-[var(--text-muted)]">لا توجد وصفة مسجلة</p>
-        )}
-        {rxGroups.map((g) => (
-          <div key={g.label} className="mb-5">
-            <div className="mb-2.5 text-[12px] font-bold uppercase tracking-wide text-[var(--text-muted)]">
-              {g.label}
-            </div>
-            {g.rows.map((row) => (
-              <DrugRow
-                key={row.name + row.instruction}
-                row={row}
-                groupKey={g.label}
-                perDrug={perDrug}
-                openAcc={openAcc}
-                onToggle={setOpenAcc}
-              />
-            ))}
-          </div>
-        ))}
-      </div>
-
-      {/* Instructions panel */}
-      <div
-        className="rx-panel"
-        data-panel="instructions"
-        hidden={rxTab !== "instructions"}
-      >
-        {instructions.length === 0 ? (
-          <p className="text-[14px] text-[var(--text-muted)]">لا توجد تعليمات مسجلة</p>
-        ) : (
-          <div className="instructions-panel">
-            {instructions.map((b) => (
-              <div key={b.text} className="instr-line">
-                <CircleCheckIcon
-                  className={`${b.tone === "ok" ? "tone-ok" : b.tone === "warn" ? "tone-warn" : b.tone === "danger" ? "tone-danger" : ""}`}
-                />
-                <span>{b.text}</span>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-
-      {/* Interactions panel */}
-      <div
-        className="rx-panel"
-        data-panel="interactions"
-        hidden={rxTab !== "interactions"}
-      >
-        {interactions.length === 0 ? (
-          <p className="text-[14px] text-[var(--text-muted)]">لا توجد تفاعلات مسجلة</p>
-        ) : (
-          <div className="space-y-2">
-            {interactions.map((g) => (
-              <div
-                key={g.title}
-                className={`interaction-card ${g.severity}${
-                  g.severity === "danger" && rxTab === "interactions" ? " shake" : ""
-                }`}
-              >
-                {g.severity === "danger" ? (
-                  <OctagonAlertIcon className="h-[18px] w-[18px]" />
-                ) : (
-                  <TriangleAlertIcon className="h-[18px] w-[18px]" />
-                )}
-                <div>
-                  <div className="font-bold">{g.title}</div>
-                  {g.text && <div className="mt-0.5">{g.text}</div>}
+      <Tabs
+        ariaLabel="الروشتة"
+        tablistCls="rx-tabs"
+        tabCls="rx-tab"
+        panelCls="rx-panel"
+        active={rxTab}
+        onActive={setRxTab}
+        items={[
+          {
+            key: "rx",
+            label: (
+              <>
+                <PillIcon className="h-4 w-4" />
+                الروشتة
+              </>
+            ),
+            badge: rxDrugCount,
+            color: "var(--accent)",
+            content:
+              rxGroups.length === 0 ? (
+                <p className="text-[14px] text-[var(--text-muted)]">
+                  لا توجد وصفة مسجلة
+                </p>
+              ) : (
+                rxGroups.map((g) => (
+                  <div key={g.label} className="mb-5">
+                    <div className="mb-2.5 text-[12px] font-bold uppercase tracking-wide text-[var(--text-muted)]">
+                      {g.label}
+                    </div>
+                    {g.rows.map((row) => (
+                      <DrugRow
+                        key={row.name + row.instruction}
+                        row={row}
+                        groupKey={g.label}
+                        perDrug={perDrug}
+                        openAcc={openAcc}
+                        onToggle={setOpenAcc}
+                        isPatient={isPatient}
+                      />
+                    ))}
+                  </div>
+                ))
+              ),
+          },
+          {
+            key: "instructions",
+            label: (
+              <>
+                <ClipboardListIcon className="h-4 w-4" />
+                تعليمات الاستخدام
+              </>
+            ),
+            badge: instructions.length,
+            color: "var(--tab-warning)",
+            content:
+              instructions.length === 0 ? (
+                <p className="text-[14px] text-[var(--text-muted)]">
+                  لا توجد تعليمات مسجلة
+                </p>
+              ) : (
+                <div className="instructions-panel">
+                  {instructions.map((b) => (
+                    <div key={b.text} className="instr-line">
+                      <CircleCheckIcon
+                        className={`${
+                          b.tone === "ok"
+                            ? "tone-ok"
+                            : b.tone === "warn"
+                              ? "tone-warn"
+                              : b.tone === "danger"
+                                ? "tone-danger"
+                                : ""
+                        }`}
+                      />
+                      <span>{b.text}</span>
+                    </div>
+                  ))}
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+              ),
+          },
+          {
+            key: "interactions",
+            label: (
+              <>
+                <TriangleAlertIcon className="h-4 w-4" />
+                التفاعلات
+              </>
+            ),
+            badge: isPatient
+              ? patient.interactionsSummary
+                ? 1
+                : undefined
+              : interactions.length,
+            color: "var(--status-danger)",
+            content:
+              isPatient ? (
+                patient.interactionsSummary ? (
+                  <Alert
+                    tone="warning"
+                    icon={
+                      <TriangleAlertIcon className="h-[18px] w-[18px]" />
+                    }
+                    title="تفاعلات — شرح مبسّط"
+                  >
+                    {patient.interactionsSummary}
+                  </Alert>
+                ) : (
+                  <Alert
+                    tone="info"
+                    icon={
+                      <TriangleAlertIcon className="h-[18px] w-[18px]" />
+                    }
+                    title="شرح التفاعلات قيد الإضافة"
+                  >
+                    {PATIENT_INTERACTIONS_PLACEHOLDER}
+                  </Alert>
+                )
+              ) : interactions.length === 0 ? (
+                <p className="text-[14px] text-[var(--text-muted)]">
+                  لا توجد تفاعلات مسجلة
+                </p>
+              ) : (
+                <div className="space-y-2">
+                  {interactions.map((g) => (
+                    <Alert
+                      key={g.title}
+                      tone={g.severity === "danger" ? "danger" : "warning"}
+                      shake={g.severity === "danger" && activeRxKey === "interactions"}
+                      icon={
+                        g.severity === "danger" ? (
+                          <OctagonAlertIcon className="h-[18px] w-[18px]" />
+                        ) : (
+                          <TriangleAlertIcon className="h-[18px] w-[18px]" />
+                        )
+                      }
+                      title={g.title}
+                    >
+                      {g.text}
+                    </Alert>
+                  ))}
+                </div>
+              ),
+          },
+        ]}
+      />
 
       <div className="rx-actions no-print">
-        <button type="button" className="btn-primary" onClick={() => window.print()}>
+        <button type="button" className="btn btn-primary" onClick={() => window.print()}>
           <PrintIcon className="h-[18px] w-[18px]" />
           تصدير PDF
         </button>
         <Link
           href="/"
-          className="btn-ghost"
-          onClick={(e) => {
-            if (
-              typeof document !== "undefined" &&
-              typeof document.startViewTransition === "function"
-            ) {
-              e.preventDefault();
-              navigateWithTransition(e.currentTarget.href);
-            }
-          }}
+          className="btn btn-ghost"
+          onClick={handleTransitionNav}
         >
           <BackIcon className="h-[18px] w-[18px]" />
           الرئيسية
@@ -229,7 +324,7 @@ export function CaseDetailClient({
         <div className="mx-auto flex w-full max-w-[1200px] items-start gap-3 px-4 py-4 sm:px-6">
           <Link
             href={`/chapter/${chapter.slug}`}
-            className="no-print mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text-secondary)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]"
+            className="no-print mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text-secondary)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
             aria-label="رجوع للفصل"
           >
             <BackIcon className="h-4 w-4" />
@@ -253,57 +348,64 @@ export function CaseDetailClient({
         </div>
       </header>
 
+      <div className="case-mode-bar no-print">
+        <ModeSwitch />
+      </div>
+
       <div className="case-layout">
         {/* Clinical column */}
         <section className="case-clinical-col">
-          {warning && warning.length > 0 && (
-            <div className="mb-5 interaction-card warning">
-              <TriangleAlertIcon className="h-[18px] w-[18px]" />
-              <div>
-                <div className="font-bold">تحذير</div>
-                {warning.map((w) => (
-                  <div key={w} className="mt-0.5">
-                    {w}
-                  </div>
-                ))}
+          {!isPatient && warning && warning.length > 0 && (
+            <Alert
+              className="mb-5"
+              tone="warning"
+              icon={<TriangleAlertIcon className="h-[18px] w-[18px]" />}
+              title="تحذير"
+            >
+              {warning.map((w) => (
+                <div key={w}>{w}</div>
+              ))}
+            </Alert>
+          )}
+
+          {isPatient && patient.alarmSigns.length > 0 && (
+            <div className="alarm-signs-card mb-5" role="note">
+              <div className="alarm-signs-title">
+                <Siren className="h-5 w-5" aria-hidden="true" />
+                لاحظ هذه العلامات بعد بدء العلاج
               </div>
+              <ul className="alarm-signs-list">
+                {patient.alarmSigns.map((s) => (
+                  <li key={s}>{s}</li>
+                ))}
+              </ul>
+              <p className="alarm-signs-note">
+                إذا ظهرت أي من هذه العلامات، توقف وافحص حالتك — وفي وجود علامة خطيرة راجع أقرب طبيب أو طوارئ فورًا.
+              </p>
             </div>
           )}
 
-          {tabs.length > 0 && (
-            <>
-              <div className="case-tabs" role="tablist">
-                {tabs.map((t, i) => (
-                  <button
-                    key={t.type}
-                    type="button"
-                    role="tab"
-                    aria-selected={i === activeTab}
-                    className={`case-tab ${i === activeTab ? "active" : ""}`}
-                    style={{ "--tab-color": CLINICAL_TAB_COLOR[t.type] } as CSSProperties}
-                    onClick={() => setActiveTab(i)}
-                  >
-                    {t.label}
-                  </button>
-                ))}
-              </div>
+          {clinicalItems.length > 0 ? (
+            <Tabs
+              ariaLabel={isPatient ? "الشرح الموفّر للمريض" : "البيانات السريرية"}
+              tablistCls="case-tabs"
+              tabCls="case-tab"
+              panelCls="tab-panel"
+              active={Math.min(activeTab, clinicalItems.length - 1)}
+              onActive={setActiveTab}
+              items={clinicalItems}
+            />
+          ) : (
+            <p className="mt-1 rounded-2xl border border-dashed border-[var(--border)] p-4 text-[15px] leading-relaxed text-[var(--text-secondary)]">
+              لا يتوفر محتوى لهذه الحالة حالياً.
+            </p>
+          )}
 
-              <div className="mt-5">
-                {tabs.map((t, i) => (
-                  <div
-                    key={t.type}
-                    role="tabpanel"
-                    className={`tab-panel ${i === activeTab ? "" : "hidden"}`}
-                  >
-                    <ul className="clinical-list">
-                      {t.lines.map((l) => (
-                        <li key={l}>{l}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </>
+          {isPatient && (
+            <p className="patient-disclaimer no-print">
+              هذا الدليل للمساعدة على فهم الحالة والدواء، وهو ليس بديلاً عن نصيحة
+              طبيبك المعالج.
+            </p>
           )}
         </section>
 
@@ -323,60 +425,14 @@ export function CaseDetailClient({
       </button>
 
       {/* Mobile bottom sheet */}
-      {sheetOpen && (
-        <div className="sheet-backdrop no-print" onClick={() => setSheetOpen(false)} />
-      )}
-      <div
-        className={`sheet no-print ${sheetOpen ? "" : "closed"}`}
-        role="dialog"
-        aria-label="الروشتة الحالية"
-        aria-hidden={!sheetOpen}
+      <Sheet
+        open={sheetOpen}
+        onClose={() => setSheetOpen(false)}
+        label="الروشتة الحالية"
       >
-        <div className="sheet-handle" />
-        <button
-          type="button"
-          className="sheet-close"
-          onClick={() => setSheetOpen(false)}
-          aria-label="إغلاق"
-        >
-          <X className="h-4 w-4" strokeWidth={2} />
-        </button>
-        <div className="clear-both pt-2">{rxCol}</div>
-      </div>
+        {rxCol}
+      </Sheet>
     </div>
-  );
-}
-
-function TabButton({
-  tab,
-  color,
-  rxTab,
-  setRxTab,
-  label,
-  badge,
-  children,
-}: {
-  tab: RxTabKey;
-  color: string;
-  rxTab: RxTabKey;
-  setRxTab: (t: RxTabKey) => void;
-  label: string;
-  badge: number;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      type="button"
-      role="tab"
-      aria-selected={rxTab === tab}
-      className={`rx-tab ${rxTab === tab ? "active" : ""}`}
-      style={{ "--tab-color": color } as CSSProperties}
-      onClick={() => setRxTab(tab)}
-    >
-      {children}
-      {label}
-      <span className={`tab-badge ${badge === 0 ? "empty" : ""}`}>{badge}</span>
-    </button>
   );
 }
 
@@ -386,12 +442,14 @@ function DrugRow({
   perDrug,
   openAcc,
   onToggle,
+  isPatient,
 }: {
   row: RxLine;
   groupKey: string;
   perDrug: PerDrugAlternatives[];
   openAcc: Record<string, boolean>;
   onToggle: (cb: (prev: Record<string, boolean>) => Record<string, boolean>) => void;
+  isPatient: boolean;
 }) {
   const match = (() => {
     const firstWord = row.name.split(" ")[0].toLowerCase();
@@ -405,23 +463,14 @@ function DrugRow({
 
   return (
     <div className="mb-2.5">
-      <div className="rx-primary">
-        <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <div className="rx-drug-name">{row.name}</div>
-            {row.instruction && (
-              <div className="rx-instruction mt-0.5">{row.instruction}</div>
-            )}
-          </div>
-          {row.price && <span className="rx-price">{row.price}</span>}
-        </div>
-      </div>
+      <RxCard name={row.name} instruction={row.instruction} price={row.price} />
 
       {alts.length > 0 && (
         <div className="mt-1.5">
           <button
             type="button"
             className={`acc-toggle ${open ? "open" : ""}`}
+            aria-expanded={open}
             onClick={() =>
               onToggle((prev) => ({ ...prev, [key]: !prev[key] }))
             }
@@ -429,7 +478,9 @@ function DrugRow({
             <span>
               {open
                 ? "إخفاء البدائل"
-                : `عرض ${alts.length} بديل${alts.length === 1 ? "" : "ات"}`}
+                : isPatient
+                  ? "بدائل متاحة"
+                  : `عرض ${alts.length} بديل${alts.length === 1 ? "" : "ات"}`}
             </span>
             <ChevronDown className="h-4 w-4" strokeWidth={2} />
           </button>
@@ -438,22 +489,24 @@ function DrugRow({
             style={{ maxHeight: open ? 500 : 0 }}
             aria-hidden={!open}
           >
-            <table className="alt-table">
-              <thead>
-                <tr>
-                  <th>البديل</th>
-                  <th className="text-end">السعر</th>
-                </tr>
-              </thead>
-              <tbody>
-                {alts.map((a) => (
-                  <tr key={a.name + (a.price ?? "")}>
-                    <td className="alt-name">{a.name}</td>
-                    <td className="alt-price text-end">{a.price ?? "—"}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <Table
+              className="alt-table"
+              columns={[
+                { header: "البديل" },
+                { header: "السعر", className: "text-end" },
+              ]}
+              rows={alts.map((a) => ({
+                cells: [
+                  <span key={`${a.name}-n`} className="alt-name">
+                    {a.name}
+                  </span>,
+                  <span key={`${a.name}-p`} className="alt-price">
+                    {a.price ?? "—"}
+                  </span>,
+                ],
+                cellClassNames: [undefined, "text-end"],
+              }))}
+            />
           </div>
         </div>
       )}

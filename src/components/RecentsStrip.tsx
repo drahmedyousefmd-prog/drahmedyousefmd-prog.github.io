@@ -15,7 +15,7 @@ export function RecentsStrip() {
       </h3>
       <div className="flex flex-wrap gap-2">
         {recents.map((r) => (
-          <Link key={r.id} href={`/case/${r.id}`} className="recent-chip">
+          <Link key={r.id} href={`/doctor/case/${r.id}`} className="recent-chip">
             {r.title}
           </Link>
         ))}

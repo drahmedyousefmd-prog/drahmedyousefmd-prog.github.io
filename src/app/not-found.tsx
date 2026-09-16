@@ -22,7 +22,7 @@ export default function NotFound() {
       <Link
         href="/"
         className="mt-6 inline-flex items-center gap-2 rounded-full"
-        style={{ background: "var(--brand)", color: "#fff", padding: "10px 20px", fontWeight: 700, fontFamily: "var(--font-heading)" }}
+        style={{ background: "var(--accent)", color: "#fff", padding: "10px 20px", fontWeight: 700, fontFamily: "var(--font-heading)" }}
       >
         <BackIcon className="h-[18px] w-[18px]" />
         العودة للرئيسية

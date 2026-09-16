@@ -111,3 +111,64 @@ export const CircleCheckIcon = (p: IconProps) => <CircleCheck strokeWidth={2} {.
 export const PillIcon = (p: IconProps) => <Pill strokeWidth={2} {...p} />;
 export const CloudRainIcon = (p: IconProps) => <CloudRain strokeWidth={2} {...p} />;
 export const ClipboardListIcon = (p: IconProps) => <ClipboardList strokeWidth={2} {...p} />;
+
+/* ---- Rochetta brand mark ---- */
+
+/**
+ * Rochetta glyph — a heartbeat pulse with a capsule resting on the plateau.
+ * Inherits `currentColor`; designed for nav chips and avatars (tint surfaces).
+ */
+export function LogoGlyph({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M2.5 12h4.5l2.5-4.5 3 9 2-4.5h7" />
+      <g transform="rotate(-12 17.8 12)">
+        <rect
+          x="15.6"
+          y="10.8"
+          width="4.4"
+          height="2.4"
+          rx="1.2"
+          fill="currentColor"
+          stroke="none"
+        />
+      </g>
+    </svg>
+  );
+}
+
+/**
+ * Full Rochetta logo — teal tile + white pulse + capsule.
+ * `variant="light"` swaps to a white tile with teal glyph (for dark/teal
+ * surfaces such as the Open Graph image backgrounds).
+ */
+export function LogoMark({
+  className = "",
+  variant = "brand",
+}: {
+  className?: string;
+  variant?: "brand" | "light";
+}) {
+  const tile = variant === "light" ? "#ffffff" : "var(--brand, #1f5b54)";
+  const glyph = variant === "light" ? "var(--brand, #1f5b54)" : "#ffffff";
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden="true">
+      <rect x="2" y="2" width="60" height="60" rx="14" fill={tile} />
+      <g stroke={glyph} strokeWidth={3.4} strokeLinecap="round" strokeLinejoin="round" fill="none">
+        <path d="M10 36h12l5-9 6 14 3.5-9H52" />
+      </g>
+      <g transform="rotate(-12 46.5 32)">
+        <rect x="41" y="29.2" width="11" height="5.6" rx="2.8" fill={glyph} />
+      </g>
+    </svg>
+  );
+}
