@@ -21,7 +21,7 @@ export function SiteNav() {
   return (
     <nav className={`site-nav no-print ${scrolled ? "scrolled" : ""}`}>
       <div className="site-nav-inner">
-        <a href="#top" className="site-logo" aria-label={SITE.name}>
+        <a href="/" className="site-logo" aria-label={SITE.name}>
           <span className="site-logo-chip">
             <LogoGlyph className="h-5 w-5" />
           </span>

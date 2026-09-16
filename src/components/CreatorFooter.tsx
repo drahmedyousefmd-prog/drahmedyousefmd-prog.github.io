@@ -1,4 +1,4 @@
-import { MailIcon, LinkedinIcon, LogoGlyph } from "./icons";
+import { MailIcon, LinkedinIcon, WhatsAppIcon, LogoGlyph } from "./icons";
 import { CONTACT, SITE } from "@/lib/site";
 
 export function CreatorFooter() {
@@ -14,9 +14,23 @@ export function CreatorFooter() {
         </div>
       </div>
       <div className="creator-links">
-        <a className="creator-link" href={`mailto:${CONTACT.email}`}>
+        <a
+          className="creator-link"
+          href={CONTACT.gmailCompose}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <MailIcon />
-          تواصل عبر البريد
+          <span>تواصل عبر البريد</span>
+        </a>
+        <a
+          className="creator-link"
+          href={CONTACT.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <WhatsAppIcon />
+          <span>واتساب</span>
         </a>
         <a
           className="creator-link"

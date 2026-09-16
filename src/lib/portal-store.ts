@@ -326,6 +326,101 @@ export function createTicket(args: {
   return ticket;
 }
 
+/** Import payload shared from a submitted consultation via the WhatsApp/Gmail forward link (`/import?t=…`). */
+export interface ImportPayload {
+  id: string;
+  t: ServiceType;
+  n: string;
+  nm?: string;
+  c?: string;
+  d: string;
+}
+
+function toB64Url(json: string): string {
+  const bytes = new TextEncoder().encode(json);
+  let bin = "";
+  bytes.forEach((b) => (bin += String.fromCharCode(b)));
+  return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+
+function fromB64Url(s: string): string {
+  const str = s.replace(/-/g, "+").replace(/_/g, "/");
+  const pad = str.length % 4 ? "=".repeat(4 - (str.length % 4)) : "";
+  const bin = atob(str + pad);
+  const bytes = Uint8Array.from(bin, (ch) => ch.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
+
+/** Encode a ticket into a compact `?t=` payload for the import link. */
+export function encodeTicketPayload(p: ImportPayload): string {
+  return toB64Url(JSON.stringify(p));
+}
+
+/** Decode an import payload; `null` when the payload is malformed. */
+export function decodeTicketPayload(raw: string): ImportPayload | null {
+  try {
+    const p = JSON.parse(fromB64Url(raw)) as Partial<ImportPayload>;
+    if (typeof p.id !== "string" || !p.id) return null;
+    if (!isServiceType(p.t)) return null;
+    if (typeof p.n !== "string") return null;
+    return {
+      id: p.id,
+      t: p.t,
+      n: p.n,
+      nm: typeof p.nm === "string" ? p.nm : undefined,
+      c: typeof p.c === "string" ? p.c : undefined,
+      d: typeof p.d === "string" ? p.d : new Date().toISOString(),
+    };
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Save a consultation that arrived via the WhatsApp/Gmail forward link into this
+ * device's tickets (the doctor's inbox reads the same store). Returns the stored
+ * ticket, or `"exists"` when the ticket_id is already present.
+ */
+export function importTicket(p: ImportPayload): Ticket | "exists" {
+  ensureReady();
+  const exists = tickets.some((x) => x.ticket_id === p.id);
+  if (exists) return "exists";
+  const ticket: Ticket = {
+    ticket_id: p.id,
+    patient_id: "guest",
+    service_type: p.t,
+    status: "pending",
+    created_at: p.d,
+    patient_profile: { name: p.nm?.trim() || undefined, identifier: (p.c ?? "").trim().toLowerCase() },
+    patient_notes: p.n,
+    attachments: [],
+    assistive_engine_output: {
+      source:
+        p.t === "prescription_reading"
+          ? "ocr_prescription_engine"
+          : p.t === "ecg_reading"
+            ? "ecg_reading_engine"
+            : "none",
+      raw_result: "",
+      visible_to_patient: false,
+    },
+    messages: [],
+  };
+  tickets = [ticket, ...tickets];
+  writeJSON(TICKETS_KEY, tickets);
+  emit();
+  return ticket;
+}
+
+function isServiceType(v: unknown): v is ServiceType {
+  return (
+    typeof v === "string" &&
+    ["general_consultation", "lab_reading", "prescription_reading", "ecg_reading", "diet_plan", "treatment_plan"].includes(
+      v as ServiceType
+    )
+  );
+}
+
 /** All tickets visible on this device: either the logged-in patient's tickets or the local guest's tickets. */
 export function myTickets(): Ticket[] {
   ensureReady();

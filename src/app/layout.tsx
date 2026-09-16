@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cairo, Tajawal, Inter } from "next/font/google";
 import { SITE, SITE_URL, CONTACT } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
+import { WhatsAppIcon } from "@/components/icons";
 import { ModeProvider } from "@/lib/mode";
 import "../../assets/css/design-tokens.css";
 import "./globals.css";
@@ -107,6 +108,16 @@ export default function RootLayout({
             }}
           />
           {children}
+          <a
+            href={CONTACT.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="wa-fab"
+            aria-label="التواصل عبر واتساب"
+            title="تواصل عبر واتساب"
+          >
+            <WhatsAppIcon className="h-6 w-6" />
+          </a>
         </ModeProvider>
       </body>
     </html>

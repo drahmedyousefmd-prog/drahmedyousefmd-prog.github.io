@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Inbox, RotateCcw, SendHorizonal, CheckCircle2, Lock, AlertTriangle } from "lucide-react";
+import { MailIcon, WhatsAppIcon } from "@/components/icons";
 import {
   addMessage,
   allTickets,
@@ -101,9 +102,10 @@ export function DoctorInboxApp() {
         {filtered.length === 0 ? (
           <div className="flex flex-col items-center gap-3 py-16 text-center text-[var(--text-muted)]">
             <Inbox className="h-10 w-10 opacity-40" aria-hidden="true" />
-            <span className="text-sm">لا توجد طلبات هنا بعد — لأغراض العرض يمكنك إرسال طلب من بوابة المريض.</span>
+            <span className="text-sm">لا توجد طلبات هنا بعد — أرسل طلبًا من بوابة المريض لتجربته.</span>
             <p className="text-[12px]">
-              ملاحظة: النظام محلي على الجهاز — الطلبات تُخزَّن في متصفح المريض نفسه.
+              الطلبات القادمة عبر واتساب/جيميل من أجهزة أخرى: اضغط الرابط المرفق في الرسالة
+              «لحفظ الطلب في صندوق طلبات المرضى» وسيظهر هنا مباشرة.
             </p>
           </div>
         ) : (
@@ -167,6 +169,14 @@ function DoctorTicketChat({ ticket, onBack }: { ticket: Ticket; onBack: () => vo
     addMessage(ticket.ticket_id, "doctor", draft);
     setDraft("");
   };
+
+  const replyText = `رد ${"فريق Rochetta / د. أحمد"} — بخصوص طلبك (${ticket.ticket_id}) ${serviceLabel(ticket.service_type)}:\n${draft || "(ستصلك الإجابة داخل المنصة أيضًا)"}`;
+  const waHref = toWhatsAppLink(ticket.patient_profile.identifier, replyText);
+  const mailHref = toMailLink(
+    ticket.patient_profile.identifier,
+    `رد على طلبك ${ticket.ticket_id}`,
+    replyText
+  );
 
   return (
     <div className="fixed inset-0 z-50 overflow-auto bg-[var(--bg)]">
@@ -272,6 +282,34 @@ function DoctorTicketChat({ ticket, onBack }: { ticket: Ticket; onBack: () => vo
                   </dd>
                 </div>
               </dl>
+              <p className="mt-2 text-[12px] text-[var(--text-muted)]">
+                رد «خارجي» من تطبيقك مباشرة لهذا المريض:
+              </p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {waHref && (
+                  <a
+                    href={waHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-pill"
+                    style={{ background: "#25d366", color: "#fff", border: "none" }}
+                  >
+                    <WhatsAppIcon className="h-4 w-4" />
+                    رد عبر واتساب
+                  </a>
+                )}
+                {mailHref && (
+                  <a href={mailHref} className="btn-pill primary">
+                    <MailIcon className="h-4 w-4" />
+                    رد عبر البريد
+                  </a>
+                )}
+                {!waHref && !mailHref && (
+                  <p className="text-[12px] text-[var(--text-muted)]">
+                    لا يوجد بريد/موبايل صحيح لهذا المريض.
+                  </p>
+                )}
+              </div>
             </section>
 
             <section className="card p-4">
@@ -338,4 +376,19 @@ function DoctorTicketChat({ ticket, onBack }: { ticket: Ticket; onBack: () => vo
       </div>
     </div>
   );
+}
+
+function toWhatsAppLink(identifier: string, text: string): string | null {
+  const digits = identifier.replace(/[^\d+]/g, "");
+  if (!digits) return null;
+  let target = digits;
+  if (/^01\d{9}$/.test(target)) target = "20" + target.slice(1);
+  else if (target.startsWith("+")) target = target.slice(1);
+  if (!/^\d{9,15}$/.test(target)) return null;
+  return `https://wa.me/${target}?text=${encodeURIComponent(text)}`;
+}
+
+function toMailLink(identifier: string, subject: string, text: string): string | null {
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(identifier)) return null;
+  return `mailto:${identifier}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
 }

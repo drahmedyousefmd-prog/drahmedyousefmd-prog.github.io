@@ -588,4 +588,80 @@ guarantee that the patient view never renders medical content.
 
 ---
 
-*End of audit — continuous journal; last update 2026-09-16 (Round 10).*
+## 21. Round 11 — contact channels + consultation delivery to doctor (2026-09-16)
+
+User requests: fix the «تواصل عبر البريد» block (visible contact is `dr.ahmed.yousef.md@gmail.com`),
+add a WhatsApp contact button (`01121246814`), deliver a message to the doctor's WhatsApp **and**
+Gmail whenever a patient submits a consultation, and give the admin a place to reply to consultations.
+
+| Feature | Status |
+|---|---|
+| **Contact constants** (`src/lib/site.ts`): official email `dr.ahmed.yousef.md@gmail.com`, `whatsapp = https://wa.me/201121246814` (+20 112 124 6814), `phoneDisplay = 01121246814` — single source reused everywhere | OK |
+| **Footer «تواصل عبر البريد»** now shows the email address visibly (LTR text under the label) and adds a **واتساب سدل line** (phone number + icon); both open the right channel | OK |
+| **Floating WhatsApp button** (`wa-fab`, bottom-left, every page via `layout.tsx`) opens `wa.me/201121246814` with the site context; hidden on print; `z-index` below the ticket chat overlay | OK |
+| **Consultation → doctor delivery on submit** (`ServiceForm`): after creating the ticket, the success panel shows «إرسال نسخة الطلب إلى الطبيب» with two buttons that compose the message **prefilled** (service, name, contact, ticket id, notes) — «إرسال عبر واتساب» opens WhatsApp Chat for `201121246814`, «إرسال عبر جيميل» opens Gmail compose `mailto:dr.ahmed.yousef.md@gmail.com` with subject «طلب استشارة عبر Rochetta — <id>». Attachments stay in the local ticket («تذاكري»), not in the forwarded text | OK |
+| **Admin reply console** — existing `/doctor/inbox` is the admin source (reply inside the chat, statuses معلّق/تم الرد/مغلقة). Added per-ticket **«رد خارجي»** actions in بيانات المريض: when the identifier is an Egyptian/phone number → «رد عبر واتساب» (normalizes `01xxxxxxxxx` → `20…`), when it's an email → «رد عبر البريد»; the message picks up the author's current draft text | OK |
+| Validation: build 100 pages, TS clean, out/ smoke **10/10** (FAB + footer + email + prefilled forward + inbox external replies), deployed `40ae96c`, live **7/7** | OK |
+
+**Important static-hosting limitation (documented):** GitHub Pages has no server, so delivery uses
+**prefilled native apps** — the patient taps «واتساب/جيميل» and the message is addressed and
+written, ready to send with one tap. A fully automatic push to WhatsApp needs the WhatsApp Business
+Cloud API (Meta) and to Gmail an EmailJS/Formspree account with API keys; both require the owner's
+external accounts and keys. Offer is available if real automatic delivery is required later.
+
+**Known limitations (carried):** localStorage-only demo data; client-side role gates (reference
+content stays public for SEO); attachments as data-URLs ≤2.5MB, not in mailto/WhatsApp.
+
+*End of Round 11 status.*
+
+---
+
+## 22. Round 12 — Gmail compose link fix + contact hide (2026-09-16)
+
+The «إرسال عبر جيميل» confirmation button and the footer email link used `mailto:`, which silently
+fails on browsers without a default mail handler (common on desktops). Both now use the Gmail web
+compose URL (`mail.google.com/mail/?view=cm&fs=1&to=...`), which opens Gmail in a new tab, always.
+
+| Feature | Status |
+|---|---|
+| `CONTACT.gmailCompose` constant added — single base URL for `https://mail.google.com/mail/?view=cm&fs=1&to=dr.ahmed.yousef.md@gmail.com`; reused by footer + ServiceForm + DoctorInbox external reply | OK |
+| Footer «تواصل عبر البريد» — now opens Gmail compose (footer hidden email + phone, icon+label only; links preserved as Gmail compose and `wa.me`) | OK |
+| ServiceForm «إرسال عبر جيميل» — opens Gmail compose with `&su=` + `&body=` prefilled Arabic text; opens in a new tab | OK |
+| DoctorInbox «رد عبر البريد» external reply — remains `mailto:` by design (sends as *your own* outgoing from the admin mail client; intentional for outbound doctor reply). If desired, can swap to Gmail compose too | OK |
+| Verification: `next build` 100 pages, TypeScript clean, out/ smoke 4/4, live 2/2 — no bare `mailto:` remains in footer; Gmail compose URL present raw + HTML-encoded (`&amp;`) | OK |
+
+**Known limitations (carried):** Gmail compose URL requires the user to be signed into Google in
+that browser. Otherwise the compose page still opens with a sign-in prompt.
+
+*End of Round 12 status.*
+
+---
+
+## 23. Round 13 — deliver consultations into the doctor's inbox (import link) (2026-09-16)
+
+Bug reported: a consultation was sent and **arrived via WhatsApp**, but did **not** appear in the
+doctor's «صندوق طلبات المرضى». Root cause is the documented static limitation — tickets are
+stored in the *submitter's* localStorage; the doctor's inbox only lists tickets stored on the
+doctor's own browser/device.
+
+| Feature | Status |
+|---|---|
+| **Import fallback for cross-device delivery** — every forward message (WhatsApp + Gmail) now includes a link: «لحفظ الطلب في صندوق طلبات المرضى اضغط الرابط التالي» → `SITE_URL/import?t=…` | OK |
+| `encodeTicketPayload` / `decodeTicketPayload` — compact base64url payload (id, service, notes, name, contact, created_at) built on submit; URL ~290 chars for a typical note | OK |
+| **`/import` page** (`ImportClient`, Suspense-safe, `robots:noindex`) — decodes the payload on the browser, validates it, saves the ticket into this device's store via `importTicket` (dedupes by ticket_id) and confirms: «تم استيراد الطلب بنجاح» + button «فتح صندوق الطلبات» → `/doctor/inbox`; handles invalid links and already-imported duplicates | OK |
+| Imported ticket keeps the real `ticket_id`; shown with service label + patient contact in the inbox, status `pending`; doctor replies in-chat as usual. Patient's own «تذاكري» unaffected (their copy stays in their browser) | OK |
+| Inbox empty-state copy clarifies the flow: consultations arriving via WhatsApp/Gmail from other devices are restored by tapping the link in the message | OK |
+| Validation: `next build` 101 pages (new `/import`), TS clean, out/ smoke 7+8 (+1 live) — encode/decode roundtrip, URL size, bundle link, import page SSR + success copy | OK |
+
+**How it works now (demo-consistent):** submitting a consultation saves the ticket on the
+patient's device AND the doctor's WhatsApp/Gmail message includes the import link. The doctor taps
+the link once on their device → the ticket lands in «صندوق طلبات المرضى» → reply in the chat.
+
+**Known limitations (carried):** still localStorage per browser; the import link requires a tap
+(no server push). A true multi-device shared inbox needs a backend/DB (offer available).
+
+*End of Round 13 status.*
+
+---
+
+*End of audit — continuous journal; last update 2026-09-16 (Round 13).*

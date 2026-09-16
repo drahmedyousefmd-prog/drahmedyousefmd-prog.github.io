@@ -1000,3 +1000,31 @@
     font-size: 16px;
   }
 }
+
+.wa-fab {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 30;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(18, 140, 66, 0.35);
+  transition:
+    transform 0.2s var(--ease-standard),
+    box-shadow 0.2s var(--ease-standard);
+}
+.wa-fab:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 12px 28px rgba(18, 140, 66, 0.45);
+}
+@media print {
+  .wa-fab {
+    display: none;
+  }
+}

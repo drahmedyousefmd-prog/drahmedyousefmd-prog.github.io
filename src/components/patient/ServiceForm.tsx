@@ -5,8 +5,10 @@ import Link from "next/link";
 import { TriangleAlert, UploadCloud, CheckCircle2 } from "lucide-react";
 import type { ServiceType } from "@/lib/services";
 import { SERVICES } from "@/lib/services";
+import { CONTACT, SITE_URL } from "@/lib/site";
+import { MailIcon, WhatsAppIcon } from "@/components/icons";
 import type { Attachment } from "@/lib/portal-store";
-import { createTicket, usePortal } from "@/lib/portal-store";
+import { createTicket, encodeTicketPayload, usePortal } from "@/lib/portal-store";
 import { PortalTopbar } from "../portal/PortalTopbar";
 import { SafetyBanner } from "../portal/SafetyBanner";
 
@@ -33,6 +35,7 @@ export function ServiceForm({ serviceType }: { serviceType: ServiceType }) {
   const [fileError, setFileError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
   const [ticketId, setTicketId] = useState<string | null>(null);
+  const [forwardText, setForwardText] = useState("");
   const fileRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
   const setField = (name: string, value: string) =>
@@ -135,6 +138,30 @@ export function ServiceForm({ serviceType }: { serviceType: ServiceType }) {
     });
     if (ticket) {
       setTicketId(ticket.ticket_id);
+      const importUrl = `${SITE_URL}/import?t=${encodeTicketPayload({
+        id: ticket.ticket_id,
+        t: service.type,
+        n: notes.join("\n") || "—",
+        nm: contactName.trim() || undefined,
+        c: identifier,
+        d: ticket.created_at,
+      })}`;
+      const body = [
+        "طلب استشارة جديد عبر Rochetta",
+        `الخدمة: ${service.title}`,
+        contactName.trim() ? `الاسم: ${contactName.trim()}` : null,
+        `التواصل: ${identifier}`,
+        `رقم التذكرة: ${ticket.ticket_id}`,
+        "",
+        "التفاصيل:",
+        notes.join("\n") || "—",
+        "",
+        "لحفظ الطلب في صندوق طلبات المرضى اضغط الرابط التالي:",
+        importUrl,
+      ]
+        .filter((x): x is string => Boolean(x))
+        .join("\n");
+      setForwardText(body);
       setDone(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
@@ -215,6 +242,37 @@ export function ServiceForm({ serviceType }: { serviceType: ServiceType }) {
               <Link href="/patient/tickets" className="btn-pill primary">
                 متابعة في تذاكري
               </Link>
+            </div>
+
+            <div className="mt-5 rounded-xl border border-dashed border-[var(--accent)] bg-[color-mix(in srgb,var(--accent)_6%,transparent)] px-4 py-3 text-start">
+              <p className="text-[13px] font-bold text-[var(--text-primary)]">
+                إرسال نسخة الطلب إلى الطبيب
+              </p>
+              <p className="mt-1 text-[12px] leading-relaxed text-[var(--text-secondary)]">
+                اضغط أحد الزرين فيفتح تطبيق الرسائل جاهزًا بالإرسال إلى {CONTACT.creatorName}.
+                المرفقات تبقى محفوظة في «تذاكري» ولا تُرسل مع النسخة.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <a
+                  className="btn-pill"
+                  style={{ background: "#25d366", color: "#fff", border: "none" }}
+                  href={`${CONTACT.whatsapp}?text=${encodeURIComponent(forwardText)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <WhatsAppIcon className="h-4 w-4" />
+                  إرسال عبر واتساب
+                </a>
+                <a
+                  className="btn-pill primary"
+                  href={`${CONTACT.gmailCompose}&su=${encodeURIComponent(`طلب استشارة عبر Rochetta — ${ticketId}`)}&body=${encodeURIComponent(forwardText)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MailIcon className="h-4 w-4" />
+                  إرسال عبر جيميل
+                </a>
+              </div>
             </div>
 
             {!user && (

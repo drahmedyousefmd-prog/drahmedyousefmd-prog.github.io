@@ -25,6 +25,9 @@ export const SITE = {
 export const CONTACT = {
   email: "dr.ahmed.yousef.md@gmail.com",
   mailtoSubmit: "mailto:dr.ahmed.yousef.md@gmail.com?subject=إضافة حالة طبية",
+  gmailCompose: "https://mail.google.com/mail/?view=cm&fs=1&to=dr.ahmed.yousef.md@gmail.com",
+  whatsapp: "https://wa.me/201121246814",
+  phoneDisplay: "01121246814",
   linkedin: "https://www.linkedin.com/in/dr-ahmed-yousef/",
   creatorName: "د. أحمد يوسف",
   creatorRole: "منشئ ومطوّر Rochetta",
