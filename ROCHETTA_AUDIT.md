@@ -664,4 +664,24 @@ the link once on their device → the ticket lands in «صندوق طلبات ا
 
 ---
 
-*End of audit — continuous journal; last update 2026-09-16 (Round 13).*
+## 24. Round 14 — fix back-button 404 + add the Rochta header to every page (2026-09-16)
+
+Bug reported: pressing the back («رجوع») button on a روشتة or شباتر page returned an error 404.
+Root cause: the case page (`CaseDetailClient`) still linked its back arrow and chapter chip to the
+**old pre-Round-9 path** `/chapter/{slug}` — which no longer exists after the move of chapters
+under `/doctor/chapter/{slug}`. Static hosting serves exactly the `out/` tree, so the stale link
+hit GitHub Pages' 404.
+
+| Feature | Status |
+|---|---|
+| **Smart back** — new client `BackLink` (`src/components/portal/BackLink.tsx`): goes to the **previous page** via `history.back()` when there is history, else falls back to a deterministic URL (e.g. the chapter). Used by both case and chapter pages (fallback `/doctor/chapter/{slug}` / `/`) | OK |
+| Case back arrow + chapter chip fixed to the real route `/doctor/chapter/{slug}` — replaces the dead `/chapter/{slug}` (HTML/bundle verify no `href="/chapter/"` remains) | OK |
+| **Rochta header on all pages** — the `site-logo` (logo + name) is now rendered by default on: case page, chapter page (horizontal first item on both), `/patient`, `/patient/tickets`, service forms, `/doctor/inbox`, `/login`, `/import`; its href is `/` on every instance (portal topbars changed from `#top` → `/`) | OK |
+| Validation: `next build` 101 pages, TS clean; out/ smoke 9/11 → 2 adjusted passes (RequireRole blocks SSR of the inbox topbar by design; bundle contains `history.length>1` in both BackLink chunks + `site-logo` `href="/"`); live 200 on case & chapter (links present, stale `/chapter/` absent), `/patient` & `/login` logos present | OK |
+| Deployed: gh-pages `4372b8f` (`69a2e44..4372b8f`) | OK |
+
+*End of Round 14 status.*
+
+---
+
+*End of audit — continuous journal; last update 2026-09-16 (Round 14).*

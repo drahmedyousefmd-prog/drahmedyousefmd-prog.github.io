@@ -1,10 +1,11 @@
 import type { Prescription } from "@/lib/types";
 import { CHAPTER_ORDER, getChapter, categoryForSlug } from "@/lib/chapters";
 import { ChapterPageApp } from "@/components/ChapterPageApp";
-import { ChapterIcon, BackIcon } from "@/components/icons";
+import { ChapterIcon, BackIcon, LogoGlyph } from "@/components/icons";
 import { JsonLd } from "@/components/JsonLd";
 import { SafetyBanner } from "@/components/portal/SafetyBanner";
-import { SITE_URL } from "@/lib/site";
+import { BackLink } from "@/components/portal/BackLink";
+import { SITE, SITE_URL } from "@/lib/site";
 import Link from "next/link";
 
 // Single source of truth: prescriptions.json — chapter data is filtered below.
@@ -67,14 +68,20 @@ export default async function ChapterPage({ params }: PageProps<"/doctor/chapter
       {/* Quiet header */}
       <SafetyBanner />
       <header className="case-header">
-        <div className="mx-auto flex w-full max-w-[1100px] items-center gap-3 px-4 py-4 sm:px-6">
-          <Link
+        <div className="mx-auto flex w-full max-w-[1100px] flex-wrap items-center gap-3 px-4 py-4 sm:px-6">
+          <Link href="/" className="site-logo case-logo no-print" aria-label={`${SITE.name} — الرئيسية`}>
+            <span className="site-logo-chip">
+              <LogoGlyph className="h-5 w-5" />
+            </span>
+            <span className="hidden sm:inline">{SITE.name}</span>
+          </Link>
+          <BackLink
             href="/"
             className="no-print flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text-secondary)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
-            aria-label="الرئيسية"
+            label="رجوع إلى الصفحة السابقة"
           >
             <BackIcon className="h-4 w-4" />
-          </Link>
+          </BackLink>
           <div className="min-w-0">
             <h1 className="text-[22px] font-extrabold leading-tight text-[var(--text-primary)]">
               {chapter.name}

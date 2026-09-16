@@ -16,12 +16,15 @@ import {
   ChapterIcon,
   BackIcon,
   PrintIcon,
+  LogoGlyph,
   PillIcon,
   ClipboardListIcon,
   OctagonAlertIcon,
   TriangleAlertIcon,
   CircleCheckIcon,
 } from "./icons";
+import { SITE } from "@/lib/site";
+import { BackLink } from "./portal/BackLink";
 import { handleTransitionNav } from "@/lib/transition";
 import { Tabs, type TabItem } from "./ui/Tabs";
 import { ModeSwitch } from "./ModeSwitch";
@@ -321,17 +324,23 @@ export function CaseDetailClient({
     <div className="min-h-dvh">
       {/* Header */}
       <header className="case-header">
-        <div className="mx-auto flex w-full max-w-[1200px] items-start gap-3 px-4 py-4 sm:px-6">
-          <Link
-            href={`/chapter/${chapter.slug}`}
+        <div className="mx-auto flex w-full max-w-[1200px] flex-wrap items-start gap-3 px-4 py-4 sm:px-6">
+          <Link href="/" className="site-logo case-logo no-print" aria-label={`${SITE.name} — الرئيسية`}>
+            <span className="site-logo-chip">
+              <LogoGlyph className="h-5 w-5" />
+            </span>
+            <span className="hidden sm:inline">{SITE.name}</span>
+          </Link>
+          <BackLink
+            href={`/doctor/chapter/${chapter.slug}`}
             className="no-print mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text-secondary)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
-            aria-label="رجوع للفصل"
+            label="رجوع إلى الصفحة السابقة"
           >
             <BackIcon className="h-4 w-4" />
-          </Link>
+          </BackLink>
           <div className="min-w-0">
             <Link
-              href={`/chapter/${chapter.slug}`}
+              href={`/doctor/chapter/${chapter.slug}`}
               className="chapter-chip no-print"
               style={{ "--cat": chapter.colorHex } as CSSProperties}
             >

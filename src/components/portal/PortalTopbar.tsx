@@ -27,7 +27,7 @@ export function PortalTopbar({
 
   return (
     <header className="portal-topbar no-print">
-      <a href="#top" className="site-logo" aria-label={SITE.name}>
+      <a href="/" className="site-logo" aria-label={`${SITE.name} — الرئيسية`}>
         <span className="site-logo-chip">
           <LogoGlyph className="h-5 w-5" />
         </span>

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Stethoscope, UserRound } from "lucide-react";
 import { LogoGlyph } from "../icons";
-import { CONTACT } from "@/lib/site";
 import {
   DOCTOR_IDENTIFIER,
   DOCTOR_PASSWORD,
@@ -53,7 +52,7 @@ export function PortalLogin() {
   return (
     <div className="min-h-dvh" id="top">
       <header className="portal-topbar no-print">
-        <a href="#top" className="site-logo" aria-label={CONTACT.creatorName}>
+        <a href="/" className="site-logo" aria-label={`Rochetta — الرئيسية`}>
           <span className="site-logo-chip">
             <LogoGlyph className="h-5 w-5" />
           </span>
