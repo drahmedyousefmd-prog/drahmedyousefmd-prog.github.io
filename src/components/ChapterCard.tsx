@@ -1,9 +1,18 @@
 import Link from "next/link";
-import type { Ref, CSSProperties } from "react";
+import type { Ref, CSSProperties, MouseEvent } from "react";
 import type { Chapter } from "@/lib/types";
 import { ChapterIcon } from "./icons";
-import { ChevronDown } from "lucide-react";
 import { navigateWithTransition } from "@/lib/transition";
+
+function handleNav(e: MouseEvent<HTMLAnchorElement>) {
+  if (
+    typeof document !== "undefined" &&
+    typeof document.startViewTransition === "function"
+  ) {
+    e.preventDefault();
+    navigateWithTransition(e.currentTarget.href);
+  }
+}
 
 export function ChapterCard({
   chapter,
@@ -18,30 +27,20 @@ export function ChapterCard({
       href={`/chapter/${chapter.slug}`}
       className="category-card"
       style={{ "--cat": chapter.colorHex } as CSSProperties}
-      onClick={(e) => {
-        if (typeof document !== "undefined" && typeof document.startViewTransition === "function") {
-          e.preventDefault();
-          navigateWithTransition(`/chapter/${chapter.slug}`);
-        }
-      }}
+      onClick={handleNav}
     >
       <div className="cat-icon">
-        <ChapterIcon name={chapter.icon} className="h-5 w-5" />
+        <ChapterIcon name={chapter.icon} className="h-6 w-6" />
       </div>
-      <span className="pt-1 text-[18px] font-bold leading-tight text-[var(--text-primary)]">
+      <span className="text-[18px] font-bold leading-tight text-[var(--text-primary)]">
         {chapter.name}
       </span>
       <span className="text-[13px] text-[var(--text-secondary)]">
         {chapter.arabicName}
       </span>
-      <div className="mt-1 flex items-center justify-between border-t border-[var(--border)] pt-3">
-        <span className="text-[13px] font-bold text-[var(--text-secondary)]">
-          {chapter.count} cases
-        </span>
-        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--surface-raised)] text-[var(--text-muted)]">
-          <ChevronDown className="h-4 w-4 -rotate-90" strokeWidth={2} />
-        </span>
-      </div>
+      <span className="mt-1 text-[13px] font-bold text-[var(--text-muted)]">
+        {chapter.count} حالة
+      </span>
     </Link>
   );
 }

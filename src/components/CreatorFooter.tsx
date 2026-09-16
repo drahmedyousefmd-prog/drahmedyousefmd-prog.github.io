@@ -1,22 +1,5 @@
 import { MailIcon, LinkedinIcon, StethoscopeIcon } from "./icons";
 
-const LINKS = [
-  {
-    href: "mailto:Dr.ahmed.yousef.md@gmail.com",
-    target: "_blank",
-    rel: "noopener noreferrer",
-    label: "تواصل عبر البريد",
-    Icon: MailIcon,
-  },
-  {
-    href: "https://www.linkedin.com/in/dr-ahmed-yousef/",
-    target: "_blank",
-    rel: "noopener noreferrer",
-    label: "LinkedIn",
-    Icon: LinkedinIcon,
-  },
-];
-
 export function CreatorFooter() {
   return (
     <footer className="creator-footer">
@@ -30,12 +13,22 @@ export function CreatorFooter() {
         </div>
       </div>
       <div className="creator-links">
-        {LINKS.map(({ href, target, rel, label, Icon }) => (
-          <a key={href} className="creator-link" href={href} target={target} rel={rel}>
-            <Icon />
-            {label}
-          </a>
-        ))}
+        <a
+          className="creator-link"
+          href="mailto:Dr.ahmed.yousef.md@gmail.com"
+        >
+          <MailIcon />
+          تواصل عبر البريد
+        </a>
+        <a
+          className="creator-link"
+          href="https://www.linkedin.com/in/dr-ahmed-yousef/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LinkedinIcon />
+          LinkedIn
+        </a>
       </div>
       <p className="creator-copyright">© 2026 Rochetta — دليل روشتات مصر</p>
     </footer>

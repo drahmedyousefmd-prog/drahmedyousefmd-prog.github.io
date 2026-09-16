@@ -16,6 +16,7 @@ import {
   BackIcon,
   PrintIcon,
   PillIcon,
+  ClipboardListIcon,
   OctagonAlertIcon,
   TriangleAlertIcon,
   CircleCheckIcon,
@@ -32,6 +33,14 @@ export interface RxGroup {
   label: string;
   rows: RxLine[];
 }
+
+type RxTabKey = "rx" | "instructions" | "interactions";
+
+const CLINICAL_TAB_COLOR: Record<ClinicalTab["type"], string> = {
+  DIAGNOSIS: "var(--brand)",
+  INVESTIGATIONS: "#3E7EA6",
+  TREATMENT: "#4A8B7C",
+};
 
 export function CaseDetailClient({
   id,
@@ -63,6 +72,7 @@ export function CaseDetailClient({
   instructions: BulletLine[];
 }) {
   const [activeTab, setActiveTab] = useState(0);
+  const [rxTab, setRxTab] = useState<RxTabKey>("rx");
   const [openAcc, setOpenAcc] = useState<Record<string, boolean>>({});
   const [sheetOpen, setSheetOpen] = useState(false);
 
@@ -71,49 +81,105 @@ export function CaseDetailClient({
     return () => clearTimeout(timer);
   }, [id, title]);
 
-  const tabs = clinical.length > 0 ? clinical : [];
+  const tabs = clinical;
+  const rxDrugCount = rxGroups.reduce((n, g) => n + g.rows.length, 0);
 
   const rxCol = (
     <div>
-      <div className="badge-label">
-        <PillIcon />
-        الروشتة الحالية
+      <div className="rx-tabs" role="tablist" aria-label="الروشتة">
+        <TabButton
+          tab="rx"
+          color="var(--brand)"
+          rxTab={rxTab}
+          setRxTab={setRxTab}
+          label="الروشتة"
+          badge={rxDrugCount}
+        >
+          <PillIcon className="h-4 w-4" />
+        </TabButton>
+        <TabButton
+          tab="instructions"
+          color="#8A6D3B"
+          rxTab={rxTab}
+          setRxTab={setRxTab}
+          label="تعليمات الاستخدام"
+          badge={instructions.length}
+        >
+          <ClipboardListIcon className="h-4 w-4" />
+        </TabButton>
+        <TabButton
+          tab="interactions"
+          color="var(--status-danger)"
+          rxTab={rxTab}
+          setRxTab={setRxTab}
+          label="التفاعلات"
+          badge={interactions.length}
+        >
+          <TriangleAlertIcon className="h-4 w-4" />
+        </TabButton>
       </div>
 
-      {rxGroups.length === 0 && (
-        <p className="text-[14px] text-[var(--text-muted)]">لا توجد وصفة مسجلة</p>
-      )}
-
-      {rxGroups.map((g) => (
-        <div key={g.label} className="mb-5">
-          <div className="mb-2.5 text-[12px] font-bold uppercase tracking-wide text-[var(--text-muted)]">
-            {g.label}
+      {/* RX panel — drugs + alternatives only */}
+      <div className="rx-panel" data-panel="rx" hidden={rxTab !== "rx"}>
+        {rxGroups.length === 0 && (
+          <p className="text-[14px] text-[var(--text-muted)]">لا توجد وصفة مسجلة</p>
+        )}
+        {rxGroups.map((g) => (
+          <div key={g.label} className="mb-5">
+            <div className="mb-2.5 text-[12px] font-bold uppercase tracking-wide text-[var(--text-muted)]">
+              {g.label}
+            </div>
+            {g.rows.map((row) => (
+              <DrugRow
+                key={row.name + row.instruction}
+                row={row}
+                groupKey={g.label}
+                perDrug={perDrug}
+                openAcc={openAcc}
+                onToggle={setOpenAcc}
+              />
+            ))}
           </div>
-          {g.rows.map((row) => (
-            <DrugRow
-              key={row.name + row.instruction}
-              row={row}
-              groupKey={g.label}
-              perDrug={perDrug}
-              openAcc={openAcc}
-              onToggle={setOpenAcc}
-            />
-          ))}
-        </div>
-      ))}
+        ))}
+      </div>
 
-      {interactions.length > 0 && (
-        <div className="mt-6">
-          <div className="badge-label">
-            <OctagonAlertIcon />
-            التفاعلات الدوائية
+      {/* Instructions panel */}
+      <div
+        className="rx-panel"
+        data-panel="instructions"
+        hidden={rxTab !== "instructions"}
+      >
+        {instructions.length === 0 ? (
+          <p className="text-[14px] text-[var(--text-muted)]">لا توجد تعليمات مسجلة</p>
+        ) : (
+          <div className="instructions-panel">
+            {instructions.map((b) => (
+              <div key={b.text} className="instr-line">
+                <CircleCheckIcon
+                  className={`${b.tone === "ok" ? "tone-ok" : b.tone === "warn" ? "tone-warn" : b.tone === "danger" ? "tone-danger" : ""}`}
+                />
+                <span>{b.text}</span>
+              </div>
+            ))}
           </div>
+        )}
+      </div>
+
+      {/* Interactions panel */}
+      <div
+        className="rx-panel"
+        data-panel="interactions"
+        hidden={rxTab !== "interactions"}
+      >
+        {interactions.length === 0 ? (
+          <p className="text-[14px] text-[var(--text-muted)]">لا توجد تفاعلات مسجلة</p>
+        ) : (
           <div className="space-y-2">
             {interactions.map((g) => (
               <div
                 key={g.title}
                 className={`interaction-card ${g.severity}${
-                  g.severity === "danger" ? " shake" : ""
+                  g.severity === "danger" && rxTab === "interactions" ? " shake" : ""
                 }`}
               >
                 {g.severity === "danger" ? (
@@ -128,37 +194,8 @@ export function CaseDetailClient({
               </div>
             ))}
           </div>
-        </div>
-      )}
-
-      {instructions.length > 0 && (
-        <div className="mt-6">
-          <div className="badge-label">
-            <CircleCheckIcon />
-            تعليمات الاستخدام
-          </div>
-          <ul className="flex flex-col gap-2">
-            {instructions.map((b) => (
-              <li key={b.text} className="flex items-start gap-2 text-[13px] leading-relaxed text-[var(--text-secondary)]">
-                <span
-                  className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
-                  style={{
-                    background:
-                      b.tone === "danger"
-                        ? "var(--status-danger)"
-                        : b.tone === "warn"
-                          ? "var(--status-warning)"
-                          : b.tone === "ok"
-                            ? "var(--status-safe)"
-                            : "var(--text-muted)",
-                  }}
-                />
-                <span>{b.text}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+        )}
+      </div>
 
       <div className="rx-actions no-print">
         <button type="button" className="btn-primary" onClick={() => window.print()}>
@@ -169,9 +206,12 @@ export function CaseDetailClient({
           href="/"
           className="btn-ghost"
           onClick={(e) => {
-            if (typeof document !== "undefined" && typeof document.startViewTransition === "function") {
+            if (
+              typeof document !== "undefined" &&
+              typeof document.startViewTransition === "function"
+            ) {
               e.preventDefault();
-              navigateWithTransition("/");
+              navigateWithTransition(e.currentTarget.href);
             }
           }}
         >
@@ -240,6 +280,7 @@ export function CaseDetailClient({
                     role="tab"
                     aria-selected={i === activeTab}
                     className={`case-tab ${i === activeTab ? "active" : ""}`}
+                    style={{ "--tab-color": CLINICAL_TAB_COLOR[t.type] } as CSSProperties}
                     onClick={() => setActiveTab(i)}
                   >
                     {t.label}
@@ -303,6 +344,39 @@ export function CaseDetailClient({
         <div className="clear-both pt-2">{rxCol}</div>
       </div>
     </div>
+  );
+}
+
+function TabButton({
+  tab,
+  color,
+  rxTab,
+  setRxTab,
+  label,
+  badge,
+  children,
+}: {
+  tab: RxTabKey;
+  color: string;
+  rxTab: RxTabKey;
+  setRxTab: (t: RxTabKey) => void;
+  label: string;
+  badge: number;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      type="button"
+      role="tab"
+      aria-selected={rxTab === tab}
+      className={`rx-tab ${rxTab === tab ? "active" : ""}`}
+      style={{ "--tab-color": color } as CSSProperties}
+      onClick={() => setRxTab(tab)}
+    >
+      {children}
+      {label}
+      <span className={`tab-badge ${badge === 0 ? "empty" : ""}`}>{badge}</span>
+    </button>
   );
 }
 

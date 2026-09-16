@@ -15,6 +15,7 @@ import {
   TriangleAlert,
   CircleCheck,
   ChevronDown,
+  ClipboardList,
   CloudRain,
   type LucideIcon,
 } from "lucide-react";
@@ -109,3 +110,4 @@ export const TriangleAlertIcon = (p: IconProps) => <TriangleAlert strokeWidth={2
 export const CircleCheckIcon = (p: IconProps) => <CircleCheck strokeWidth={2} {...p} />;
 export const PillIcon = (p: IconProps) => <Pill strokeWidth={2} {...p} />;
 export const CloudRainIcon = (p: IconProps) => <CloudRain strokeWidth={2} {...p} />;
+export const ClipboardListIcon = (p: IconProps) => <ClipboardList strokeWidth={2} {...p} />;
