@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fdoctor\u002Fcase\u002F[id]","\u002Fdoctor\u002Fchapter\u002F[slug]","\u002Fpatient\u002Fnew\u002F[serviceType]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
