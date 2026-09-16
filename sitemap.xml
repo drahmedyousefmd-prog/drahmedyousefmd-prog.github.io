@@ -493,6 +493,12 @@
 <priority>0.6</priority>
 </url>
 <url>
+<loc>https://drahmedyousefmd-prog.github.io/patient</loc>
+<lastmod>2026-09-16T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
 <loc>https://drahmedyousefmd-prog.github.io/patient/new/general_consultation</loc>
 <lastmod>2026-09-16T00:00:00.000Z</lastmod>
 <changefreq>yearly</changefreq>
