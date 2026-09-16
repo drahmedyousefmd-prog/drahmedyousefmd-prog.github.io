@@ -1,55 +1,82 @@
-import type { ReactElement } from "react";
+import type { ReactElement, SVGProps } from "react";
+import {
+  Brain,
+  Pill,
+  ShieldPlus,
+  HeartPulse,
+  Droplets,
+  LayoutGrid,
+  Search,
+  Printer,
+  ArrowLeft,
+  Mail,
+  Stethoscope,
+  OctagonAlert,
+  TriangleAlert,
+  CircleCheck,
+  ChevronDown,
+  CloudRain,
+  type LucideIcon,
+} from "lucide-react";
 import type { ChapterIconKey } from "@/lib/types";
 
-const PATHS: Record<ChapterIconKey, ReactElement> = {
-  brain: (
-    <>
-      <path d="M12 4c-1.7 0-3 1.3-3 3 0 .3 0 .6.1.9C7.9 8.7 6.7 10.1 6.7 11.8c0 .9.3 1.8.9 2.5C6.9 15 6.3 16 6.3 17.2c0 2.2 1.8 4 4 4 .9 0 1.7-.3 2.3-.8.6.5 1.4.8 2.3.8 2.2 0 4-1.8 4-4 0-1.2-.5-2.3-1.3-3-.6-.7-.9-1.6-.9-2.4 0-1.7-1.2-3.1-2.9-3.9.1-.3.1-.6.1-.9 0-1.7-1.3-3-3-3z" />
-      <path d="M8 11c.7.7 1.7.7 2.4 0M13.6 11c.7.7 1.7.7 2.4 0" />
-    </>
-  ),
-  pill: (
-    <>
-      <path d="M9 2h6a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3z" />
-      <path d="M12 2v20" />
-    </>
-  ),
-  syringe: (
-    <>
-      <path d="M9.8 3h4.4M12 1.5v3" />
-      <path d="M7.5 6.5h9l-1.2 4.9a4.6 4.6 0 0 1-3.3 3.2 4.6 4.6 0 0 1-3.3-3.2z" />
-      <path d="M12 14.6v3.9M12 18.5l1.9-1.1M12 18.5l-1.9-1.1" />
-    </>
-  ),
-  jar: (
-    <>
-      <path d="M6.5 5.5h11l-1.6 4.3c-.4 1.2-1.5 2-2.7 2h-2.4c-1.2 0-2.3-.8-2.7-2z" />
-      <path d="M5 12h14a1 1 0 0 1 1 1v2.5c0 3-2.4 5.5-5.5 5.5H9.5C6.4 21 4 18.6 4 15.5V13a1 1 0 0 1 1-1z" />
-    </>
-  ),
-  heart: (
-    <path d="M16.5 5.5c-1.7 0-3.3 1-4.5 2.6C10.8 6.5 9.2 5.5 7.5 5.5 5 5.5 3 7.5 3 10c0 1.9.8 3.4 2.1 4.6L12 21l6.9-6.4C20.2 13.4 21 11.9 21 10c0-2.5-2-4.5-4.5-4.5z" />
-  ),
-  droplet: (
-    <path d="M12 2.7 18.9 9.9c1.3 1.4 2 3 2 4.6 0 2.3-1.9 4.1-4.2 4.1H7.3c-2.3 0-4.2-1.8-4.2-4.1 0-1.6.7-3.2 2-4.6z" />
-  ),
-  lungs: (
-    <>
+export function SkinIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M2 5.5c3-1.5 6 1.5 9 0s6 1.5 9 0" />
+      <path d="M2 12c3-1.5 6 1.5 9 0s6 1.5 9 0" />
+      <path d="M2 18.5c3-1.5 6 1.5 9 0s6 1.5 9 0" />
+    </svg>
+  );
+}
+
+export function LungsIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
       <path d="M12 3.5v4" />
       <path d="M12 7.5c-1.4 0-2.7 1.2-3 2.8-.3 1.5.3 3.2 0 4.7-.5 2.5 1.1 4.8 3.5 4.8 1 0 1.8-.5 1.8-1.4V10l-2.3-2.5z" />
       <path d="M12 7.5c1.4 0 2.7 1.2 3 2.8.3 1.5-.3 3.2 0 4.7.5 2.5-1.1 4.8-3.5 4.8-1 0-1.8-.5-1.8-1.4V10l2.3-2.5z" />
-    </>
-  ),
-  bowl: (
-    <>
+    </svg>
+  );
+}
+
+export function StomachIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
       <path d="M9 3.2c.8.8.8 1.4 0 2.2M13.6 2.7c.8.8.8 1.4 0 2.2" />
       <path d="M3.5 13C3.5 8.9 7.4 5 12.5 5s9 3.9 9 8c0 3.8-2.9 6.5-9 6.5S3.5 16.8 3.5 13z" />
       <path d="M5.5 19.5h14" />
-    </>
-  ),
-  grid: (
-    <path d="M4 3.5h6.5v6.5H4zM13.5 3.5H20v6.5h-6.5zM4 14h6.5v6.5H4zM13.5 14H20v6.5h-6.5z" />
-  ),
+    </svg>
+  );
+}
+
+export function LinkedinIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <rect x="2.5" y="2.5" width="19" height="19" rx="3.5" />
+      <path d="M8.1 11.3v5.2" />
+      <path d="M8.1 7.7v.4" />
+      <path d="M12.4 16.5v-3.1c0-1.1.7-1.8 1.7-1.8s1.7.8 1.7 1.8v3.1" />
+      <path d="M12.4 11.3v.2" />
+    </svg>
+  );
+}
+
+/* ---- Chapter icon mapping ---- */
+
+const LUCIDE_MAP: Record<string, LucideIcon> = {
+  brain: Brain,
+  pill: Pill,
+  syringe: ShieldPlus,
+  heart: HeartPulse,
+  droplet: Droplets,
+  grid: LayoutGrid,
+};
+
+const CUSTOM_MAP: Record<string, (p: { className?: string }) => ReactElement> = {
+  jar: SkinIcon,
+  lungs: LungsIcon,
+  bowl: StomachIcon,
 };
 
 export function ChapterIcon({
@@ -59,44 +86,26 @@ export function ChapterIcon({
   name: ChapterIconKey;
   className?: string;
 }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.6}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-    >
-      {PATHS[name]}
-    </svg>
-  );
+  const Lucide = LUCIDE_MAP[name];
+  if (Lucide) {
+    return <Lucide className={className} strokeWidth={2} aria-hidden="true" />;
+  }
+  const Custom = CUSTOM_MAP[name];
+  return <Custom className={className} />;
 }
 
-export function SearchGlyph({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
-      <circle cx="11" cy="11" r="7" />
-      <path d="m21 21-4.3-4.3" />
-    </svg>
-  );
-}
+/* ---- UI icons ---- */
 
-export function PrintGlyph({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
-      <path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
-      <path d="M6 14h12v8H6z" />
-    </svg>
-  );
-}
+type IconProps = SVGProps<SVGSVGElement> & { className?: string };
 
-export function BackGlyph({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
-      <path d="m15 18-6-6 6-6" />
-    </svg>
-  );
-}
+export const SearchIcon = (p: IconProps) => <Search strokeWidth={2} {...p} />;
+export const PrintIcon = (p: IconProps) => <Printer strokeWidth={2} {...p} />;
+export const BackIcon = (p: IconProps) => <ArrowLeft strokeWidth={2} {...p} />;
+export const MailIcon = (p: IconProps) => <Mail strokeWidth={2} {...p} />;
+export const StethoscopeIcon = (p: IconProps) => <Stethoscope strokeWidth={2} {...p} />;
+export const ChevronDownIcon = (p: IconProps) => <ChevronDown strokeWidth={2} {...p} />;
+export const OctagonAlertIcon = (p: IconProps) => <OctagonAlert strokeWidth={2} {...p} />;
+export const TriangleAlertIcon = (p: IconProps) => <TriangleAlert strokeWidth={2} {...p} />;
+export const CircleCheckIcon = (p: IconProps) => <CircleCheck strokeWidth={2} {...p} />;
+export const PillIcon = (p: IconProps) => <Pill strokeWidth={2} {...p} />;
+export const CloudRainIcon = (p: IconProps) => <CloudRain strokeWidth={2} {...p} />;

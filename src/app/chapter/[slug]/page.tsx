@@ -1,6 +1,7 @@
 import type { Prescription } from "@/lib/types";
-import { CHAPTER_ORDER, getChapter, textColorFor } from "@/lib/chapters";
+import { CHAPTER_ORDER, getChapter } from "@/lib/chapters";
 import { ChapterPageApp } from "@/components/ChapterPageApp";
+import { ChapterIcon, BackIcon } from "@/components/icons";
 import Link from "next/link";
 
 import psychiatry from "@/data/chapters/psychiatry.json";
@@ -41,35 +42,45 @@ export default async function ChapterPage({ params }: PageProps<"/chapter/[slug]
   const { slug } = await params;
   const chapter = getChapter(slug) ?? CHAPTER_ORDER[CHAPTER_ORDER.length - 1];
   const prescriptions = CHAPTER_DATA[slug] ?? [];
-  const accent = chapter.colorHex;
-  const text = textColorFor(accent);
 
   return (
-    <div className="flex min-h-dvh flex-col" style={{ backgroundColor: "#f5f1e8" }}>
-      {/* Colored top bar */}
-      <header
-        className="flex items-center gap-3 px-5 py-4"
-        style={{ backgroundColor: accent, color: text }}
-      >
-        <Link
-          href="/"
-          className="flex items-center justify-center rounded-full p-1 opacity-70 hover:opacity-100 transition"
-          aria-label="الرئيسية"
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
-            <path d="m15 18-6-6 6-6" />
-          </svg>
-        </Link>
-        <h1 className="flex-1 text-lg font-black">{chapter.name}</h1>
-        <span className="rounded-full bg-white/20 px-2.5 py-1 text-[11px] font-bold">
-          {chapter.arabicName}
-        </span>
+    <div
+      className="flex min-h-dvh flex-col"
+      style={{
+        background: "color-mix(in srgb, " + chapter.colorHex + " 6%, var(--bg))",
+      }}
+    >
+      {/* Quiet header */}
+      <header className="case-header">
+        <div className="mx-auto flex w-full max-w-[1100px] items-center gap-3 px-4 py-4 sm:px-6">
+          <Link
+            href="/"
+            className="no-print flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text-secondary)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]"
+            aria-label="الرئيسية"
+          >
+            <BackIcon className="h-4 w-4" />
+          </Link>
+          <div className="min-w-0">
+            <h1 className="text-[22px] font-extrabold leading-tight text-[var(--text-primary)]">
+              {chapter.name}
+            </h1>
+            <span
+              className="mt-1 inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[12px] font-bold"
+              style={{
+                background: `color-mix(in srgb, ${chapter.colorHex} 10%, white)`,
+                color: chapter.colorHex,
+              }}
+            >
+              <ChapterIcon name={chapter.icon} className="h-3 w-3" />
+              {chapter.arabicName}
+            </span>
+          </div>
+        </div>
       </header>
 
       <ChapterPageApp
         name={chapter.name}
         arabicName={chapter.arabicName}
-        accent={accent}
         prescriptions={prescriptions}
       />
     </div>

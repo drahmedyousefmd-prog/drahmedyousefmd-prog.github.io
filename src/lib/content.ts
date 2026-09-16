@@ -165,7 +165,12 @@ export function parseSeverityBlocks(raw: string): InteractionGroup[] {
 }
 
 /** Splits generic instruction/note lines keeping ❌/⚠️/✅ markers. */
-export function parseBulletLines(raw: string): { text: string; tone: "ok" | "warn" | "danger" | "info" }[] {
+export interface BulletLine {
+  text: string;
+  tone: "ok" | "warn" | "danger" | "info";
+}
+
+export function parseBulletLines(raw: string): BulletLine[] {
   if (!raw) return [];
   return raw
     .split(/\r?\n/)

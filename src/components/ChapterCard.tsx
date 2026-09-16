@@ -1,28 +1,47 @@
 import Link from "next/link";
+import type { Ref, CSSProperties } from "react";
 import type { Chapter } from "@/lib/types";
-import { textColorFor } from "@/lib/chapters";
 import { ChapterIcon } from "./icons";
+import { ChevronDown } from "lucide-react";
+import { navigateWithTransition } from "@/lib/transition";
 
-export function ChapterCard({ chapter }: { chapter: Chapter }) {
-  const text = textColorFor(chapter.colorHex);
-  const divider = `${text}55`; // ~33% alpha
+export function ChapterCard({
+  chapter,
+  ref,
+}: {
+  chapter: Chapter;
+  ref?: Ref<HTMLAnchorElement>;
+}) {
   return (
     <Link
+      ref={ref}
       href={`/chapter/${chapter.slug}`}
-      className="flex flex-col rounded-[18px] p-4 min-h-[112px] shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md"
-      style={{ backgroundColor: chapter.colorHex }}
+      className="category-card"
+      style={{ "--cat": chapter.colorHex } as CSSProperties}
+      onClick={(e) => {
+        if (typeof document !== "undefined" && typeof document.startViewTransition === "function") {
+          e.preventDefault();
+          navigateWithTransition(`/chapter/${chapter.slug}`);
+        }
+      }}
     >
-      <ChapterIcon name={chapter.icon} className="h-[22px] w-[22px] text-white/85" />
-      <span className="mt-2.5 text-[15px] font-bold leading-snug" style={{ color: text }}>
+      <div className="cat-icon">
+        <ChapterIcon name={chapter.icon} className="h-5 w-5" />
+      </div>
+      <span className="pt-1 text-[18px] font-bold leading-tight text-[var(--text-primary)]">
         {chapter.name}
       </span>
-      <span className="mt-0.5 text-[11px] opacity-80" style={{ color: text }}>
+      <span className="text-[13px] text-[var(--text-secondary)]">
         {chapter.arabicName}
       </span>
-      <div className="mt-2.5 h-px w-full" style={{ backgroundColor: divider, opacity: 0.6 }} />
-      <span className="text-xs font-bold" style={{ color: text }}>
-        {chapter.count} cases
-      </span>
+      <div className="mt-1 flex items-center justify-between border-t border-[var(--border)] pt-3">
+        <span className="text-[13px] font-bold text-[var(--text-secondary)]">
+          {chapter.count} cases
+        </span>
+        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--surface-raised)] text-[var(--text-muted)]">
+          <ChevronDown className="h-4 w-4 -rotate-90" strokeWidth={2} />
+        </span>
+      </div>
     </Link>
   );
 }

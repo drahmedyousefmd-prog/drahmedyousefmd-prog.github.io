@@ -1,14 +1,14 @@
 import type { Chapter, ChapterIconKey } from "./types";
 
 /**
- * Central chapter configuration — Soft Autumn palette.
- * Color table (matching the Android ChapterConfig):
- *  Psychiatry #2E6560 | Pain & Analgesics #C1613D | Antibiotics #6B6E3A
- *  Dermatology #C98572 | Cardiovascular #A13D2A | Urinary #6D4C52
- *  Respiratory #3F8C82 | GIT #4E6F63 | Others #A69572
+ * Central chapter configuration.
+ * Category colors (quiet tints on the site — not loud fills):
+ *  Psychiatry #6E5DB3 | Pain & Analgesics #C1652B | Antibiotics #7A8C3F
+ *  Dermatology #B4736A | Cardiovascular #B23B3B | Urinary #6B5B73
+ *  Respiratory #3E7EA6 | GIT #4A8B7C | Others #6B6B6B
  */
 
-export const DARK_TEXT = "#2A1E18";
+export const DARK_TEXT = "#1E2321";
 
 interface ChapterSeed {
   slug: string;
@@ -20,15 +20,15 @@ interface ChapterSeed {
 }
 
 export const CHAPTER_ORDER: ChapterSeed[] = [
-  { slug: "psychiatry", name: "Psychiatry", arabicName: "أعصاب / الطب النفسي", colorHex: "#2E6560", icon: "brain", tagline: "Mental health" },
-  { slug: "pain-analgesics", name: "Pain & Analgesics", arabicName: "الألم والمسكنات", colorHex: "#C1613D", icon: "pill", tagline: "Pain management" },
-  { slug: "antibiotics", name: "Antibiotics", arabicName: "المضادات الحيوية", colorHex: "#6B6E3A", icon: "syringe", tagline: "Infections" },
-  { slug: "dermatology", name: "Dermatology", arabicName: "الأمراض الجلدية", colorHex: "#C98572", icon: "jar", tagline: "Skin & hair" },
-  { slug: "cardiovascular", name: "Cardiovascular", arabicName: "القلب والأوعية الدموية", colorHex: "#A13D2A", icon: "heart", tagline: "Heart & vessels" },
-  { slug: "urinary", name: "Urinary", arabicName: "المسالك البولية", colorHex: "#6D4C52", icon: "droplet", tagline: "Kidney & bladder" },
-  { slug: "respiratory", name: "Respiratory", arabicName: "الجهاز التنفسي", colorHex: "#3F8C82", icon: "lungs", tagline: "Lungs & airway" },
-  { slug: "git", name: "GIT", arabicName: "الجهاز الهضمي", colorHex: "#4E6F63", icon: "bowl", tagline: "Digestive system" },
-  { slug: "others", name: "Others", arabicName: "أخرى", colorHex: "#A69572", icon: "grid", tagline: "Other cases" },
+  { slug: "psychiatry", name: "Psychiatry", arabicName: "أعصاب / الطب النفسي", colorHex: "#6E5DB3", icon: "brain", tagline: "Mental health" },
+  { slug: "pain-analgesics", name: "Pain & Analgesics", arabicName: "الألم والمسكنات", colorHex: "#C1652B", icon: "pill", tagline: "Pain management" },
+  { slug: "antibiotics", name: "Antibiotics", arabicName: "المضادات الحيوية", colorHex: "#7A8C3F", icon: "syringe", tagline: "Infections" },
+  { slug: "dermatology", name: "Dermatology", arabicName: "الأمراض الجلدية", colorHex: "#B4736A", icon: "jar", tagline: "Skin & hair" },
+  { slug: "cardiovascular", name: "Cardiovascular", arabicName: "القلب والأوعية الدموية", colorHex: "#B23B3B", icon: "heart", tagline: "Heart & vessels" },
+  { slug: "urinary", name: "Urinary", arabicName: "المسالك البولية", colorHex: "#6B5B73", icon: "droplet", tagline: "Kidney & bladder" },
+  { slug: "respiratory", name: "Respiratory", arabicName: "الجهاز التنفسي", colorHex: "#3E7EA6", icon: "lungs", tagline: "Lungs & airway" },
+  { slug: "git", name: "GIT", arabicName: "الجهاز الهضمي", colorHex: "#4A8B7C", icon: "bowl", tagline: "Digestive system" },
+  { slug: "others", name: "Others", arabicName: "أخرى", colorHex: "#6B6B6B", icon: "grid", tagline: "Other cases" },
 ];
 
 export function slugForCategory(category: string): string {
