@@ -1,7 +1,7 @@
-:HL["/rochetta/_next/static/chunks/026ta4r40_vn0.css","style"]
-:HL["/rochetta/_next/static/media/48e6fa8a5baca31f-s.p.14yttwb5hb7vt.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/rochetta/_next/static/media/4b676bcffc00356a-s.p.24y4-vc3jpn8m.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/rochetta/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/rochetta/_next/static/media/9ff27b8a0a8f3dc0-s.p.40_3w74kn95bo.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/rochetta/_next/static/media/d54db18e8cd5f74f-s.p.0ji0xjltb6ro5.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"case","param":null,"prefetchHints":4192,"slots":{"children":{"name":"id","param":{"type":"d","key":"rochetta-004","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"UVoj7sZCopGs6XRAz8kVy"}
+:HL["/_next/static/chunks/3kppag-vqenxu.css","style"]
+:HL["/_next/static/media/48e6fa8a5baca31f-s.p.14yttwb5hb7vt.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/4b676bcffc00356a-s.p.24y4-vc3jpn8m.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/9ff27b8a0a8f3dc0-s.p.40_3w74kn95bo.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/d54db18e8cd5f74f-s.p.0ji0xjltb6ro5.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"case","param":null,"prefetchHints":4192,"slots":{"children":{"name":"id","param":{"type":"d","key":"rochetta-004","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"kKsQlo2aJHkK80o94vDsz"}
