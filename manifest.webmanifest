@@ -1,0 +1,32 @@
+{
+  "name": "Rochetta — دليل روشتات مصر",
+  "short_name": "Rochetta",
+  "description": "دليلك العملي للروشتات الطبية: دواء لكل حالة، التعليمات، البدائل، والتفاعلات.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "dir": "rtl",
+  "lang": "ar",
+  "background_color": "#f7f5f1",
+  "theme_color": "#1f5b54",
+  "icons": [
+    {
+      "src": "/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
