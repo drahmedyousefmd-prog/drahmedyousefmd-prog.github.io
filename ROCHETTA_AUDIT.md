@@ -695,7 +695,7 @@ Per the site-split plan (separate «استشارة» patient site now live at `h
 | **Doctor tab untouched** — the «طبيب» button keeps its exact prior behavior/styling (`setMode("doctor")`) | OK |
 | **Out of scope by instruction** — case/chapter pages (`CaseDetailClient` `ModeSwitch`) still render the internal «طبيب/مريض» toggle; everything else in the header/pages unchanged | OK |
 | Validation: `next build` 101 pages, TS clean; out/ home has the estesharah exit link + caption and no «مريض» in the nav row; case page smoke shows the old toggle retained and no external-link regressions. `npm run lint` shows only **pre-existing** errors (SiteNav logo `<a href="/">` line 26, import/PortalLogin/PortalTopbar `<a href="/">`) — untouched to respect the «don't change other elements» scope; build does not gate on ESLint | OK |
-| Deployed: gh-pages commit `…` | commit+deploy in progress |
+| Deployed: main `cd98426` + gh-pages `2bbf139` (`4372b8f..2bbf139`) | OK |
 
 *End of Round 15 status.*
 
