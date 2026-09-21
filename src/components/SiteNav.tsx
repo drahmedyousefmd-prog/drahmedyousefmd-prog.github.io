@@ -2,14 +2,16 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { HeartHandshake, Stethoscope } from "lucide-react";
 import { LogoGlyph } from "./icons";
-import { CONTACT, SITE } from "@/lib/site";
+import { CONTACT, PATIENT_SITE_URL, SITE } from "@/lib/site";
 import { logout, usePortal } from "@/lib/portal-store";
-import { ModeSwitch } from "./ModeSwitch";
+import { useMode } from "@/lib/mode";
 
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
   const { ready, user, doctorPendingTotal } = usePortal();
+  const { mode, setMode } = useMode();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -83,7 +85,22 @@ export function SiteNav() {
         </a>
       </div>
       <div className="site-nav-mode">
-        <ModeSwitch />
+        <div className="tab-group" role="group" aria-label="وضع العرض">
+          <button
+            type="button"
+            aria-pressed={mode === "doctor"}
+            className={`tab ${mode === "doctor" ? "active" : ""}`}
+            onClick={() => setMode("doctor")}
+          >
+            <Stethoscope className="h-3.5 w-3.5" strokeWidth={2} aria-hidden="true" />
+            طبيب
+          </button>
+          <a className="tab tab-external" href={PATIENT_SITE_URL}>
+            <HeartHandshake className="h-3.5 w-3.5" strokeWidth={2} aria-hidden="true" />
+            استشارة
+          </a>
+        </div>
+        <span className="mode-caption">الحصول على استشارة طبية</span>
       </div>
     </nav>
   );

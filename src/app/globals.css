@@ -37,6 +37,22 @@ p {
   height: 15px;
   flex-shrink: 0;
 }
+/* Patient-exit link (header «استشارة») + its caption */
+.tab-external {
+  text-decoration: none;
+}
+.mode-caption {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary, #5c7378);
+  margin-inline-start: 10px;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .mode-caption {
+    display: none;
+  }
+}
 
 /* ---------------- Sticky navbar (solid over the light hero) ---------------- */
 .site-nav {

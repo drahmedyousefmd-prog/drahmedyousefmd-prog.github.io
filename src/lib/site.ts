@@ -5,6 +5,11 @@
 
 export const SITE_URL = "https://drahmedyousefmd-prog.github.io";
 
+/** The separate patient-consultation site («استشارة»). TEMPORARY GitHub Pages
+ *  URL until the custom domain is chosen — update `PATIENT_SITE_URL` to the
+ *  real domain when it ships. */
+export const PATIENT_SITE_URL = "https://drahmedyousefmd-prog.github.io/estesharah";
+
 /** localStorage key persisting the doctor/patient mode choice. */
 export const MODE_KEY = "rochetta-mode";
 

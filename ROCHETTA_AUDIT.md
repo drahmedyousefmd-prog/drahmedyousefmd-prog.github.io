@@ -684,4 +684,21 @@ hit GitHub Pages' 404.
 
 ---
 
-*End of audit — continuous journal; last update 2026-09-16 (Round 14).*
+## 25. Round 15 — rename the header «مريض» button → «استشارة» (external exit to the separate patient site) (2026-09-21)
+
+Per the site-split plan (separate «استشارة» patient site now live at `https://drahmedyousefmd-prog.github.io/estesharah`), the header's patient-view toggle becomes a full external navigation to the standalone site.
+
+| Item | Status |
+|---|---|
+| **Header only** — `SiteNav.tsx`: the «مريض» button is replaced **in the same slot** by an «استشارة» tab (plain `<a>`, same `.tab` styling, HeartHandshake icon) with href `PATIENT_SITE_URL` → full external navigation; the internal `setMode("patient")` handler is gone from the header | OK |
+| **Caption** «الحصول على استشارة طبية» rendered beside the button (`.mode-caption`, hidden <640px to protect the fixed 40px nav row); `PATIENT_SITE_URL` added in `src/lib/site.ts` (temp Pages URL, comment marks the swap point for the custom domain) | OK |
+| **Doctor tab untouched** — the «طبيب» button keeps its exact prior behavior/styling (`setMode("doctor")`) | OK |
+| **Out of scope by instruction** — case/chapter pages (`CaseDetailClient` `ModeSwitch`) still render the internal «طبيب/مريض» toggle; everything else in the header/pages unchanged | OK |
+| Validation: `next build` 101 pages, TS clean; out/ home has the estesharah exit link + caption and no «مريض» in the nav row; case page smoke shows the old toggle retained and no external-link regressions. `npm run lint` shows only **pre-existing** errors (SiteNav logo `<a href="/">` line 26, import/PortalLogin/PortalTopbar `<a href="/">`) — untouched to respect the «don't change other elements» scope; build does not gate on ESLint | OK |
+| Deployed: gh-pages commit `…` | commit+deploy in progress |
+
+*End of Round 15 status.*
+
+---
+
+*End of audit — continuous journal; last update 2026-09-21 (Round 15).*
