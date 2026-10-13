@@ -1,4 +1,9 @@
 User-Agent: *
 Allow: /
+Disallow: /patient
+Disallow: /login
+Disallow: /import
+Disallow: /doctor/inbox
+Disallow: /doctor/categories
 
 Sitemap: https://drahmedyousefmd-prog.github.io/sitemap.xml
