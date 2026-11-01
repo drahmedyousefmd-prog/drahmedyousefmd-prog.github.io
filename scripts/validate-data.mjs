@@ -14,15 +14,15 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 
 // Must mirror CHAPTER_ORDER in src/lib/chapters.ts.
 const CATEGORIES = {
-  Psychiatry: 8,
-  "Pain & Analgesics": 8,
-  Antibiotics: 7,
+  Psychiatry: 9,
+  "Pain & Analgesics": 12,
+  Antibiotics: 8,
   Dermatology: 15,
   Cardiovascular: 8,
-  Urinary: 8,
+  Urinary: 9,
   Respiratory: 8,
-  GIT: 9,
-  Others: 1,
+  GIT: 18,
+  Others: 2,
 };
 
 const REQUIRED_KEYS = ["id", "title", "subtitle", "content", "category", "chapterAr"];

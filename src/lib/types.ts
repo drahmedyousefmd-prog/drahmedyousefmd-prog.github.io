@@ -13,6 +13,8 @@ export interface Prescription {
   patient_diagnosis_summary?: string;
   patient_interactions_summary?: string;
   alarm_signs_patient?: string[];
+  /** Batch-1: mutual links to closely related cases (optional). */
+  related?: { id: string; label: string }[];
 }
 
 export type ChapterIconKey =

@@ -51,12 +51,12 @@
     "id": "rochetta-005",
     "title": "Insomnia",
     "subtitle": "Difficulty initiating or maintaining sleep — poor sleep hygiene most common cause",
-    "content": "[DIAGNOSIS]\r\n- Most insomnia is secondary: stress, depression, medications\r\n- Sleep hygiene FIRST: regular schedule, no screens, no caffeine PM\r\n- CBT-I is most effective long-term treatment\r\n- Pharmacotherapy: short-term only (2–4 weeks)\r\n\r\n[INVESTIGATIONS]\r\n- Lab: TSH, CBC, FBS, B12, ferritin — exclude organic sleep disorders\r\n- Special test: Sleep diary (2 weeks), Epworth Sleepiness Scale; PSG if suspected OSA\r\n- Monitor: Benzodiazepine duration, rebound insomnia, daytime sedation\r\n- Screen: Alcohol use, depression screen (PHQ-9), medication review for sleep disruptors\r\n\r\n[TREATMENT]\r\n- Zolpidem 5-10mg: Short-acting — sleep onset insomnia\r\n- Zopiclone 3.75-7.5mg: Alternative to zolpidem\r\n- Melatonin 2mg: Jet lag, shift work, elderly\r\n- Amitriptyline 10-25mg: If comorbid depression/pain\r\n\r\n[RX]\r\n- Zolpidem 5mg tab (Zolpidem Tartrate) | قرص قبل النوم مباشرة — مؤقت 2-4 أسابيع فقط | 22 ج.م\r\n- OR Melatonin 2mg tab (Melatonin) | قرص قبل النوم بـ 30-60 دقيقة | —\r\n- OR Amitriptyline 10mg tab (Amitriptyline HCl) | قرص قبل النوم — ممتاز إذا أرق + ألم أو اكتئاب | 25.5 ج.م\r",
+    "content": "[DIAGNOSIS]\r\n- Most insomnia is secondary: stress, depression, medications\r\n- Sleep hygiene FIRST: regular schedule, no screens, no caffeine PM\r\n- CBT-I is most effective long-term treatment\r\n- Pharmacotherapy: short-term only (2–4 weeks)\r\n\r\n[INVESTIGATIONS]\r\n- Lab: TSH, CBC, FBS, B12, ferritin — exclude organic sleep disorders\r\n- Special test: Sleep diary (2 weeks), Epworth Sleepiness Scale; PSG if suspected OSA\r\n- Monitor: Benzodiazepine duration, rebound insomnia, daytime sedation\r\n- Screen: Alcohol use, depression screen (PHQ-9), medication review for sleep disruptors\r\n\r\n[TREATMENT]\r\n- Zolpidem 5-10mg: Short-acting — sleep onset insomnia\r\n- Zopiclone 3.75-7.5mg: Alternative to zolpidem\r\n- Melatonin 2mg: Jet lag, shift work, elderly\r\n- Amitriptyline 10-25mg: If comorbid depression/pain\r\n\r\n[RX]\r\n- Zolpidem 5mg tab (Zolpidem Tartrate) | قرص قبل النوم مباشرة — مؤقت 2-4 أسابيع فقط | 22 ج.م\r\n- OR Melatonin 2mg tab (Melatonin) | قرص قبل النوم بـ 30-60 دقيقة | —\r\n- OR Amitriptyline 10mg tab (Amitriptyline HCl) | قرص قبل النوم — ممتاز إذا أرق + ألم أو اكتئاب | 25.5 ج.م\r\n\r\n[RX-الروشتة — Sleep Aid]\r\n- Sleep Aid 5mg tab | قرص قبل النوم بساعة لمدة أسبوعين فقط | ⚠ غير مطابق",
     "category": "Psychiatry",
     "chapterAr": "أعصاب / الطب النفسي",
     "alternatives": "Stilnox 10mg tab | 28 ج.م\nMelatonin 3mg tab | 35 ج.م\nAmitriptyline 25mg tab | 12 ج.م\nDoxepin 25mg cap | 45 ج.م",
     "perDrugAlternatives": "Zolpidem 5mg tab | 22 ج.م: Stilnox 10mg tab | 28 ج.م, Zolpidem Sanofi 5mg tab | 18 ج.م, Ambien 10mg tab | 35 ج.م\nMelatonin 2mg tab | 30 ج.م: Melatone 3mg tab | 35 ج.م, Circadin 2mg tab | 45 ج.م, Natrol Melatonin 5mg tab | 28 ج.م\nAmitriptyline 10mg tab | 25.5 ج.م: Tryptizol 25mg tab | 12 ج.م, Laroxyl 10mg tab | 15 ج.م, Endep 10mg tab | 10 ج.م",
-    "drugInstructions": "⚠️ Zolpidem: Use ONLY for 2-4 weeks maximum\r\n⚠️ Take immediately before getting into bed — do not take earlier\r\n✅ Melatonin: Take 30-60 minutes before desired bedtime\r\n✅ Amitriptyline: Take at bedtime (sedating)\r\n❌ Do NOT take Zolpidem if you cannot commit to 7-8 hours of sleep\r\n❌ Avoid alcohol completely — dangerous synergy\r\n⚠️ Practice sleep hygiene: regular schedule, no screens 1h before bed\r",
+    "drugInstructions": "⚠️ Zolpidem: Use ONLY for 2-4 weeks maximum\r\n⚠️ Take immediately before getting into bed — do not take earlier\r\n✅ Melatonin: Take 30-60 minutes before desired bedtime\r\n✅ Amitriptyline: Take at bedtime (sedating)\r\n❌ Do NOT take Zolpidem if you cannot commit to 7-8 hours of sleep\r\n❌ Avoid alcohol completely — dangerous synergy\r\n⚠️ Practice sleep hygiene: regular schedule, no screens 1h before bed\r\n⚠️ Sleep Aid: قرص قبل النوم بساعة ولمدة أسبوعين فقط\r\n❌ الامتناع عن القهوة والشاي قبل النوم بـ4 ساعات",
     "drugInteractions": "Zolpidem + Opioids:\r\n❌ Increased risk of respiratory depression and death.\r\n\r\nZolpidem + Other CNS depressants (Benzodiazepines, Antihistamines, Alcohol):\r\n⚠️ Additive sedation. Use lowest effective dose.\r\n\r\nAmitriptyline + MAOIs:\r\n❌ Serotonin Syndrome. NEVER combine.\r"
   },
   {
@@ -133,14 +133,14 @@
   },
   {
     "id": "rochetta-012",
-    "title": "Acute Gout",
+    "title": "Gout (Acute & Chronic)",
     "subtitle": "Sudden onset monoarthritis — especially 1st MTP — crystal arthropathy",
-    "content": "[DIAGNOSIS]\r\n- Excruciating pain at base of great toe (podagra)\r\n- Hot, swollen, tender joint — erythematous overlying skin\r\n- Often at night, after dietary excess or dehydration\r\n- MSU crystal aspiration = gold standard\r\n\r\n[INVESTIGATIONS]\r\n- Lab: CBC, ESR/CRP, serum uric acid (may be normal during attack), renal function, LFTs\r\n- Special test: MSU crystal aspiration under polarised microscopy (gold standard)\r\n- Imaging: X-ray of affected joint to exclude fractures or calcification\r\n- Monitor: Serum urate levels during prophylaxis (target < 360 µmol/L)\r\n\r\n[TREATMENT]\r\n- ACUTE ATTACK: NSAID (high dose) OR Colchicine (low dose) OR Steroid\r\n- PROPHYLAXIS (if ≥ 2 attacks/year): Allopurinol 100mg → titrate to target urate < 360\r\n- Lifestyle: reduce red meat, organ meats, beer; increase water\r\n- Start Allopurinol 2-4 weeks AFTER attack settles\r\n\r\n[RX-الروشتة — Acute Attack]\r\n- Colchicine 500mcg tab (Colchicine) | قص مرة واحدة ثم قرص بعد ساعة ثم نصف كل 12 ساعة — max 6mg | 190 ج.م\r\n- OR Diclofenac 50mg tab (Diclofenac Potassium) | قرص 3 مرات يوميًا × 5-7 أيام — جرعة عالية | 39 ج.م\r\n\r\n[RX-الروشتة — Prophylaxis]\r\n- Allopurinol 100mg tab (Allopurinol) | قرص مرة واحدة يوميًا — تزاد كل 4 أسابيع حتى urate < 360 | 8 ج.م\r",
+    "content": "[DIAGNOSIS]\r\n- Excruciating pain at base of great toe (podagra)\r\n- Hot, swollen, tender joint — erythematous overlying skin\r\n- Often at night, after dietary excess or dehydration\r\n- MSU crystal aspiration = gold standard\r\n\r\n[INVESTIGATIONS]\r\n- Lab: CBC, ESR/CRP, serum uric acid (may be normal during attack), renal function, LFTs\r\n- Special test: MSU crystal aspiration under polarised microscopy (gold standard)\r\n- Imaging: X-ray of affected joint to exclude fractures or calcification\r\n- Monitor: Serum urate levels during prophylaxis (target < 360 µmol/L)\r\n\r\n[TREATMENT]\r\n- ACUTE ATTACK: NSAID (high dose) OR Colchicine (low dose) OR Steroid\r\n- PROPHYLAXIS (if ≥ 2 attacks/year): Allopurinol 100mg → titrate to target urate < 360\r\n- Lifestyle: reduce red meat, organ meats, beer; increase water\r\n- ULT may be started during a flare under anti-inflammatory cover; do NOT stop allopurinol during a flare if the patient already takes it\r\n- ULT indication: ≥ 2 flares/year, tophi, or radiographic damage — not routinely after a first flare\r\n- Febuxostat (≤ 40 mg/day) is an alternative if allopurinol is not tolerated — use with caution in cardiovascular disease\r\n\r\n[WARNING]\r\nColchicine: stop if vomiting or diarrhoea; reduce dose or avoid in renal/hepatic impairment; avoid strong CYP3A4/P-gp inhibitors (e.g. clarithromycin).\r\nNSAIDs: avoid in renal impairment, peptic ulcer/GI bleeding, or cardiovascular disease.\r\nProbenecid: avoid in renal impairment and history of stones; maintain hydration.\r\n\r\n[RX-الروشتة — في الاستقبال (ER) — Acute Flare]\r\n- Colchicine 500mcg tab | قرصان (1 مجم) عند بداية النوبة ثم قرص بعد ساعة ثم قرص مرة أو مرتين يوميًا حتى زوال النوبة | 190 ج.م\r\n- Diclofenac 75mg IM | حقنة عضل كل 12 ساعة عند اللزوم — بديل للكولشيسين | 17 ج.م\r\n\r\n[RX-الروشتة — في البيت — Acute Flare]\r\n- Colchicine 500mcg tab | قرص مرة أو مرتين يوميًا حتى زوال النوبة | 190 ج.م\r\n- Indocid cap | كبسولة 3 مرات يوميًا | ⚠ غير مطابق\r\n- Prednisone 30–40mg/day | قرص مرة واحدة يوميًا لمدة 5 أيام — إذا كان الكولشيسين ومضادات الالتهاب غير الستيرويدية ممنوعة أو غير مجدية | ⚠ غير مطابق\r\n\r\n[RX-الروشتة — Chronic Gout (ULT)]\r\n- Zyloric 100mg tab (Allopurinol) | يبدأ بقرص 100 مجم يوميًا (أقل في القصور الكلوي) ثم تزاد 100 مجم كل 2–5 أسابيع حتى urate < 6 mg/dL (المعتاد 300 مجم وقد تصل إلى 800 مجم يوميًا) | ⚠ غير مطابق\r\n- Colchicine 500mcg tab | قرص يوميًا للوقاية من النوبة لمدة 3–6 أشهر أثناء بدء خافض اليوريك | 190 ج.م\r\n- Probenecid 500mg tab | قرص كل 12 ساعة إذا لم يُتحمّل allopurinol أو لم يتحقق الهدف | ⚠ غير مطابق",
     "category": "Pain & Analgesics",
     "chapterAr": "الألم والمسكنات",
     "alternatives": "",
-    "perDrugAlternatives": "Colchicine 500mcg tab | 30 ج.م: Colchicine Sandoz 500mcg tab | 80 ج.م, Colchicine Arrow 500mcg tab | 25 ج.م, Colchimax 500mcg tab | 60 ج.م\r\nDiclofenac 50mg tab | 12 ج.م: Voltaren 50mg tab | 40 ج.م, Diclofenac Arrow 50mg tab | 10 ج.م, Cataflam 50mg tab | 55 ج.م\r\nAllopurinol 100mg tab | 18 ج.م: Zyloprim 100mg tab | 60 ج.م, Allopurinol Apotex 100mg tab | 20 ج.م, Allurit 100mg tab | 15 ج.م\r",
-    "drugInstructions": "⚠️ Allopurinol: Start 2-4 weeks AFTER attack settles\r\n⚠️ Colchicine: Take at FIRST sign of attack — most effective within 12h\r\n⚠️ Colchicine max: 6mg total per attack\r\n⚠️ Maintain high fluid intake (2-3L/day)\r\n✅ Take with food\r\n❌ Avoid alcohol — increases uric acid\r\n❌ Avoid organ meats, red meat, beer\r\n⚠️ Report rash, mouth sores, or fever (serious side effects)\r",
+    "perDrugAlternatives": "Colchicine 500mcg tab | 30 ج.م: Colchicine Sandoz 500mcg tab | 80 ج.م, Colchicine Arrow 500mcg tab | 25 ج.م, Colchimax 500mcg tab | 60 ج.م\r\nDiclofenac 75mg IM | 17 ج.م: Voltaren 75mg IM | 80 ج.م\r\nZyloric 100mg tab | ⚠ غير مطابق: Allopurinol 100mg tab | 8 ج.م, Zyloprim 100mg tab | 60 ج.م",
+    "drugInstructions": "⚠️ Colchicine: Take at FIRST sign of attack — most effective within 12h\r\n⚠️ Colchicine max: 6mg total per attack\r\n⚠️ Maintain high fluid intake (2-3L/day)\r\n✅ Take with food\r\n❌ Avoid alcohol — increases uric acid\r\n❌ Avoid organ meats, red meat, beer\r\n⚠️ Report rash, mouth sores, or fever (serious side effects)\r\n✅ يشرب سوائل كثيرة\r\n❌ يقلل اللحوم والكبدة والبقوليات والكحول\r\n✅ يخفف الوزن إن كان زائدًا\r\n⚠️ استمرار العلاج طويل الأمد مع متابعة حمض اليوريك ووظائف الكلى\r\n⚠️ يمكن بدء خافض اليوريك أثناء النوبة تحت تغطية مضاد للالتهاب — ولا يوقف allopurinol إذا كان يتناوله بالفعل",
     "drugInteractions": "Allopurinol + Azathioprine/6-MP:\r\n❌↑↑↑ Life-threatening bone marrow suppression. Reduce Azathioprine by 75% or avoid.\r\n\r\nColchicine + Clarithromycin/Erythromycin:\r\n❌↑↑↑ Fatal toxicity (especially with renal impairment). Avoid completely.\r"
   },
   {
@@ -159,11 +159,11 @@
     "id": "rochetta-014",
     "title": "Migraine",
     "subtitle": "Unilateral throbbing headache ± aura, photophobia, nausea",
-    "content": "[DIAGNOSIS]\r\n- Unilateral, pulsating headache 4–72 hours\r\n- With or without aura (visual disturbances)\r\n- Photophobia, phonophobia, nausea/vomiting\r\n- Triggers: stress, hormones, sleep deprivation, alcohol\r\n\r\n[INVESTIGATIONS]\r\n- Lab: CBC, TSH, FBS — rule out secondary causes if atypical pattern\r\n- Special test: Headache diary; consider CT/MRI brain if first or worst headache, focal neurological signs\r\n- ECG: Baseline if starting propranolol prophylaxis\r\n- Monitor: Migraine frequency, severity (VAS), medication overuse (analgesic headache)\r\n\r\n[TREATMENT]\r\n- Mild-Moderate: Paracetamol + NSAID + antiemetic\r\n- Moderate-Severe: Triptan (Sumatriptan 50mg) + NSAID\r\n- Prophylaxis: Propranolol / Amitriptyline / Topiramate\r\n\r\n[RX-الروشتة — Acute]\r\n- Paracetamol 1g tab (Acetaminophen) | قرص مرتين يوميًا عند بداية النوبة | 5 ج.م\r\n- + Ibuprofen 400mg tab (Ibuprofen) | قرص مرتين يوميًا بعد الأكل | 6 ج.م\r\n- OR Sumatriptan 50mg tab (Sumatriptan) | قرص واحدة عند بدء النوبة | —\r\n\r\n[RX-الروشتة — Prophylaxis]\r\n- Propranolol 40mg tab (Propranolol HCl) | قرص مرتين يوميًا — يزاد تدريجيًا | 15 ج.م\r\n- OR Amitriptyline 10mg tab (Amitriptyline) | قرص قبل النوم — تزاد إلى 50mg | 25.5 ج.م\r",
+    "content": "[DIAGNOSIS]\r\n- Unilateral, pulsating headache 4–72 hours\r\n- With or without aura (visual disturbances)\r\n- Photophobia, phonophobia, nausea/vomiting\r\n- Triggers: stress, hormones, sleep deprivation, alcohol\r\n\r\n[INVESTIGATIONS]\r\n- Lab: CBC, TSH, FBS — rule out secondary causes if atypical pattern\r\n- Special test: Headache diary; consider CT/MRI brain if first or worst headache, focal neurological signs\r\n- ECG: Baseline if starting propranolol prophylaxis\r\n- Monitor: Migraine frequency, severity (VAS), medication overuse (analgesic headache)\r\n\r\n[TREATMENT]\r\n- Mild-Moderate: Paracetamol + NSAID + antiemetic\r\n- Moderate-Severe: Triptan (Sumatriptan 50mg) + NSAID\r\n- Prophylaxis: Propranolol / Amitriptyline / Topiramate\r\n\r\n[RX-الروشتة — Acute]\r\n- Paracetamol 1g tab (Acetaminophen) | قرص مرتين يوميًا عند بداية النوبة | 5 ج.م\r\n- + Ibuprofen 400mg tab (Ibuprofen) | قرص مرتين يوميًا بعد الأكل | 6 ج.م\r\n- OR Sumatriptan 50mg tab (Sumatriptan) | قرص واحدة عند بدء النوبة | —\r\n\r\n[RX-الروشتة — Prophylaxis]\r\n- Propranolol 40mg tab (Propranolol HCl) | قرص مرتين يوميًا — يزاد تدريجيًا | 15 ج.م\r\n- OR Amitriptyline 10mg tab (Amitriptyline) | قرص قبل النوم — تزاد إلى 50mg | 25.5 ج.م\r\n\r\n[WARNING]\r\nSumatriptan is contraindicated in ischaemic heart disease and uncontrolled hypertension.\r\n\r\n[RX-الروشتة — أثناء النوبة (نسخة المصدر)]\r\n- Cataflam 75mg IM | حقنة عضل أو وريد كل 12 ساعة عند اللزوم | 100 ج.م\r\n- Primperan 10mg amp | حقنة عضل أو وريد ببطء كل 12 ساعة عند اللزوم | ⚠ غير مطابق\r\n- Sumagraine 25/50mg tab | قرص 25 أو 50 مجم مرة واحدة مع كمية كبيرة من الماء — يُكرر قرص بعد ساعتين إذا لم يتحسن (بحد أقصى 200 مجم/يوم) | ⚠ غير مطابق\r\n\r\n[RX-الروشتة — الوقاية (نسخة المصدر)]\r\n- Pizotifen 0.5mg tab | قرص مرة واحدة يوميًا في البداية — يمكن زيادتها إلى 3 مرات يوميًا أو 3 أقراص قبل النوم (بحد أقصى 4.5 مجم/يوم) | ⚠ غير مطابق\r\n- Inderal 10mg tab | قرص 3 مرات يوميًا | ⚠ غير مطابق",
     "category": "Pain & Analgesics",
     "chapterAr": "الألم والمسكنات",
     "alternatives": "",
-    "perDrugAlternatives": "Paracetamol 1g tab | 8 ج.م: Panadol 1g tab | 16 ج.م, Efferalgan 1g tab | 14 ج.م, Doliprane 1g tab | 12 ج.م\r\nIbuprofen 400mg tab | 15 ج.م: Brufen 400mg tab | 30 ج.م, Advil 400mg tab | 35 ج.م, Ibuprofen GPO 400mg tab | 12 ج.م\r\nSumatriptan 50mg tab | 90 ج.م: Imigran 50mg tab | 200 ج.م, Sumatriptan Arrow 50mg tab | 80 ج.م, Relpax 40mg tab | 250 ج.م\r\nPropranolol 40mg tab | 15 ج.م: Inderal 40mg tab | 50 ج.م, Propranolol Sandoz 40mg tab | 12 ج.م, Propranolol Apotex 40mg tab | 10 ج.م\r\nAmitriptyline 10mg tab | 8 ج.م: Tryptizol 10mg tab | 25 ج.م, Amitriptyline Arrow 10mg tab | 7 ج.م, Endep 10mg tab | 30 ج.م\r",
+    "perDrugAlternatives": "Paracetamol 1g tab | 8 ج.م: Panadol 1g tab | 16 ج.م, Efferalgan 1g tab | 14 ج.م, Doliprane 1g tab | 12 ج.م\r\nIbuprofen 400mg tab | 15 ج.م: Brufen 400mg tab | 30 ج.م, Advil 400mg tab | 35 ج.م, Ibuprofen GPO 400mg tab | 12 ج.م\r\nSumatriptan 50mg tab | 90 ج.م: Imigran 50mg tab | 200 ج.م, Sumatriptan Arrow 50mg tab | 80 ج.م, Relpax 40mg tab | 250 ج.م\r\nPropranolol 40mg tab | 15 ج.م: Inderal 40mg tab | 50 ج.م, Propranolol Sandoz 40mg tab | 12 ج.م, Propranolol Apotex 40mg tab | 10 ج.م\r\nAmitriptyline 10mg tab | 8 ج.م: Tryptizol 10mg tab | 25 ج.م, Amitriptyline Arrow 10mg tab | 7 ج.م, Endep 10mg tab | 30 ج.م\r\nCataflam 75mg IM | 100 ج.م: Diclofenac 75mg IM | 17 ج.م\r\nSumagraine 25/50mg tab | ⚠ غير مطابق: Sumatriptan 50mg tab | 90 ج.م",
     "drugInstructions": "⚠️ Sumatriptan: Take at EARLIEST sign of migraine — most effective within 1h\r\n⚠️ Max 2 doses in 24 hours\r\n⚠️ Propranolol (prophylaxis): Takes 2-4 weeks for full effect\r\n⚠️ Propranolol: Do NOT stop suddenly — taper over 1-2 weeks\r\n✅ Take Paracetamol + Ibuprofen at onset for best results\r\n❌ Avoid alcohol, chocolate, aged cheese — triggers\r\n⚠️ If asthmatic: use Amlodipine instead of Propranolol\r",
     "drugInteractions": "Triptans + SSRIs/MAOIs:\r\n⚠️ Serotonin Syndrome risk. Monitor but may be used with caution.\r\n\r\nPropranolol + Verapamil/Diltiazem:\r\n❌ Severe bradycardia, heart block, heart failure.\r\n\r\nPropranolol + Insulin/Sulfonylureas:\r\n⚠️ Masks hypoglycemia symptoms. Monitor glucose closely.\r"
   },
@@ -261,7 +261,13 @@
     "alternatives": "",
     "perDrugAlternatives": "Losec 20mg cap (Omeprazole) | 27 ج.م: Gastrazol 20mg cap (Pharonia) | 15 ج.م, Gasec 20mg cap (Nepha) | 18 ج.م, Omez 20mg cap | 20 ج.م\r\nBismuth subsalicylate 120mg tab | 8 ج.م: Bismuth subcitrate 120mg tab | 10 ج.م, De-Nol 120mg tab | 55 ج.م\r\nBispyller cap | 800 ج.م: Pylorid cap | 750 ج.م, Pyloquad cap | 450 ج.م, Helicobac 300mg cap | 350 ج.م\r\nAmoxicillin 1g tab | 43.5 ج.م: Augmentin 1g tab | 210 ج.م, Amoxicillin Teva 1g tab | 35 ج.م, Amoxil 1g tab | 40 ج.م\r\nClarithromycin 500mg tab | 40 ج.م: Klaricid 500mg tab | 85 ج.م, Clarikan SR 500mg tab | 79 ج.م, Klarimix 500mg tab | 72 ج.م, Fromilid 500mg tab | 55 ج.م\r\nLevofloxacin 500mg tab | 92 ج.م: Levaquin 500mg tab | 192 ج.م, Leflox 500mg tab | 76 ج.م, Levozine 500mg tab | 55 ج.م, Tavacin 500mg tab | 90 ج.م, Debacolev 500mg tab | 75 ج.م\nControloc 20mg tab (Pantoprazole) | 90 ج.م: Zurcal 20mg tab (AUG) | 75 ج.م, Antopral 20mg tab (Sandoz) | 70 ج.م, Pantazol 20mg tab (Sigma) | 60 ج.م\r\nNexium 20mg cap (Esomeprazole) | 49 ج.م: Esogast 20mg cap (Copad) | 35 ج.م, Esomac 40mg cap (Copad) | 45 ج.م, Eso-protocol 40mg cap (EGY Pharm) | 40 ج.م\r\nLanzor 30mg cap (Lansoprazole) | 65 ج.م: Zolipax 30mg cap (Sedico) | 50 ج.م, Loral 30mg cap (Pharco) | 45 ج.م, Peptazol 30mg cap (Sipmaco) | 55 ج.م\r\nMetronidazole 500mg tab | 34 ج.م: Flagyl 500mg tab | 20 ج.م, Metronidazole GPO 500mg tab | 10 ج.م, Metronidazole Arrow 500mg tab | 8 ج.م\r\nTetracycline 500mg tab | 8 ج.م: Tetracycline GPO 500mg tab | 5 ج.م, Tetrex 500mg tab | 12 ج.م\r",
     "drugInstructions": "⚠️ Complete ALL 14 days — eradication depends on full course\r\n⚠️ PPI: Take 30-60 min BEFORE meals for maximum effect\r\n⚠️ Amoxicillin + Clarithromycin: Take WITH food\r\n⚠️ Metronidazole: Do NOT drink alcohol — severe nausea/vomiting\r\n⚠️ Avoid alcohol for 48h after last Metronidazole dose\r\n⚠️ Repeat urea breath test 4 weeks after finishing\r\n❌ Do NOT skip doses — promotes resistance\r",
-    "drugInteractions": "Clarithromycin + Statins (Simvastatin):\r\n❌↑↑ Rhabdomyolysis risk. Stop statin during treatment.\r\n\r\nPPI (Omeprazole) + Clopidogrel:\r\n❌ Reduced antiplatelet effect. Use Pantoprazole instead.\r\n\r\nMetronidazole + Alcohol:\r\n❌ Disulfiram-like reaction. Avoid alcohol 48h after last dose.\r"
+    "drugInteractions": "Clarithromycin + Statins (Simvastatin):\r\n❌↑↑ Rhabdomyolysis risk. Stop statin during treatment.\r\n\r\nPPI (Omeprazole) + Clopidogrel:\r\n❌ Reduced antiplatelet effect. Use Pantoprazole instead.\r\n\r\nMetronidazole + Alcohol:\r\n❌ Disulfiram-like reaction. Avoid alcohol 48h after last dose.\r",
+    "related": [
+      {
+        "id": "rochetta-073",
+        "label": "Chronic Gastritis"
+      }
+    ]
   },
   {
     "id": "rochetta-023",
@@ -567,12 +573,12 @@
     "id": "rochetta-048",
     "title": "Lower UTI / Cystitis",
     "subtitle": "Dysuria, frequency, urgency — most common in women",
-    "content": "[DIAGNOSIS]\r\n- Dysuria, urinary frequency, urgency, suprapubic pain\r\n- Cloudy / malodorous urine\r\n- Urine dipstick: positive for leukocytes + nitrites\r\n- Uncomplicated — no fever, no flank pain\r\n\r\n[INVESTIGATIONS]\r\n- Urine analysis (routine urine): WBCs (pus cells), RBCs, bacteria — pyuria supports UTI\r\n- Urine dipstick: leukocyte esterase and nitrite — quick bedside screen; negative nitrite does NOT exclude UTI\r\n- Urine culture + sensitivity (MSU): for recurrent, complicated, pregnancy, pyelonephritis, treatment failure\r\n- Renal function (Urea, Creatinine): guides antibiotic choice and dose adjustment\r\n- CBC / CRP: if systemic infection or fever suspected\r\n- Blood cultures: if high fever, rigors, or sepsis suspected\r\n- Imaging (US KUB / CT): only if suspected obstruction, stone, abscess, recurrent complicated UTI, or no fever response at 48–72h\r\n\r\n[TREATMENT]\r\n- 1st line: Nitrofurantoin 100mg twice daily × 5 days\r\n- OR Fosfomycin 3g single dose — convenient option\r\n- Alternative (culture-guided): TMP-SMX if local resistance < 20%, or oral beta-lactam\r\n- Fluoroquinolones are NOT first-line for uncomplicated UTI — reserve for complicated cases after culture\r\n- Phenazopyridine: symptom relief only, ≤ 2–3 days\r\n- Complicated / systemic: Ciprofloxacin or Ceftriaxone — usually 10–14 days\r\n- Pregnancy: Nitrofurantoin (avoid near term ≥ 37 weeks and G6PD deficiency), Fosfomycin, or beta-lactam per culture\r\n\r\n[WARNING]\r\nPyelonephritis in pregnancy → URGENT hospital admission + IV antibiotics. No clinical improvement in 48–72h → re-culture, re-examine, re-image — do not simply switch antibiotics. Nitrofurantoin and Fosfomycin have poor renal-tissue penetration — not for pyelonephritis.\r\n\r\n[RX-الروشتة — Uncomplicated]\n- Nitrofurantoin 100mg tab (Nitrofurantoin) | قرص مرتين يوميًا بعد الأكل لمدة 5 أيام | 2.4 ج.م\r\n- OR Fosfomycin 3g sachet (Fosfomycin Trometamol) | كيس واحد يذاب في ميه — جرعة واحدة | 39 ج.م\r\n- Phenazopyridine 100mg tab (Phenazopyridine HCl) | قرص 3 مرات يوميًا بعد الأكل لمدة 2-3 أيام — مسكن للحرقة | 5 ج.م\r\n\r\n[RX-الروشتة — Complicated / Systemic]\r\n- Ciprofloxacin 500mg tab (Ciprofloxacin) | قرص مرتين يوميًا لمدة 7-14 يومًا — حسب الحساسية | —\r\n- OR Ceftriaxone 1g inj (Ceftriaxone) | 1 جم حقن وريد يوميًا — بالمستشفى | —\r\n- OR Cefixime 400mg tab (Cefixime) | قرص مرة يوميًا لمدة 10 أيام | —\r\n\r\n[RX-الروشتة — Pregnancy]\r\n- Nitrofurantoin 100mg tab (Nitrofurantoin) | قرص 4 مرات يوميًا لمدة 5 أيام — يتجنب بعد 37 أسبوعًا وعند نقص G6PD | 2.4 ج.م\r\n- OR Fosfomycin 3g sachet (Fosfomycin Trometamol) | كيس واحد يذاب في ميه — جرعة واحدة | 39 ج.م\r\n- OR Amoxicillin-clavulanate 1g tab (Amoxicillin + Clavulanate) | قرص مرتين يوميًا لمدة 7 أيام — حسب المزرعة | —\r",
+    "content": "[DIAGNOSIS]\r\n- Dysuria, urinary frequency, urgency, suprapubic pain\r\n- Cloudy / malodorous urine\r\n- Urine dipstick: positive for leukocytes + nitrites\r\n- Uncomplicated — no fever, no flank pain\r\n\r\n[INVESTIGATIONS]\r\n- Urine analysis (routine urine): WBCs (pus cells), RBCs, bacteria — pyuria supports UTI\r\n- Urine dipstick: leukocyte esterase and nitrite — quick bedside screen; negative nitrite does NOT exclude UTI\r\n- Urine culture + sensitivity (MSU): for recurrent, complicated, pregnancy, pyelonephritis, treatment failure\r\n- Renal function (Urea, Creatinine): guides antibiotic choice and dose adjustment\r\n- CBC / CRP: if systemic infection or fever suspected\r\n- Blood cultures: if high fever, rigors, or sepsis suspected\r\n- Imaging (US KUB / CT): only if suspected obstruction, stone, abscess, recurrent complicated UTI, or no fever response at 48–72h\r\n\r\n[TREATMENT]\r\n- 1st line: Nitrofurantoin 100mg twice daily × 5 days\r\n- OR Fosfomycin 3g single dose — convenient option\r\n- Alternative (culture-guided): TMP-SMX if local resistance < 20%, or oral beta-lactam\r\n- Fluoroquinolones are NOT first-line for uncomplicated UTI — reserve for complicated cases after culture\r\n- Phenazopyridine: symptom relief only, ≤ 2–3 days\r\n- Complicated / systemic: Ciprofloxacin or Ceftriaxone — usually 10–14 days\r\n- Pregnancy: Nitrofurantoin (avoid near term ≥ 37 weeks and G6PD deficiency), Fosfomycin, or beta-lactam per culture\r\n- Do not treat asymptomatic bacteriuria except in pregnancy or before urologic procedures with mucosal trauma.\r\n- Men and any complicating factor = complicated UTI (longer course ≥ 7 days; consider prostatitis).\r\n\r\n[WARNING]\r\nPyelonephritis in pregnancy → URGENT hospital admission + IV antibiotics. No clinical improvement in 48–72h → re-culture, re-examine, re-image — do not simply switch antibiotics. Nitrofurantoin and Fosfomycin have poor renal-tissue penetration — not for pyelonephritis.\r\nFever + rigors → request US — may be acute pyelonephritis.\r\nOliguria → blood urea and creatinine — may be acute renal failure.\r\nAnuria → may be acute retention of urine — needs urgent catheter.\r\nRefer if pregnant, renal impairment, recurrent UTI, or immunosuppression.\r\n\r\n[RX-الروشتة — Pregnancy]\r\n- Nitrofurantoin 100mg tab (Nitrofurantoin) | قرص 4 مرات يوميًا لمدة 5 أيام — يتجنب بعد 37 أسبوعًا وعند نقص G6PD | 2.4 ج.م\r\n- OR Fosfomycin 3g sachet (Fosfomycin Trometamol) | كيس واحد يذاب في ميه — جرعة واحدة | 39 ج.م\r\n- OR Amoxicillin-clavulanate 1g tab (Amoxicillin + Clavulanate) | قرص مرتين يوميًا لمدة 7 أيام — حسب المزرعة | —\r\n\r\n[RX-الروشتة — Uncomplicated Cystitis]\r\n- Nitrofurantoin 100mg tab (Nitrofurantoin) | قرص مرتين يوميًا لمدة 5 أيام — تجنب إذا CrCl < 30 | 2.4 ج.م\r\n- Fosfomycin 3g sachet | كيس واحد مذاب في ماء مرة واحدة — جرعة واحدة | 39 ج.م\r\n- Trimethoprim 100mg tab | قرص مرتين يوميًا لمدة 3 أيام — فقط إذا كانت المقاومة المحلية < 20% | ⚠ غير مطابق\r\n\r\n[RX-الروشتة — Symptomatic Relief]\r\n- Panadol 500mg tab | قرص 3 مرات يوميًا | 46 ج.م\r\n- Proximol tab | قرص أو كيس على نصف كوب ماء 3 مرات يوميًا بعد الأكل | ⚠ غير مطابق\r\n- Vitamin C 500mg tab | كبسولة 3 مرات يوميًا | 12 ج.م\r\n\r\n[RX-الروشتة — Pyelonephritis / Complicated UTI]\r\n- Ceftriaxone 1g IM | جرعة واحدة ثم علاج فموي حسب المزرعة | 69 ج.م\r\n- Cipro 500mg tab | قرص كل 12 ساعة لمدة 7 أيام — فقط إذا كانت الحساسية مؤكدة | 90 ج.م\r\n- Augmentin 1g tab | قرص كل 12 ساعة لمدة 10–14 يومًا — حسب الحساسية | 210 ج.م",
     "category": "Urinary",
     "chapterAr": "المسالك البولية",
     "alternatives": "",
-    "perDrugAlternatives": "Nitrofurantoin 100mg tab | 25 ج.م: Macrodantin 100mg tab | 90 ج.م, Nitrofurantoin Arrow 100mg tab | 20 ج.م, Nitrofurantoin GPO 100mg tab | 18 ج.م\r\nFosfomycin 3g sachet | 65 ج.م: Monurol 3g sachet | 140 ج.م, Fosfomycin Teva 3g sachet | 55 ج.م, Fosfomycin Sandoz 3g sachet | 50 ج.م\r\nPhenazopyridine 100mg tab | 40 ج.م: Pyridium 100mg tab | 95 ج.م, Phenazopyridine GPO 100mg tab | 35 ج.م, AZO 100mg tab | 110 ج.م\r",
-    "drugInstructions": "",
+    "perDrugAlternatives": "Nitrofurantoin 100mg tab | 25 ج.م: Macrodantin 100mg tab | 90 ج.م, Nitrofurantoin Arrow 100mg tab | 20 ج.م, Nitrofurantoin GPO 100mg tab | 18 ج.م\r\nFosfomycin 3g sachet | 65 ج.م: Monurol 3g sachet | 140 ج.م, Fosfomycin Teva 3g sachet | 55 ج.م, Fosfomycin Sandoz 3g sachet | 50 ج.م\r\nPhenazopyridine 100mg tab | 40 ج.م: Pyridium 100mg tab | 95 ج.م, Phenazopyridine GPO 100mg tab | 35 ج.م, AZO 100mg tab | 110 ج.م\r\nPanadol 500mg tab | 46 ج.م: Cataflam 50mg tab | 55 ج.م\r\nVitamin C 500mg tab | 12 ج.م: C-Retard cap | ⚠ غير مطابق\r\nCeftriaxone 1g IM | 69 ج.م: Rocephin 1g IM | 120 ج.م\r\nCipro 500mg tab | 90 ج.م: Ciprofloxacin 500mg tab | 53 ج.م\r\nAugmentin 1g tab | 210 ج.م: Hibiotic tab | ⚠ غير مطابق",
+    "drugInstructions": "✅ يشرب 5–10 أكواب سوائل يوميًا\r\n❌ لا يحبس البول لفترات طويلة\r\n✅ يقلل الملح في الأكل",
     "drugInteractions": ""
   },
   {
@@ -663,24 +669,24 @@
     "id": "rochetta-056",
     "title": "Common Cold / URTI",
     "subtitle": "Viral upper respiratory tract infection — self-limiting 7–10 days",
-    "content": "[DIAGNOSIS]\r\n- Nasal congestion, sneezing, rhinorrhea, sore throat\r\n- Low-grade fever, malaise, myalgia\r\n- No antibiotics needed — viral cause in 95% of cases\r\n\r\n[INVESTIGATIONS]\r\n- Lab: None routinely — clinically diagnosed; CRP if bacterial superinfection uncertain\r\n- Special test: Rapid flu/COVID test if influenza epidemics or high-risk patient\r\n- Monitor: Temperature, symptom duration (resolve 7–10 days), hydration\r\n- Screen: Red flags (high fever > 5 days, pleuritic pain, shortness of breath) for pneumonia\r\n\r\n[TREATMENT]\r\n- Paracetamol for fever and myalgia\r\n- Nasal decongestant for congestion (max 3–5 days)\r\n- Antihistamine for sneezing and rhinorrhea\r\n- Fluids, rest, humidified air\r\n\r\n[WARNING]\r\nDo NOT prescribe antibiotics for uncomplicated viral URTI — promotes resistance without benefit.\r\n\r\n[RX]\r\n- Panadol 500mg tab (Paracetamol) | قرص كل 6 ساعات عند الحاجة | 46 ج.م\r\n- Afrin nasal spray (Oxymetazoline 0.05%) | بخاخ لكل فتحة أنف مرتين يوميًا لمدة 3 أيام | 5 ج.م\r\n- Cetirizine 10mg tab (Cetirizine HCl) | قرص مرة واحدة يوميًا قبل النوم | 93 ج.م\r",
+    "content": "[DIAGNOSIS]\r\n- Nasal congestion, sneezing, rhinorrhea, sore throat\r\n- Low-grade fever, malaise, myalgia\r\n- No antibiotics needed — viral cause in 95% of cases\r\n\r\n[INVESTIGATIONS]\r\n- Lab: None routinely — clinically diagnosed; CRP if bacterial superinfection uncertain\r\n- Special test: Rapid flu/COVID test if influenza epidemics or high-risk patient\r\n- Monitor: Temperature, symptom duration (resolve 7–10 days), hydration\r\n- Screen: Red flags (high fever > 5 days, pleuritic pain, shortness of breath) for pneumonia\r\n\r\n[TREATMENT]\r\n- Paracetamol for fever and myalgia\r\n- Nasal decongestant for congestion (max 3–5 days)\r\n- Antihistamine for sneezing and rhinorrhea\r\n- Fluids, rest, humidified air\r\n\r\n[WARNING]\r\nDo NOT prescribe antibiotics for uncomplicated viral URTI — promotes resistance without benefit.\r\nAntibiotic only if bacterial infection is suspected; limit topical nasal decongestant to 5 days.\r\n\r\n[RX]\r\n- Panadol 500mg tab (Paracetamol) | قرص كل 6 ساعات عند الحاجة | 46 ج.م\r\n- Afrin nasal spray (Oxymetazoline 0.05%) | بخاخ لكل فتحة أنف مرتين يوميًا لمدة 3 أيام | 5 ج.م\r\n- Cetirizine 10mg tab (Cetirizine HCl) | قرص مرة واحدة يوميًا قبل النوم | 93 ج.م\r\n\r\n[RX-الروشتة — نزلة البرد (نسخة المصدر)]\r\n- Brufen Cold tab | قرص 3 مرات يوميًا | ⚠ غير مطابق\r\n- Otrivin adult nasal drops | نقطتين بكل فتحة أنف 3 مرات يوميًا لمدة 5 أيام | ⚠ غير مطابق\r\n- Bronchicum syrup | قرص أو ملعقة 3 مرات يوميًا | ⚠ غير مطابق\r\n- Hibiotic tab | قرص كل 12 ساعة لمدة 5 أيام — إذا اشتُبه في عدوى بكتيرية فقط | ⚠ غير مطابق",
     "category": "Respiratory",
     "chapterAr": "الجهاز التنفسي",
     "alternatives": "",
-    "perDrugAlternatives": "Panadol 500mg tab | 46 ج.م: Paracetamol 500mg tab | 8 ج.م, Efferalgan 500mg tab | 10 ج.م, Doliprane 500mg tab | 12 ج.م\r\nAfrin nasal spray (Oxymetazoline 0.05%) | 5 ج.م: Otrivin 0.1% spray | 20 ج.م, Nazol spray | 15 ج.م, Sinuberase spray | 18 ج.م\r\nCetirizine 10mg tab | 93 ج.م: Zyrtec 10mg tab | 80 ج.م, Cetirizine Arrow 10mg tab | 20 ج.م, Cetirizine GPO 10mg tab | 15 ج.م\r",
-    "drugInstructions": "",
+    "perDrugAlternatives": "Panadol 500mg tab | 46 ج.م: Paracetamol 500mg tab | 8 ج.م, Efferalgan 500mg tab | 10 ج.م, Doliprane 500mg tab | 12 ج.م\r\nAfrin nasal spray (Oxymetazoline 0.05%) | 5 ج.م: Otrivin 0.1% spray | 20 ج.م, Nazol spray | 15 ج.م, Sinuberase spray | 18 ج.م\r\nCetirizine 10mg tab | 93 ج.م: Zyrtec 10mg tab | 80 ج.م, Cetirizine Arrow 10mg tab | 20 ج.م, Cetirizine GPO 10mg tab | 15 ج.م\r\nOtrivin adult nasal drops | ⚠ غير مطابق: Afrin nasal spray (Oxymetazoline 0.05%) | 5 ج.م\r\nHibiotic tab | ⚠ غير مطابق: Augmentin 1g tab | 210 ج.م",
+    "drugInstructions": "✅ يشرب سوائل دافئة أو ينسون.",
     "drugInteractions": ""
   },
   {
     "id": "rochetta-057",
     "title": "Acute Bronchitis",
     "subtitle": "Cough productive of sputum, often post-viral, ± wheeze",
-    "content": "[DIAGNOSIS]\r\n- Persistent cough > 5 days, often with mucopurulent sputum\r\n- Chest tightness, mild dyspnea on exertion\r\n- Chest X-ray normal — to rule out pneumonia\r\n\r\n[INVESTIGATIONS]\r\n- Imaging: Chest X-ray (PA) — exclude pneumonia/consolidation\r\n- Lab: CRP, FBC if fever persists or bacterial cause suspected\r\n- Culture: Sputum MC&S if purulent and bacterial suspected\r\n- Monitor: Cough duration (> 3 weeks needs further review), fever curve, response to mucolytics\r\n\r\n[TREATMENT]\r\n- Mucolytic to loosen secretions\r\n- Cough suppressant only if severely distressing\r\n- Antibiotics only if bacterial cause suspected\r\n\r\n[RX-الروشتة — علاج أعراضي]\r\n- ACC 200mg sachet (Acetylcysteine) | كيس يذاب في ميه مرتين يوميًا لمدة 7 أيام | 28 ج.م\r\n- Noscapine syrup (Noscapine) | ملعقة 3 مرات يوميًا | 5.5 ج.م\r\n- Panadol 500mg tab (Paracetamol) | قرص كل 6 ساعات عند الحاجة | 46 ج.م\r\n\r\n[RX-الروشتة — إذا اشتباه سبب بكتيري]\r\n- Amoxicillin 500mg cap (Amoxicillin Trihydrate) | كبسولة 3 مرات يوميًا لمدة 5-7 أيام | 8 ج.م\r\n- OR Azithromycin 500mg tab (Azithromycin) | قرص مرة واحدة يوميًا لمدة 3-5 أيام | 25 ج.م\r",
+    "content": "[DIAGNOSIS]\r\n- Persistent cough > 5 days, often with mucopurulent sputum\r\n- Chest tightness, mild dyspnea on exertion\r\n- Chest X-ray normal — to rule out pneumonia\r\n\r\n[INVESTIGATIONS]\r\n- Imaging: Chest X-ray (PA) — exclude pneumonia/consolidation\r\n- Lab: CRP, FBC if fever persists or bacterial cause suspected\r\n- Culture: Sputum MC&S if purulent and bacterial suspected\r\n- Monitor: Cough duration (> 3 weeks needs further review), fever curve, response to mucolytics\r\n\r\n[TREATMENT]\r\n- Mucolytic to loosen secretions\r\n- Cough suppressant only if severely distressing\r\n- Antibiotics only if bacterial cause suspected\r\n\r\n[RX-الروشتة — علاج أعراضي]\r\n- ACC 200mg sachet (Acetylcysteine) | كيس يذاب في ميه مرتين يوميًا لمدة 7 أيام | 28 ج.م\r\n- Noscapine syrup (Noscapine) | ملعقة 3 مرات يوميًا | 5.5 ج.م\r\n- Panadol 500mg tab (Paracetamol) | قرص كل 6 ساعات عند الحاجة | 46 ج.م\r\n\r\n[RX-الروشتة — إذا اشتباه سبب بكتيري]\r\n- Amoxicillin 500mg cap (Amoxicillin Trihydrate) | كبسولة 3 مرات يوميًا لمدة 5-7 أيام | 8 ج.م\r\n- OR Azithromycin 500mg tab (Azithromycin) | قرص مرة واحدة يوميًا لمدة 3-5 أيام | 25 ج.م\r\n\r\n[RX-الروشتة — الشعب الهوائية (نسخة المصدر)]\r\n- Brufen 400mg tab (Ibuprofen) | قرص 3 مرات يوميًا | 78 ج.م\r\n- Otrivin adult nasal drops | نقطتين بكل فتحة أنف 3 مرات يوميًا لمدة 5 أيام فقط | ⚠ غير مطابق\r\n- Bronchicum syrup | قرص أو ملعقة 3 مرات يوميًا | ⚠ غير مطابق\r\n- Vental 2mg tab | قرص 3 مرات يوميًا أو بختين كل 6 ساعات | ⚠ غير مطابق\r\n- Zithromax 250mg cap | كبسولتان أول يوم ثم كبسولة يوميًا لمدة 4 أيام | 120 ج.م",
     "category": "Respiratory",
     "chapterAr": "الجهاز التنفسي",
     "alternatives": "",
-    "perDrugAlternatives": "ACC 200mg sachet | 35 ج.م: Fluimucil 200mg sachet | 60 ج.م, ACC GPO 200mg sachet | 25 ج.م, Acetylcysteine Sandoz 200mg | 20 ج.م\r\nNoscapine syrup | 25 ج.م: Noscapine GPO syrup | 18 ج.م, Tusscapsine syrup | 35 ج.م, Noscapine Sandoz syrup | 15 ج.م\r\nPanadol 500mg tab | 46 ج.م: Paracetamol 500mg tab | 8 ج.م, Efferalgan 500mg tab | 10 ج.م, Doliprane 500mg tab | 12 ج.م\r\nAmoxicillin 500mg cap | 18 ج.م: Amoxil 500mg cap | 45 ج.م, Amoxicillin Arrow 500mg cap | 15 ج.م, Ospamox 500mg cap | 50 ج.م\r\nAzithromycin 500mg tab | 55 ج.م: Zithromax 500mg tab | 150 ج.م, Azee 500mg tab | 70 ج.م, Azithromycin GPO 500mg tab | 45 ج.م\r",
-    "drugInstructions": "",
+    "perDrugAlternatives": "ACC 200mg sachet | 35 ج.م: Fluimucil 200mg sachet | 60 ج.م, ACC GPO 200mg sachet | 25 ج.م, Acetylcysteine Sandoz 200mg | 20 ج.م\r\nNoscapine syrup | 25 ج.م: Noscapine GPO syrup | 18 ج.م, Tusscapsine syrup | 35 ج.م, Noscapine Sandoz syrup | 15 ج.م\r\nPanadol 500mg tab | 46 ج.م: Paracetamol 500mg tab | 8 ج.م, Efferalgan 500mg tab | 10 ج.م, Doliprane 500mg tab | 12 ج.م\r\nAmoxicillin 500mg cap | 18 ج.م: Amoxil 500mg cap | 45 ج.م, Amoxicillin Arrow 500mg cap | 15 ج.م, Ospamox 500mg cap | 50 ج.م\r\nAzithromycin 500mg tab | 55 ج.م: Zithromax 500mg tab | 150 ج.م, Azee 500mg tab | 70 ج.م, Azithromycin GPO 500mg tab | 45 ج.م\r\nZithromax 250mg cap | 120 ج.م: Azithromycin 250mg tab | 49.5 ج.م\r\nBrufen 400mg tab (Ibuprofen) | 78 ج.م: Ibuprofen 400mg tab | 6 ج.م",
+    "drugInstructions": "✅ يشرب سوائل دافئة: ليمون، ينسون، حلبة.",
     "drugInteractions": ""
   },
   {
@@ -771,12 +777,12 @@
     "id": "rochetta-065",
     "title": "GERD & Peptic Ulcer",
     "subtitle": "Heartburn, epigastric pain, acid reflux",
-    "content": "[DIAGNOSIS]\r\n- Burning epigastric pain / retrosternal burning\r\n- Worse after meals or lying down, relieved partly by antacids\r\n- Alarm features (weight loss, bleeding, dysphagia) need endoscopy\r\n\r\n[INVESTIGATIONS]\r\n- Lab: FBC (anaemia from bleeding), LFTs; H. pylori testing if ulcer suspected\r\n- Special test: Endoscopy (OGD) — indicated with alarm features or refractory symptoms\r\n- Monitor: Response to PPI trial, symptom control, red flag symptoms at each visit\r\n- Biopsy: Endoscopic biopsy for H. pylori if ulcer/atrophic changes\r\n\r\n[TREATMENT]\r\n- PPIs are prodrugs, activated only in acidic environment\r\n- Must be taken 30–60 min before a meal to work properly\r\n- H2 blockers are a good alternative if PPIs not tolerated\r\n\r\n[WARNING]\r\nAlarm signs: dysphagia, weight loss, vomiting blood, black stools — refer for endoscopy.\r\n\r\n[RX]\r\n- Losec 20mg cap (Omeprazole) | كبسولة قبل الإفطار بنصف ساعة | 27 ج.م\r\n- Antodine 40mg tab (Famotidine) | قرص قبل النوم — حاصر H2 بديل للـ PPI | 35 ج.م\r\n- Gastrofait 1g tab (Sucralfate) | قرص 4 مرات يوميًا قبل الأكل بساعة | 70 ج.م\r",
+    "content": "[DIAGNOSIS]\r\n- Burning epigastric pain / retrosternal burning\r\n- Worse after meals or lying down, relieved partly by antacids\r\n- Alarm features (weight loss, bleeding, dysphagia) need endoscopy\r\n\r\n[INVESTIGATIONS]\r\n- Lab: FBC (anaemia from bleeding), LFTs; H. pylori testing if ulcer suspected\r\n- Special test: Endoscopy (OGD) — indicated with alarm features or refractory symptoms\r\n- Monitor: Response to PPI trial, symptom control, red flag symptoms at each visit\r\n- Biopsy: Endoscopic biopsy for H. pylori if ulcer/atrophic changes\r\n\r\n[TREATMENT]\r\n- PPIs are prodrugs, activated only in acidic environment\r\n- Must be taken 30–60 min before a meal to work properly\r\n- H2 blockers are a good alternative if PPIs not tolerated\r\n- ER: insert IV cannula and do ECG to exclude MI before treating severe heartburn as GERD\r\n- ER: if no improvement after the IV infusion, give Controloc 40 mg vial diluted in 10 mL slow IV\r\n\r\n[WARNING]\r\nAlarm signs: dysphagia, weight loss, vomiting blood, black stools — refer for endoscopy.\r\n\r\n[RX]\r\n- Losec 20mg cap (Omeprazole) | كبسولة قبل الإفطار بنصف ساعة | 27 ج.م\r\n- Antodine 40mg tab (Famotidine) | قرص قبل النوم — حاصر H2 بديل للـ PPI | 35 ج.م\r\n- Gastrofait 1g tab (Sucralfate) | قرص 4 مرات يوميًا قبل الأكل بساعة | 70 ج.م\r\n\r\n[RX-الروشتة — في الاستقبال (ER)]\r\n- Normal saline 200mL IV + Antodine amp + Primperan amp + Visceralgine amp | محلول وريدي | ⚠ غير مطابق\r\n- Controloc 40mg vial | يُخفف في 10 مل ويُعطى وريد ببطء إذا لم يتحسن | ⚠ غير مطابق\r\n\r\n[RX-الروشتة — في البيت]\r\n- Omez 20mg cap | كبسولة قبل الفطار بنصف ساعة لمدة أسبوعين | 20 ج.م\r\n- Epicogel syrup | ملعقة كبيرة بعد الأكل 3 مرات يوميًا | ⚠ غير مطابق\r\n- Motilium 10mg tab | قرص قبل الأكل بنصف ساعة وقبل النوم | 100 ج.م",
     "category": "GIT",
     "chapterAr": "الجهاز الهضمي",
     "alternatives": "",
-    "perDrugAlternatives": "Losec 20mg cap (Omeprazole) | 27 ج.م: Gastrazol 20mg cap (Pharonia) | 15 ج.م, Gasec 20mg cap (Nepha) | 18 ج.م, Omez 20mg cap | 20 ج.م\r\nAntodine 40mg tab (Famotidine) | 35 ج.م: Famotal 40mg tab (Sedico) | 28 ج.م, Famotin 40mg tab (Memphis) | 25 ج.م, Gastromina 40mg tab (MUP) | 30 ج.م\r\nGastrofait 1g tab (Sucralfate) | 70 ج.م: Sucralfate Arrow 1g tab | 50 ج.م, Sucralfate GPO 1g tab | 40 ج.م, Carafate 1g tab | 160 ج.م\r\nNexium 20mg cap (Esomeprazole) | 49 ج.م: Esogast 20mg cap (Copad) | 35 ج.م, Esomac 40mg cap (Copad) | 45 ج.م, Eso-protocol 40mg cap (EGY Pharm) | 40 ج.م\r\nControloc 20mg tab (Pantoprazole) | 90 ج.م: Zurcal 20mg tab (AUG) | 75 ج.م, Antopral 20mg tab (Sandoz) | 70 ج.م, Pantazol 20mg tab (Sigma) | 60 ج.م\r\nLanzor 30mg cap (Lansoprazole) | 65 ج.م: Zolipax 30mg cap (Sedico) | 50 ج.م, Loral 30mg cap (Pharco) | 45 ج.م, Peptazol 30mg cap (Sipmaco) | 55 ج.م\r\nAntodine 20mg tab (Famotidine) | 25 ج.م: Famotal 20mg tab (Sedico) | 20 ج.م, Famotin 20mg tab (Memphis) | 18 ج.م, Gastromina 20mg tab (MUP) | 22 ج.م\r\nZantac 150mg tab (Ranitidine) | 30 ج.م: Acloc 150mg tab (Sigma) | 22 ج.م, Bantin 150mg tab (Sedico) | 20 ج.م, Rani 150mg tab (Pharo) | 18 ج.م\r\nUlcelfree 150mg tab (Nizatidine) | 35 ج.م\r",
-    "drugInstructions": "⚠️ PPI: Take 30-60 min BEFORE breakfast for maximum effect\r\n⚠️ PPI is a prodrug — needs acidic environment to activate\r\n⚠️ Sucralfate: Take 1h BEFORE meals and at bedtime\r\n✅ Omeprazole preferred over other PPIs if on Clopidogrel\r\n⚠️ Elevate head of bed 15-20cm\r\n❌ Avoid: caffeine, chocolate, spicy food, citrus, alcohol, fatty food\r",
+    "perDrugAlternatives": "Controloc 40mg vial | ⚠ غير مطابق: Controloc 20mg tab | 90 ج.م\r\nLosec 20mg cap (Omeprazole) | 27 ج.م: Gastrazol 20mg cap (Pharonia) | 15 ج.م, Gasec 20mg cap (Nepha) | 18 ج.م, Omez 20mg cap | 20 ج.م\r\nAntodine 40mg tab (Famotidine) | 35 ج.م: Famotal 40mg tab (Sedico) | 28 ج.م, Famotin 40mg tab (Memphis) | 25 ج.م, Gastromina 40mg tab (MUP) | 30 ج.م\r\nGastrofait 1g tab (Sucralfate) | 70 ج.م: Sucralfate Arrow 1g tab | 50 ج.م, Sucralfate GPO 1g tab | 40 ج.م, Carafate 1g tab | 160 ج.م\r\nNexium 20mg cap (Esomeprazole) | 49 ج.م: Esogast 20mg cap (Copad) | 35 ج.م, Esomac 40mg cap (Copad) | 45 ج.م, Eso-protocol 40mg cap (EGY Pharm) | 40 ج.م\r\nLanzor 30mg cap (Lansoprazole) | 65 ج.م: Zolipax 30mg cap (Sedico) | 50 ج.م, Loral 30mg cap (Pharco) | 45 ج.م, Peptazol 30mg cap (Sipmaco) | 55 ج.م\r\nZantac 150mg tab (Ranitidine) | 30 ج.م: Acloc 150mg tab (Sigma) | 22 ج.م, Bantin 150mg tab (Sedico) | 20 ج.م, Rani 150mg tab (Pharo) | 18 ج.م\r\nUlcelfree 150mg tab (Nizatidine) | 35 ج.م\r\nOmez 20mg cap | 20 ج.م: Controloc 40mg tab | ⚠ غير مطابق\r\nMotilium 10mg tab | 100 ج.م: Domperidone GPO 10mg tab | 15 ج.م\r\nControloc 20mg tab (Pantoprazole) | 90 ج.م: Zurcal 20mg tab (AUG) | 75 ج.م, Antopral 20mg tab (Sandoz) | 70 ج.م, Pantazol 20mg tab (Sigma) | 60 ج.م\r\nAntodine 20mg tab (Famotidine) | 25 ج.م: Famotal 20mg tab (Sedico) | 20 ج.م, Famotin 20mg tab (Memphis) | 18 ج.م, Gastromina 20mg tab (MUP) | 22 ج.م",
+    "drugInstructions": "⚠️ PPI: Take 30-60 min BEFORE breakfast for maximum effect\r\n⚠️ PPI is a prodrug — needs acidic environment to activate\r\n⚠️ Sucralfate: Take 1h BEFORE meals and at bedtime\r\n✅ Omeprazole preferred over other PPIs if on Clopidogrel\r\n⚠️ Elevate head of bed 15-20cm\r\n❌ Avoid: caffeine, chocolate, spicy food, citrus, alcohol, fatty food\r\n❌ ممنوع الأكل المسبّك والحراق\r\n❌ ممنوع الأكل قبل النوم بـ3 ساعات ويكون خفيفًا\r\n❌ يقلل الدهون — ممنوع السجائر والشاي والنسكافيه والقهوة\r\n✅ لو الوزن زائد يخس أو يمارس رياضة — يرفع رأسه أثناء النوم\r\n❌ ممنوع المسكنات",
     "drugInteractions": "PPI + Clopidogrel:\r\n❌ Reduced antiplatelet effect. Use Omeprazole (least interaction among PPIs).\r\n\r\nH2 Blockers + Antacids:\r\n⚠️ Separate by 2 hours — antacids reduce H2 blocker absorption.\r\n\r\nSucralfate + PPI / H2 Blockers:\r\n⚠️ Take Sucralfate 1h apart from acid reducers for full effect.\r"
   },
   {
@@ -807,24 +813,24 @@
     "id": "rochetta-068",
     "title": "Spastic Colon / IBS",
     "subtitle": "Recurrent abdominal pain with altered bowel habit",
-    "content": "[DIAGNOSIS]\r\n- Colicky pain: Mebeverine, Trimebutine\r\n- Diarrhea-dominant: Streptoquin, Loperamide with caution\r\n- Constipation-dominant: Lactulose, bulk-forming agents\r\n\r\n[INVESTIGATIONS]\r\n- Lab: CBC, TSH, FBS, coeliac serology (tTG-IgA), ESR/CRP — exclude organic causes\r\n- Culture: Stool MC&S if infectious diarrhea suspected\r\n- Special test: IBS diagnostic criteria (Rome IV); colonoscopy if alarm features or age > 50\r\n- Monitor: Stool diary (Bristol scale), symptom frequency, response to antispasmodic\r\n\r\n[TREATMENT]\r\n- Small frequent meals, avoid large ones\r\n- Reduce caffeine and stimulants\r\n- Regular physical activity, good sleep\r\n\r\n[WARNING]\r\nRifaximin is not a general IBS treatment — proven role only in IBS-D with suspected bacterial overgrowth.\r\n\r\n[RX]\r\n- Duspatalin 135mg tab (Mebeverine HCl) | قرص 3 مرات يوميًا قبل الأكل بـ20 دقيقة | 56 ج.م\r\n- OR Coloverin A tab (Mebeverine + Sulpiride) | قرص 3 مرات يوميًا | 99 ج.م\r\n- Streptoquin tab (Multi-component) | قرص 3 مرات يوميًا | 46 ج.م\r",
+    "content": "[DIAGNOSIS]\r\n- Colicky pain: Mebeverine, Trimebutine\r\n- Diarrhea-dominant: Streptoquin, Loperamide with caution\r\n- Constipation-dominant: Lactulose, bulk-forming agents\r\n\r\n[INVESTIGATIONS]\r\n- Lab: CBC, TSH, FBS, coeliac serology (tTG-IgA), ESR/CRP — exclude organic causes\r\n- Culture: Stool MC&S if infectious diarrhea suspected\r\n- Special test: IBS diagnostic criteria (Rome IV); colonoscopy if alarm features or age > 50\r\n- Monitor: Stool diary (Bristol scale), symptom frequency, response to antispasmodic\r\n\r\n[TREATMENT]\r\n- Small frequent meals, avoid large ones\r\n- Reduce caffeine and stimulants\r\n- Regular physical activity, good sleep\r\n\r\n[WARNING]\r\nRifaximin is not a general IBS treatment — proven role only in IBS-D with suspected bacterial overgrowth.\r\n\r\n[RX]\r\n- Duspatalin 135mg tab (Mebeverine HCl) | قرص 3 مرات يوميًا قبل الأكل بـ20 دقيقة | 56 ج.م\r\n- OR Coloverin A tab (Mebeverine + Sulpiride) | قرص 3 مرات يوميًا | 99 ج.م\r\n- Streptoquin tab (Multi-component) | قرص 3 مرات يوميًا | 46 ج.م\r\n\r\n[RX-الروشتة — القولون العصبي (نسخة المصدر)]\r\n- Colona tab | قرص 3 مرات يوميًا قبل الأكل بربع ساعة | ⚠ غير مطابق\r\n- Spasmodigestin tab | قرص 3 مرات يوميًا قبل الأكل بربع ساعة | ⚠ غير مطابق\r\n- Gast-reg tab | قرص قبل الأكل بنصف ساعة 3 مرات يوميًا | ⚠ غير مطابق\r\n- Disflatyl tab | قرص 3 مرات يوميًا | ⚠ غير مطابق\r\n\r\n[RX-الروشتة — خيار آخر]\r\n- Coloverin A tab | كبسولة 3 مرات يوميًا | 99 ج.م\r\n- Coloverin SR cap | كبسولة 3 مرات يوميًا | ⚠ غير مطابق",
     "category": "GIT",
     "chapterAr": "الجهاز الهضمي",
     "alternatives": "",
-    "perDrugAlternatives": "Duspatalin 135mg tab (Mebeverine) | 60 ج.م: Mebeverine Arrow 135mg tab | 40 ج.م, Mebeverine GPO 135mg tab | 35 ج.م, Colofac 135mg tab | 75 ج.م\r\nColoverin A tab | 25 ج.م: Hyoscine Butylbromide Arrow 10mg | 15 ج.م, Buscopan 10mg tab | 30 ج.م, Hyoscine GPO 10mg tab | 12 ج.م\r\nStreptoquin tab | 200 ج.م: Streptoquin GPO tab | 170 ج.م, Rifaximin 550mg tab | 180 ج.م, Normix 550mg tab | 250 ج.م\r",
-    "drugInstructions": "",
+    "perDrugAlternatives": "Coloverin A tab | 99 ج.م: Coloverin SR cap | ⚠ غير مطابق\r\nGast-reg tab | ⚠ غير مطابق: Motilium 10mg tab | 100 ج.م\r\nDuspatalin 135mg tab (Mebeverine) | 60 ج.م: Mebeverine Arrow 135mg tab | 40 ج.م, Mebeverine GPO 135mg tab | 35 ج.م, Colofac 135mg tab | 75 ج.م\r\nStreptoquin tab | 200 ج.م: Streptoquin GPO tab | 170 ج.م, Rifaximin 550mg tab | 180 ج.م, Normix 550mg tab | 250 ج.م\r\nColoverin A tab | 25 ج.م: Hyoscine Butylbromide Arrow 10mg | 15 ج.م, Buscopan 10mg tab | 30 ج.م, Hyoscine GPO 10mg tab | 12 ج.م",
+    "drugInstructions": "✅ يكثر من الخضراوات والفاكهة الغنية بالألياف\r\n❌ بلاش وجبات ثقيلة\r\n❌ يقلل الفول والطعمية والفاصوليا والعدس والكرنب والقرنبيط والأكل الحراق والدهون والقهوة والنسكافيه\r\n✅ يقلل الضغط العصبي والنفسي",
     "drugInteractions": ""
   },
   {
     "id": "rochetta-069",
     "title": "Oral Problems",
     "subtitle": "Gingivitis, herpes, thrush, oral sores",
-    "content": "[DIAGNOSIS]\r\n- Vesicles around lip: Herpes simplex\r\n- White patches: Mouth thrush\r\n- Painful ulcer, white membrane: Oral sore\r\n- Red swollen gums: Gingivitis\r\n\r\n[INVESTIGATIONS]\r\n- Culture: Swab of lesions/vesicles for HSV if herpes suspected; oral swab for candida\r\n- Special test: Full dental examination; biopsy if ulcer persists > 2 weeks\r\n- Monitor: Lesion healing, response to treatment, recurrence (herpes)\r\n- Screen: Blood count if recurrent aphthous ulcers (iron, B12, folate deficiency)\r\n\r\n[WARNING]\r\nUlcer lasting over 2 weeks, recurrent, or with systemic symptoms — think autoimmune cause or refer.\r\n\r\n[RX]\r\n- Chlorhexidine mouth wash (Chlorhexidine Gluconate) | غرغرة 3 مرات يوميًا | 55 ج.م\r\n- Amoxicillin 500mg cap (Amoxicillin Trihydrate) | كبسولة 3 مرات يوميًا لمدة 5-7 أيام | 8 ج.م\r\n- Nystatin oral suspension (Nystatin) | مضمضة وبلع 4 مرات يوميًا لمدة أسبوع | 30 ج.م\r\n- Acyclovir cream (Acyclovir 5%) | يوضع فور ظهور أول أعراض الهربس | 27 ج.م\r",
+    "content": "[DIAGNOSIS]\r\n- Vesicles around lip: Herpes simplex\r\n- White patches: Mouth thrush\r\n- Painful ulcer, white membrane: Oral sore\r\n- Red swollen gums: Gingivitis\r\n\r\n[INVESTIGATIONS]\r\n- Culture: Swab of lesions/vesicles for HSV if herpes suspected; oral swab for candida\r\n- Special test: Full dental examination; biopsy if ulcer persists > 2 weeks\r\n- Monitor: Lesion healing, response to treatment, recurrence (herpes)\r\n- Screen: Blood count if recurrent aphthous ulcers (iron, B12, folate deficiency)\r\n\r\n[WARNING]\r\nUlcer lasting over 2 weeks, recurrent, or with systemic symptoms — think autoimmune cause or refer.\r\nTreat predisposing factors for oral candidiasis: optimize glycaemic control and stop unnecessary antibiotics or rinse the mouth after inhaled steroids.\r\n\r\n[RX]\r\n- Chlorhexidine mouth wash (Chlorhexidine Gluconate) | غرغرة 3 مرات يوميًا | 55 ج.م\r\n- Amoxicillin 500mg cap (Amoxicillin Trihydrate) | كبسولة 3 مرات يوميًا لمدة 5-7 أيام | 8 ج.م\r\n- Nystatin oral suspension (Nystatin) | مضمضة وبلع 4 مرات يوميًا لمدة أسبوع | 30 ج.م\r\n- Acyclovir cream (Acyclovir 5%) | يوضع فور ظهور أول أعراض الهربس | 27 ج.م\r\n\r\n[RX-الروشتة — قرح الفم المتكررة]\r\n- BBC spray | دهان 4 مرات يوميًا | ⚠ غير مطابق\r\n- Betadine mouth wash | غسول للفم 3 مرات يوميًا | ⚠ غير مطابق\r\n- Supravit cap | كبسولة مرتين يوميًا | ⚠ غير مطابق\r\n\r\n[RX-الروشتة — مونيليا الفم]\r\n- Daktarin oral gel | دهان 4 مرات يوميًا | ⚠ غير مطابق\r\n- BBC spray | 3 مرات يوميًا | ⚠ غير مطابق",
     "category": "GIT",
     "chapterAr": "الجهاز الهضمي",
     "alternatives": "",
     "perDrugAlternatives": "Chlorhexidine mouth wash | 35 ج.م: Hibitane mouth wash | 60 ج.م, Chlorhexidine GPO | 25 ج.م, Corsodyl mouth wash | 70 ج.م\r\nAmoxicillin 500mg cap | 18 ج.م: Amoxil 500mg cap | 45 ج.م, Amoxicillin Arrow 500mg cap | 15 ج.م, Ospamox 500mg cap | 50 ج.م\r\nNystatin oral suspension | 40 ج.م: Mycostatin oral suspension | 80 ج.م, Nystatin GPO suspension | 30 ج.م, Nystatin Sandoz suspension | 25 ج.م\r\nAcyclovir cream | 20 ج.م: Zovirax cream | 55 ج.م, Acyclovir GPO cream | 15 ج.م, Acivir cream | 18 ج.م\r",
-    "drugInstructions": "",
+    "drugInstructions": "⚠️ إذا استمرت القرحة أكثر من أسبوعين → مراجعة الطبيب\r\n✅ لو مريض سكر يضبط سكره جيدًا\r\n✅ لو يتناول مضادًا حيويًا منذ فترة طويلة يوقفه\r\n✅ مضمضة الفم جيدًا بعد بخاخات الكورتيزون",
     "drugInteractions": ""
   },
   {
@@ -861,6 +867,228 @@
     "alternatives": "",
     "perDrugAlternatives": "Legalon cap (Silymarin) | 80 ج.م: Silymarin Arrow cap | 55 ج.م, Silymarin GPO cap | 45 ج.م, Heparex cap | 60 ج.م\r\nHepafort cap | 50 ج.م: Liv-52 cap | 65 ج.م, Hepafort GPO cap | 40 ج.م, Livomyn cap | 55 ج.م\r",
     "drugInstructions": "",
+    "drugInteractions": ""
+  },
+  {
+    "id": "rochetta-073",
+    "title": "Chronic Gastritis",
+    "subtitle": "Dyspepsia and epigastric burning — H. pylori is the commonest identifiable cause",
+    "content": "[DIAGNOSIS]\r\n- Dyspepsia, epigastric pain or burning, nausea, early satiety\r\n- H. pylori infection is the commonest identifiable cause\r\n- Alarm features (weight loss, bleeding, dysphagia, anaemia) → endoscopy\r\n\r\n[INVESTIGATIONS]\r\n- H. pylori stool antigen (or urea breath test) — stop PPI ≥ 2 weeks and antibiotics ≥ 4 weeks before testing\r\n- Confirm eradication ≥ 4 weeks after finishing treatment (PPI off ≥ 2 weeks)\r\n- Lab: CBC (iron deficiency), FBS if long-term PPI\r\n\r\n[TREATMENT]\r\n- If H. pylori positive: optimized bismuth quadruple therapy for 14 days (ACG 2024)\r\n- If H. pylori negative / symptomatic: stop NSAIDs and gastric irritants; PPI for 2–4 weeks\r\n\r\n[WARNING]\r\nDo not use PPI–clarithromycin(–metronidazole) triple therapy unless clarithromycin susceptibility is proven (ACG 2024).\r\n\r\n[RX-Protocol 1 — Bismuth Quadruple (14 days)]\r\n- Losec 20mg cap (Omeprazole) | كبسولة مرتين يوميًا قبل الأكل بـ 30 دقيقة | 27 ج.م\r\n- Bismuth subsalicylate 120mg tab | 4 قراص يوميًا (2 مرتين) | 8 ج.م\r\n- Metronidazole 500mg tab | قرص 3 مرات يوميًا بعد الأكل | 34 ج.م\r\n- Tetracycline 500mg tab | قرص 4 مرات يوميًا بعد الأكل | 8 ج.م\r\n- OR Bispyller cap (Bismuth + Metronidazole + Tetracycline) | 3 كبسولات، 4 مرات يوميًا لمدة 10 أيام — بديل مجمّع | 800 ج.م\r\n\r\n[RX-الروشتة — H. pylori Negative / Symptomatic]\r\n- Omez 20mg cap | كبسولة قبل الفطار بنصف ساعة لمدة 2–4 أسابيع | 20 ج.م",
+    "category": "GIT",
+    "chapterAr": "الجهاز الهضمي",
+    "alternatives": "",
+    "perDrugAlternatives": "Losec 20mg cap (Omeprazole) | 27 ج.م: Gastrazol 20mg cap (Pharonia) | 15 ج.م, Gasec 20mg cap (Nepha) | 18 ج.م, Omez 20mg cap | 20 ج.م\r\nBismuth subsalicylate 120mg tab | 8 ج.م: Bismuth subcitrate 120mg tab | 10 ج.م, De-Nol 120mg tab | 55 ج.م\r\nBispyller cap | 800 ج.م: Pylorid cap | 750 ج.م, Pyloquad cap | 450 ج.م, Helicobac 300mg cap | 350 ج.م\r\nMetronidazole 500mg tab | 34 ج.م: Flagyl 500mg tab | 20 ج.م, Metronidazole GPO 500mg tab | 10 ج.م, Metronidazole Arrow 500mg tab | 8 ج.م\r\nTetracycline 500mg tab | 8 ج.م: Tetracycline GPO 500mg tab | 5 ج.م, Tetrex 500mg tab | 12 ج.م\r\nOmez 20mg cap | 20 ج.م: Controloc 40mg tab | ⚠ غير مطابق",
+    "drugInstructions": "⚠️ إيقاف الـ PPI أسبوعين والمضاد الحيوي 4 أسابيع قبل تحليل H. pylori\r\n⚠️ تأكيد الإبادة بعد 4 أسابيع من انتهاء العلاج (وPPI متوقف أسبوعين)",
+    "drugInteractions": "",
+    "related": [
+      {
+        "id": "rochetta-022",
+        "label": "H. pylori Eradication"
+      }
+    ]
+  },
+  {
+    "id": "rochetta-074",
+    "title": "Typhoid (Enteric) Fever",
+    "subtitle": "Prolonged fever with abdominal symptoms — blood culture before antibiotics",
+    "content": "[DIAGNOSIS]\r\n- Step-ladder fever, headache, abdominal pain, constipation or diarrhoea\r\n- Relative bradycardia, splenomegaly, rose spots (often absent)\r\n- Confusion or GI bleeding = severe disease\r\n\r\n[INVESTIGATIONS]\r\n- Blood culture BEFORE antibiotics (stool/urine cultures in weeks 2–3); Widal has limited reliability\r\n- Lab: FBC, LFTs, renal function\r\n- Monitor: hydration and fever control\r\n\r\n[TREATMENT]\r\n- Uncomplicated oral therapy: azithromycin 1 g on day 1 then 500 mg daily for 6 days (total 7 days)\r\n- Alternatives: cefixime 200 mg q12h for 10–14 days; ciprofloxacin 500 mg q12h for 7 days only if the isolate is fluoroquinolone-susceptible\r\n- Admit/refer: toxic appearance, altered consciousness, GI bleeding or perforation signs, persistent vomiting → IV ceftriaxone 2 g daily (then azithromycin to complete ≥ 7 days); meropenem for ceftriaxone-resistant/XDR strains\r\n\r\n[WARNING]\r\nAvoid NSAIDs/aspirin (GI bleeding and perforation risk) — use paracetamol.\r\nFluoroquinolone resistance is common; do not rely on ciprofloxacin empirically.\r\nRelapse may occur 2–3 weeks after recovery.\r\n\r\n[RX-الروشتة — التيفود]\r\n- Zithromax 500mg tab | قرصان (1 جم) أول يوم ثم قرص 500 مجم يوميًا لمدة 6 أيام | 150 ج.م\r\n- Panadol 500mg tab | قرص كل 6–8 ساعات عند ارتفاع الحرارة | 46 ج.م\r\n- Lactulose syrup | ملعقة كبيرة 3 مرات يوميًا عند وجود إمساك | ⚠ غير مطابق\r\n\r\n[RX-الروشتة — بدائل حسب الحساسية]\r\n- Cefixime 200mg tab | قرص كل 12 ساعة لمدة 10–14 يومًا — حسب الحساسية | ⚠ غير مطابق\r\n- Cipro 500mg tab | قرص كل 12 ساعة لمدة 7 أيام — فقط إذا أثبتت المزرعة الحساسية | 90 ج.م",
+    "category": "Antibiotics",
+    "chapterAr": "المضادات الحيوية",
+    "alternatives": "",
+    "perDrugAlternatives": "Zithromax 500mg tab | 150 ج.م: Azomycin 500mg cap | ⚠ غير مطابق\r\nPanadol 500mg tab | 46 ج.م: Paracetamol 500mg tab | 8 ج.م\r\nLactulose syrup | ⚠ غير مطابق: Duphalac syrup (Lactulose) | 60 ج.م\r\nCipro 500mg tab | 90 ج.م: Ciprofloxacin 500mg tab | 53 ج.م",
+    "drugInstructions": "✅ سوائل كثيرة وتعويض الجفاف\r\n⚠️ إعادة عمل مزرعة إذا استمرت الحرارة\r\n❌ ممنوع استخدام المسكنات غير الباراسيتامول (NSAIDs)",
+    "drugInteractions": ""
+  },
+  {
+    "id": "rochetta-075",
+    "title": "Urinary Crystals, Gravel & Stones",
+    "subtitle": "Urate, calcium oxalate or phosphate crystals — high fluid intake and type-specific diet",
+    "content": "[DIAGNOSIS]\r\n- Loin pain or colic, haematuria, passage of gravel\r\n- Stone type: urate (radiolucent), calcium oxalate (radio-opaque), phosphate\r\n\r\n[INVESTIGATIONS]\r\n- Urine analysis: crystals, pH, RBCs\r\n- Imaging: US KUB or CT KUB for stones\r\n- Lab: serum uric acid, calcium, phosphate, renal function; stone analysis if passed\r\n\r\n[TREATMENT]\r\n- High fluid intake (2–3 L/day) to keep urine dilute\r\n- Type-specific dietary advice (see instructions)\r\n\r\n[WARNING]\r\nFever with obstruction, anuria, or severe pain → urgent urology referral.\r\nSee also: Renal Colic / Urolithiasis (rochetta-050).\r\n\r\n[RX-الروشتة — Urate Crystals]\r\n- Urosolvin sachet | كيس على نصف كوب ماء 3 مرات يوميًا قبل الأكل بنصف ساعة | ⚠ غير مطابق\r\n\r\n[RX-الروشتة — Calcium Oxalate]\r\n- Epimag sachet | كيس على نصف كوب ماء 3 مرات يوميًا قبل الأكل بنصف ساعة | ⚠ غير مطابق\r\n\r\n[RX-الروشتة — Phosphate]\r\n- Vitacid C effervescent | كيس على نصف كوب ماء 3 مرات يوميًا قبل الأكل بنصف ساعة | ⚠ غير مطابق",
+    "category": "Urinary",
+    "chapterAr": "المسالك البولية",
+    "alternatives": "",
+    "perDrugAlternatives": "",
+    "drugInstructions": "✅ شرب كميات كبيرة من الماء\r\n❌ يقلل الكبدة واللحمة والسمك — ممنوع الشاي والقهوة والكوكاكولا\r\n❌ يقلل الطماطم والمانجو والفراولة والشيكولاتة",
+    "drugInteractions": "",
+    "related": [
+      {
+        "id": "rochetta-050",
+        "label": "Renal Colic / Urolithiasis"
+      }
+    ]
+  },
+  {
+    "id": "rochetta-076",
+    "title": "Trigeminal Neuralgia",
+    "subtitle": "Burning, electric-shock or stabbing facial pain — specialist-level",
+    "content": "[DIAGNOSIS]\r\n- Burning, electric-shock or stabbing pain\r\n- Worsened by jaw movement, eating or laughing\r\n- Usually unilateral and preceded by muscle spasm\r\n- Specialist-level case — for specialists\r\n\r\n[INVESTIGATIONS]\r\n- MRI brain with contrast if young, bilateral, sensory loss, or refractory — exclude MS or tumour\r\n- Lab: LFTs, CBC before carbamazepine\r\n\r\n[TREATMENT]\r\n- Carbamazepine is first-line; titrate slowly (400–800 mg/day)\r\n- Specialist-level: neurology referral if refractory or adverse effects\r\n\r\n[WARNING]\r\nCarbamazepine contraindicated in hepatic patients. Monitor LFTs and CBC; stop if rash, jaundice, or marrow suppression.\r\n\r\n[RX-الروشتة — العصب الخامس]\r\n- Mobic 7.5mg tab | قرص كل 12 ساعة | ⚠ غير مطابق\r\n- Tegretol 200mg tab | قرص كل 12 ساعة | 80 ج.م",
+    "category": "Pain & Analgesics",
+    "chapterAr": "الألم والمسكنات",
+    "alternatives": "",
+    "perDrugAlternatives": "Tegretol 200mg tab | 80 ج.م: Carbamazepine 200mg tab | 35 ج.م",
+    "drugInstructions": "⚠️ زيادة الجرعة تدريجيًا تحت إشراف الطبيب\r\n❌ ممنوع في مرضى الكبد\r\n⚠️ عمل صورة دم ووظائف كبد دوريًا",
+    "drugInteractions": ""
+  },
+  {
+    "id": "rochetta-077",
+    "title": "Sciatica",
+    "subtitle": "Radiating leg pain along the sciatic nerve — usually a disc herniation",
+    "content": "[DIAGNOSIS]\r\n- Radiating pain from the lower back down the posterior thigh/leg, often below the knee\r\n- Numbness, tingling, or weakness in a dermatomal distribution\r\n- Worse with cough/sneeze or sitting; straight-leg raise positive\r\n\r\n[INVESTIGATIONS]\r\n- MRI lumbosacral spine if progressive deficit, cauda equina features, or no improvement in 4–6 weeks\r\n- Lab: FBS, ESR/CRP if red flags\r\n\r\n[TREATMENT]\r\n- Short course NSAID ± muscle relaxant; avoid prolonged bed rest\r\n- Physiotherapy; image-guided injection or neurosurgical referral if refractory\r\n\r\n[WARNING]\r\nRed flags — saddle anaesthesia, bladder/bowel dysfunction, bilateral leg weakness → urgent MRI and neurosurgical referral (cauda equina).\r\n\r\n[RX-الروشتة — عرق النسا]\r\n- Mobic 7.5mg tab | قرص كل 12 ساعة | ⚠ غير مطابق\r\n- Reparil gel | دهان مرتين يوميًا | ⚠ غير مطابق\r\n- Myofen cap | كبسولة 3 مرات يوميًا | ⚠ غير مطابق\r\n- Tegretol 200mg tab | قرص كل 12 ساعة | 80 ج.م",
+    "category": "Pain & Analgesics",
+    "chapterAr": "الألم والمسكنات",
+    "alternatives": "",
+    "perDrugAlternatives": "Tegretol 200mg tab | 80 ج.م: Carbamazepine 200mg tab | 35 ج.م",
+    "drugInstructions": "✅ راحة تامة في السرير لمدة أسبوعين\r\n✅ ينام على سطح صلب قدر الإمكان\r\n✅ علاج طبيعي",
+    "drugInteractions": ""
+  },
+  {
+    "id": "rochetta-078",
+    "title": "Diabetic Neuropathy",
+    "subtitle": "Distal symmetric burning and numbness in a diabetic — optimize glycaemic control",
+    "content": "[DIAGNOSIS]\r\n- Symmetric distal burning, tingling, or numbness (stocking-glove)\r\n- Loss of vibration/pin-prick sensation, absent ankle reflexes\r\n- Screen for foot ulcers and autonomic symptoms\r\n\r\n[INVESTIGATIONS]\r\n- Lab: HbA1c, FBS, B12, TSH, renal function\r\n- Special test: monofilament test; nerve conduction study if diagnosis uncertain\r\n\r\n[TREATMENT]\r\n- Optimize glycaemic control — the only disease-modifying measure\r\n- Symptomatic: pregabalin/gabapentin, duloxetine, or amitriptyline (see Neuropathic Pain)\r\n\r\n[WARNING]\r\nTrental (pentoxifylline) is contraindicated in renal and hepatic impairment. Evidence for vasodilators in diabetic neuropathy is weak — review the need.\r\n\r\n[RX-الروشتة — الاعتلال العصبي السكري]\r\n- Mobic 7.5mg tab | قرص كل 12 ساعة | ⚠ غير مطابق\r\n- Tegretol 200mg tab | قرص كل 12 ساعة | 80 ج.م\r\n- Cobal cap | كبسولة مرة واحدة يوميًا | ⚠ غير مطابق\r\n- Betolvex amp | حقنة عضل كل 3 أيام لمدة أسبوعين ثم حقنة عضل كل شهر | ⚠ غير مطابق\r\n- Trental 100mg tab | قرصان كل 8 ساعات بعد الأكل لمدة شهرين | ⚠ غير مطابق",
+    "category": "Pain & Analgesics",
+    "chapterAr": "الألم والمسكنات",
+    "alternatives": "",
+    "perDrugAlternatives": "Tegretol 200mg tab | 80 ج.م: Carbamazepine 200mg tab | 35 ج.م",
+    "drugInstructions": "✅ ضبط السكر مهم جدًا\r\n✅ يحافظ على قدميه ويتجنب الأحذية الضيقة",
+    "drugInteractions": "",
+    "related": [
+      {
+        "id": "rochetta-010",
+        "label": "Neuropathic Pain"
+      }
+    ]
+  },
+  {
+    "id": "rochetta-079",
+    "title": "Cluster Headache",
+    "subtitle": "Severe unilateral periorbital pain with autonomic features — high-flow oxygen first",
+    "content": "[DIAGNOSIS]\r\n- Severe unilateral periorbital pain lasting 15–180 minutes, 1–8 attacks/day\r\n- Ipsilateral lacrimation, conjunctival injection, rhinorrhoea, ptosis, restlessness\r\n- Clusters over weeks to months, often nocturnal\r\n\r\n[INVESTIGATIONS]\r\n- MRI brain if atypical, first presentation with neurological signs, or refractory\r\n- Screen for secondary causes (sinusitis, glaucoma)\r\n\r\n[TREATMENT]\r\n- Acute: high-flow oxygen 100% by mask for 15 minutes + rapid-acting analgesic\r\n- Prophylaxis: verapamil (specialist) ± short course steroids\r\n\r\n[WARNING]\r\nHigh-flow oxygen is first-line for the acute attack. Refer to neurology for prophylaxis; verapamil requires ECG monitoring.\r\n\r\n[RX-الروشتة — الصداع العنقودي]\r\n- Adolor amp | حقنة عضل كل 12 ساعة عند اللزوم | ⚠ غير مطابق\r\n- Cataflam 50mg tab | قرص 3 مرات يوميًا | 55 ج.م",
+    "category": "Pain & Analgesics",
+    "chapterAr": "الألم والمسكنات",
+    "alternatives": "",
+    "perDrugAlternatives": "Cataflam 50mg tab | 55 ج.م: Brufen 400mg tab (Ibuprofen) | 78 ج.م\r\nAdolor amp | ⚠ غير مطابق: Diclofenac 75mg IM | 17 ج.م",
+    "drugInstructions": "✅ أكسجين عالي التدفق 100% بقناع لمدة 15 دقيقة عند بداية النوبة\r\n❌ تجنب الكحول أثناء فترة العنقود",
+    "drugInteractions": ""
+  },
+  {
+    "id": "rochetta-080",
+    "title": "Memory Improvement",
+    "subtitle": "Age-related memory complaints — rule out reversible causes first",
+    "content": "[DIAGNOSIS]\r\n- Subjective memory decline without functional impairment\r\n- Exclude depression, sleep deprivation, drugs, thyroid disease, B12 deficiency, and dementia\r\n\r\n[INVESTIGATIONS]\r\n- Lab: CBC, TSH, B12, folate, FBS, calcium\r\n- Special test: cognitive screen (MMSE/MoCA)\r\n- Imaging: MRI brain if focal signs or rapid decline\r\n\r\n[TREATMENT]\r\n- Treat reversible causes; cognitive stimulation, exercise, sleep hygiene\r\n- No proven benefit for nootropic supplements in healthy adults — review the need\r\n\r\n[WARNING]\r\nExclude depression and dementia before prescribing nootropics. Specialist referral if cognitive decline affects daily function.\r\n\r\n[RX-الروشتة — تحسين الذاكرة]\r\n- Activate tab | قرص قبل الفطار يوميًا لمدة شهر فقط | ⚠ غير مطابق",
+    "category": "Psychiatry",
+    "chapterAr": "أعصاب / الطب النفسي",
+    "alternatives": "",
+    "perDrugAlternatives": "",
+    "drugInstructions": "⚠️ لمدة شهر فقط\r\n✅ مراجعة الطبيب إذا لم تتحسن الأعراض",
+    "drugInteractions": ""
+  },
+  {
+    "id": "rochetta-081",
+    "title": "Obesity & Weight Reduction",
+    "subtitle": "BMI ≥ 30, or ≥ 27 with comorbidity — lifestyle first; specialist-level",
+    "content": "[DIAGNOSIS]\r\n- BMI ≥ 30, or ≥ 27 with a weight-related comorbidity\r\n- Assess waist circumference, blood pressure, and comorbidities\r\n- Specialist-level case — for specialists\r\n\r\n[INVESTIGATIONS]\r\n- Lab: FBS/HbA1c, lipid profile, LFTs, TSH, renal function\r\n- Screen: eating disorder, depression, sleep apnoea\r\n\r\n[TREATMENT]\r\n- Lifestyle first: calorie deficit, ≥ 150 min/week activity, adequate sleep\r\n- Pharmacotherapy only as an adjunct; stop if < 5% weight loss after 12 weeks\r\n- Bariatric surgery referral if BMI ≥ 40, or ≥ 35 with comorbidity\r\n\r\n[WARNING]\r\nOrlistat: separate other drugs by 2 hours and supplement fat-soluble vitamins. Statin only when dyslipidaemia is present.\r\n\r\n[RX-الروشتة — السمنة]\r\n- Orlistat 120mg cap | كبسولة قبل أو وسط الأكل كل 8 ساعات — لا دواء آخر خلال ساعتين | ⚠ غير مطابق\r\n- Zocor 20mg tab | قرص مرة واحدة يوميًا | ⚠ غير مطابق\r\n- Omega 3 Plus tab | قرص مرة واحدة يوميًا | ⚠ غير مطابق",
+    "category": "Others",
+    "chapterAr": "أخرى",
+    "alternatives": "",
+    "perDrugAlternatives": "",
+    "drugInstructions": "⚠️ توقف عن الدواء إذا لم تفقد 5% من الوزن خلال 12 أسبوعًا\r\n✅ نظام غذائي منخفض السعرات وممارسة الرياضة\r\n❌ تجنب الأدوية الأخرى خلال ساعتين من الأورليستات",
+    "drugInteractions": ""
+  },
+  {
+    "id": "rochetta-082",
+    "title": "Amoebiasis",
+    "subtitle": "Entamoeba histolytica — bloody diarrhoea; treat the luminal phase after tissue therapy",
+    "content": "[DIAGNOSIS]\r\n- Bloody diarrhoea, abdominal pain, tenesmus; may be asymptomatic\r\n- Liver abscess: fever + right upper quadrant pain\r\n\r\n[INVESTIGATIONS]\r\n- Stool microscopy for E. histolytica cysts/trophozoites (3 samples)\r\n- Stool antigen or PCR if available; serology for invasive disease\r\n- Imaging: US liver if abscess suspected\r\n\r\n[TREATMENT]\r\n- Invasive/vegetative disease: metronidazole 500 mg/8 h for 10 days, followed by a luminal agent to clear cysts\r\n- Cyst carrier: metronidazole + diloxanide furoate (or paromomycin)\r\n\r\n[WARNING]\r\nTreat the luminal (cyst) phase after tissue therapy to prevent relapse. Avoid alcohol with metronidazole.\r\n\r\n[RX-الروشتة — Vegetative Form]\r\n- Flagyl 500mg tab | قرص كل 8 ساعات لمدة 10 أيام | 34 ج.م\r\n\r\n[RX-الروشتة — Cyst Form]\r\n- Furazole tab | قرص كل 8 ساعات لمدة 10 أيام | ⚠ غير مطابق\r\n\r\n[RX-الروشتة — Cyst Form — بديل]\r\n- Flagyl 500mg tab | قرص كل 8 ساعات لمدة أسبوع ثم يوقف أسبوعًا ثم يكرر نفس الجرعة أسبوعًا | 34 ج.م",
+    "category": "GIT",
+    "chapterAr": "الجهاز الهضمي",
+    "alternatives": "",
+    "perDrugAlternatives": "Flagyl 500mg tab | 34 ج.م: Metronidazole 500mg tab | 34 ج.م",
+    "drugInstructions": "❌ ممنوع الكحول أثناء العلاج وبعد 48 ساعة من آخر جرعة ميترونيدازول\r\n✅ إعادة تحليل البراز بعد العلاج",
+    "drugInteractions": ""
+  },
+  {
+    "id": "rochetta-083",
+    "title": "Giardiasis",
+    "subtitle": "Giardia lamblia — bloating, greasy diarrhoea after contaminated water",
+    "content": "[DIAGNOSIS]\r\n- Diarrhoea, bloating, greasy stools, malabsorption\r\n- Often from contaminated water\r\n\r\n[INVESTIGATIONS]\r\n- Stool microscopy (3 samples) or stool antigen for Giardia\r\n\r\n[TREATMENT]\r\n- Metronidazole 500 mg/12 h for 7 days\r\n- Reference regimens: metronidazole 500 mg q12h × 7 days · mebendazole 200 mg q8h × 5 days\r\n\r\n[WARNING]\r\nAvoid alcohol with metronidazole. Treat household contacts if recurrent.\r\n\r\n[RX-الروشتة — الجيارديا]\r\n- Flagyl 500mg tab | قرص كل 12 ساعة لمدة 7 أيام | 34 ج.م",
+    "category": "GIT",
+    "chapterAr": "الجهاز الهضمي",
+    "alternatives": "",
+    "perDrugAlternatives": "Flagyl 500mg tab | 34 ج.م: Metronidazole 500mg tab | 34 ج.م",
+    "drugInstructions": "❌ ممنوع الكحول أثناء العلاج وبعد 48 ساعة من آخر جرعة",
+    "drugInteractions": ""
+  },
+  {
+    "id": "rochetta-084",
+    "title": "Enterobiasis (Pinworm)",
+    "subtitle": "Perianal itching worse at night — treat the whole household and repeat after 2 weeks",
+    "content": "[DIAGNOSIS]\r\n- Perianal itching worse at night, restlessness, insomnia\r\n- Visible pinworms in the perianal area\r\n\r\n[INVESTIGATIONS]\r\n- Perianal tape test (cellophane tape) in the morning\r\n\r\n[TREATMENT]\r\n- Flubendazole 100 mg single dose, repeated after 2 weeks\r\n- Alternatives: albendazole 400 mg single dose or mebendazole 100 mg single dose, repeated after 2 weeks\r\n- Treat all household contacts\r\n\r\n[WARNING]\r\nRepeat the dose after 2 weeks and treat all household members. Hygiene measures are essential to prevent reinfection.\r\n\r\n[RX-الروشتة — الدبوس]\r\n- Fluvermal 100mg tab | قرص مرة واحدة ويُكرَّر بعد أسبوعين | ⚠ غير مطابق\r\n- White precipitate ointment | دهان صباحًا ومساءً لمدة 10 أيام | ⚠ غير مطابق\r\n\r\n[RX-الروشتة — بديل]\r\n- Bendax 200mg tab | قرصان مرة واحدة وتُكرَّر بعد أسبوعين | ⚠ غير مطابق",
+    "category": "GIT",
+    "chapterAr": "الجهاز الهضمي",
+    "alternatives": "",
+    "perDrugAlternatives": "",
+    "drugInstructions": "✅ الاهتمام بالنظافة الشخصية وقص الأظافر\r\n✅ الملابس تُغلى في ماء ساخن وتُكوى جيدًا بعد الغسيل\r\n✅ غسل الأيدي بالصابون بعد الحمام\r\n✅ علاج كل أفراد البيت\r\n✅ غسل الخضراوات والفاكهة جيدًا",
+    "drugInteractions": ""
+  },
+  {
+    "id": "rochetta-085",
+    "title": "Ancylostomiasis (Hookworm)",
+    "subtitle": "Iron-deficiency anaemia with epigastric pain — chronic intestinal blood loss",
+    "content": "[DIAGNOSIS]\r\n- Iron-deficiency anaemia, epigastric pain, ground itch at the entry site\r\n- Chronic blood loss from the small bowel\r\n\r\n[INVESTIGATIONS]\r\n- Stool microscopy for hookworm ova\r\n- Lab: CBC, ferritin\r\n\r\n[TREATMENT]\r\n- Flubendazole 100 mg/12 h for 3 days\r\n- Alternatives: albendazole 400 mg once · mebendazole 100 mg single dose repeated after 2 weeks\r\n- Treat iron-deficiency anaemia\r\n\r\n[WARNING]\r\nCorrect iron-deficiency anaemia; severe anaemia may need transfusion before deworming.\r\n\r\n[RX-الروشتة — الأنكلستوما]\r\n- Fluvermal 100mg tab | قرص كل 12 ساعة لمدة 3 أيام | ⚠ غير مطابق\r\n\r\n[RX-الروشتة — بديل]\r\n- Antiver 100mg tab | قرص مرة واحدة ويُكرَّر بعد أسبوعين | ⚠ غير مطابق",
+    "category": "GIT",
+    "chapterAr": "الجهاز الهضمي",
+    "alternatives": "",
+    "perDrugAlternatives": "",
+    "drugInstructions": "✅ النظافة الشخصية وارتداء الأحذية\r\n✅ علاج الأنيميا بالحديد",
+    "drugInteractions": ""
+  },
+  {
+    "id": "rochetta-086",
+    "title": "Ascariasis",
+    "subtitle": "Ascaris lumbricoides — abdominal pain and passage of worms; watch for obstruction",
+    "content": "[DIAGNOSIS]\r\n- Abdominal pain, nausea, cough (larval migration), passage of worms\r\n- Complications: intestinal obstruction, biliary colic\r\n\r\n[INVESTIGATIONS]\r\n- Stool microscopy for Ascaris ova; CBC (eosinophilia)\r\n- Imaging: US/abdominal X-ray if obstruction suspected\r\n\r\n[TREATMENT]\r\n- Flubendazole 100 mg/12 h for 3 days\r\n- Alternatives: albendazole 400 mg once · mebendazole 100 mg/12 h for 3 days, repeated after 2 weeks\r\n\r\n[WARNING]\r\nIntestinal obstruction or biliary complications need urgent surgical referral — do not give deworming alone.\r\n\r\n[RX-الروشتة — الإسكارس]\r\n- Fluvermal 100mg tab | قرص كل 12 ساعة لمدة 3 أيام | ⚠ غير مطابق",
+    "category": "GIT",
+    "chapterAr": "الجهاز الهضمي",
+    "alternatives": "",
+    "perDrugAlternatives": "",
+    "drugInstructions": "✅ النظافة الشخصية وغسل الخضراوات والفاكهة",
+    "drugInteractions": ""
+  },
+  {
+    "id": "rochetta-087",
+    "title": "Hymenolepis nana",
+    "subtitle": "Dwarf tapeworm — niclosamide 2 g on day 1 then 1 g daily for 6 days",
+    "content": "[DIAGNOSIS]\r\n- Mild abdominal pain or diarrhoea; often asymptomatic\r\n- Commoner in children and with poor hygiene\r\n\r\n[INVESTIGATIONS]\r\n- Stool microscopy for H. nana ova (may need repeated samples)\r\n\r\n[TREATMENT]\r\n- Niclosamide: day 1 — 2 g once; next 6 days — 1 g once\r\n\r\n[WARNING]\r\nRepeat stool examination after treatment. Treat household contacts and reinforce hygiene.\r\n\r\n[RX-الروشتة — الدودة القزمة]\r\n- Niclosan 500mg tab | 4 أقراص تُمضغ قبل الفطار بساعة في أول يوم ثم قرصان قبل الفطار لمدة 6 أيام | ⚠ غير مطابق",
+    "category": "GIT",
+    "chapterAr": "الجهاز الهضمي",
+    "alternatives": "",
+    "perDrugAlternatives": "",
+    "drugInstructions": "✅ يمضغ الأقراص جيدًا قبل الفطار\r\n✅ إعادة تحليل البراز بعد أسبوعين",
+    "drugInteractions": ""
+  },
+  {
+    "id": "rochetta-088",
+    "title": "Bilharziasis (Schistosomiasis)",
+    "subtitle": "Schistosoma haematobium/mansoni — haematuria or portal hypertension after fresh-water exposure",
+    "content": "[DIAGNOSIS]\r\n- Haematuria, dysuria, frequency (S. haematobium)\r\n- Diarrhoea or portal hypertension (S. mansoni)\r\n- Endemic exposure to fresh water\r\n\r\n[INVESTIGATIONS]\r\n- Urine/stool microscopy for Schistosoma ova; serology\r\n- Imaging: US urinary tract or liver\r\n- Lab: CBC (eosinophilia)\r\n\r\n[TREATMENT]\r\n- Praziquantel 40 mg/kg PO single dose (weight-based); 600 mg tablets — 4 tablets as dosed in the prescription\r\n\r\n[WARNING]\r\nAvoid praziquantel in the first trimester of pregnancy unless clearly indicated. Re-examine 4–6 weeks after treatment.\r\n\r\n[RX-الروشتة — البلهارسيا]\r\n- Praziquantel 600mg tab | 4 أقراص مرة واحدة | ⚠ غير مطابق",
+    "category": "GIT",
+    "chapterAr": "الجهاز الهضمي",
+    "alternatives": "",
+    "perDrugAlternatives": "",
+    "drugInstructions": "✅ جرعة واحدة — يمكن تكرارها بعد 2–4 أسابيع حسب الحاجة\r\n✅ تجنب مياه الترع والأنهار",
+    "drugInteractions": ""
+  },
+  {
+    "id": "rochetta-089",
+    "title": "Taeniasis",
+    "subtitle": "T. saginata / T. solium — intestinal tapeworm; exclude neurocysticercosis first",
+    "content": "[DIAGNOSIS]\r\n- Passage of proglottids, abdominal discomfort, weight loss\r\n- T. solium carries a risk of cysticercosis\r\n\r\n[INVESTIGATIONS]\r\n- Stool microscopy for Taenia ova/proglottids; species identification (T. solium vs T. saginata)\r\n- Neuroimaging if seizures or neurological symptoms — exclude neurocysticercosis\r\n\r\n[TREATMENT]\r\n- Praziquantel 5–10 mg/kg single dose (preferred)\r\n- Niclosamide 2 g total; albendazole 400 mg daily for 3 days\r\n\r\n[WARNING]\r\nUse praziquantel and albendazole cautiously if cysticercosis is suspected (seizures have been reported with treatment). Niclosamide is minimally absorbed, so it is the safer option when cysticercosis cannot be excluded.\r\nSeizures or neurological symptoms → neuroimaging and specialist referral; neurocysticercosis is a different indication (albendazole 400 mg q12h for 7–30 days, specialist-managed).\r\n\r\n[RX-الروشتة — الدودة الشريطية]\r\n- Praziquantel 600mg tab | قرص واحد (600 مجم) مرة واحدة | ⚠ غير مطابق\r\n\r\n[RX-الروشتة — بدائل]\r\n- Niclosan 500mg tab | قرصان بعد الفطار ثم قرصان بعد ساعة | ⚠ غير مطابق\r\n- Bendax 200mg tab | قرصان (400 مجم) مرة يوميًا لمدة 3 أيام | ⚠ غير مطابق",
+    "category": "GIT",
+    "chapterAr": "الجهاز الهضمي",
+    "alternatives": "",
+    "perDrugAlternatives": "",
+    "drugInstructions": "✅ طهي اللحوم جيدًا\r\n✅ غسل الأيدي بالصابون\r\n✅ فحص المخالطين في البيت",
     "drugInteractions": ""
   }
 ]

@@ -4,7 +4,6 @@ import { useEffect, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { ChevronDown, Siren } from "lucide-react";
 import { addRecent } from "@/lib/recents";
-import { useMode } from "@/lib/mode";
 import type { ChapterIconKey } from "@/lib/types";
 import type {
   RxLine,
@@ -27,7 +26,6 @@ import { SITE } from "@/lib/site";
 import { BackLink } from "./portal/BackLink";
 import { handleTransitionNav } from "@/lib/transition";
 import { Tabs, type TabItem } from "./ui/Tabs";
-import { ModeSwitch } from "./ModeSwitch";
 import { Sheet } from "./ui/Sheet";
 import { Alert } from "./ui/Alert";
 import { Table } from "./ui/Table";
@@ -68,6 +66,7 @@ export function CaseDetailClient({
   interactions,
   instructions,
   patient,
+  related,
 }: {
   id: string;
   title: string;
@@ -90,13 +89,15 @@ export function CaseDetailClient({
     interactionsSummary: string;
     alarmSigns: string[];
   };
+  related?: { id: string; label: string }[];
 }) {
   const [activeTab, setActiveTab] = useState(0);
   const [rxTab, setRxTab] = useState(0);
   const [openAcc, setOpenAcc] = useState<Record<string, boolean>>({});
   const [sheetOpen, setSheetOpen] = useState(false);
-  const { mode } = useMode();
-  const isPatient = mode !== "doctor";
+  // Patient consultation now lives on the separate «استشارة» site; Rochetta
+  // always shows the doctor view of a case.
+  const isPatient = false;
 
   useEffect(() => {
     const timer = setTimeout(() => addRecent(id, title), 0);
@@ -333,7 +334,7 @@ export function CaseDetailClient({
           </Link>
           <BackLink
             href={`/doctor/chapter/${chapter.slug}`}
-            className="no-print mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text-secondary)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+            className="no-print mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text-secondary)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
             label="رجوع إلى الصفحة السابقة"
           >
             <BackIcon className="h-4 w-4" />
@@ -357,10 +358,6 @@ export function CaseDetailClient({
         </div>
       </header>
 
-      <div className="case-mode-bar no-print">
-        <ModeSwitch />
-      </div>
-
       <div className="case-layout">
         {/* Clinical column */}
         <section className="case-clinical-col">
@@ -375,6 +372,21 @@ export function CaseDetailClient({
                 <div key={w}>{w}</div>
               ))}
             </Alert>
+          )}
+
+          {related && related.length > 0 && (
+            <div className="mb-5 flex flex-wrap items-center gap-2 text-[13px]">
+              <span className="font-semibold text-[var(--text-secondary)]">حالات ذات صلة:</span>
+              {related.map((r) => (
+                <Link
+                  key={r.id}
+                  href={`/doctor/case/${r.id}`}
+                  className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-3 py-1 text-[var(--accent)] transition hover:border-[var(--accent)]"
+                >
+                  {r.label}
+                </Link>
+              ))}
+            </div>
           )}
 
           {isPatient && patient.alarmSigns.length > 0 && (
@@ -498,24 +510,26 @@ function DrugRow({
             style={{ maxHeight: open ? 500 : 0 }}
             aria-hidden={!open}
           >
-            <Table
-              className="alt-table"
-              columns={[
-                { header: "البديل" },
-                { header: "السعر", className: "text-end" },
-              ]}
-              rows={alts.map((a) => ({
-                cells: [
-                  <span key={`${a.name}-n`} className="alt-name">
-                    {a.name}
-                  </span>,
-                  <span key={`${a.name}-p`} className="alt-price">
-                    {a.price ?? "—"}
-                  </span>,
-                ],
-                cellClassNames: [undefined, "text-end"],
-              }))}
-            />
+            <div className="table-scroll">
+              <Table
+                className="alt-table"
+                columns={[
+                  { header: "البديل" },
+                  { header: "السعر", className: "text-end" },
+                ]}
+                rows={alts.map((a) => ({
+                  cells: [
+                    <span key={`${a.name}-n`} className="alt-name">
+                      {a.name}
+                    </span>,
+                    <span key={`${a.name}-p`} className="alt-price">
+                      {a.price ?? "—"}
+                    </span>,
+                  ],
+                  cellClassNames: [undefined, "text-end"],
+                }))}
+              />
+            </div>
           </div>
         </div>
       )}

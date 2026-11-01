@@ -23,7 +23,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/doctor/case/[id]">) {
   const { id } = await params;
   const rx = prescriptions.find((p) => p.id === id);
-  if (!rx) return { title: "Rochetta" };
+  if (!rx) return { title: "Rochetta", robots: { index: false, follow: false } };
   const url = `${SITE_URL}/doctor/case/${rx.id}`;
   const chapter = getChapterByCategory(rx.category);
   const description =
@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: PageProps<"/doctor/case/[id]"
     title: rx.title,
     description,
     alternates: { canonical: url },
+    robots: { index: false, follow: false },
     openGraph: {
       type: "article",
       url,
@@ -132,6 +133,7 @@ export default async function CasePage({ params }: PageProps<"/doctor/case/[id]"
       perDrug={perDrug}
       interactions={interactions}
       instructions={instructions}
+      related={rx.related ?? []}
       patient={{
         diagnosisSummary: rx.patient_diagnosis_summary ?? "",
         interactionsSummary: rx.patient_interactions_summary ?? "",
