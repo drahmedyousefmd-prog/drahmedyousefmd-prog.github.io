@@ -1,7 +1,8 @@
 # BATCH 1 — Prescriptions Add/Update Report
 
-**Branch:** `feature/prescriptions-batch1`
-**Status:** implemented, built, verified — **not committed, not pushed, not deployed**.
+**Branch:** `feature/prescriptions-batch1` (pushed to origin)
+**Status:** implemented, built, verified, **deployed to `gh-pages`** on 2026-11-01 (`983153f..82ac671`).
+**Live:** https://drahmedyousefmd-prog.github.io
 **Data:** `src/data/prescriptions.json` — 72 → **89** cases (17 CREATE, 9 UPDATE, 27 source cases).
 
 ---
@@ -272,4 +273,8 @@ No interactions file exists, so `drugInteractions` was left unchanged (empty on 
 - `README.md` — 72 → 89 references.
 - `BATCH1_REPORT.md` — this file.
 
-**Nothing was committed, pushed, or deployed. Awaiting your review.**
+**Deployment (2026-11-01):**
+- Source commits on `feature/prescriptions-batch1`: `a68b502` (batch 1) and `6536d12` (pending site work); branch pushed to origin.
+- `gh-pages`: `983153f..82ac671` (force-push via `scripts/deploy.ps1`).
+- Live checks: all of `rochetta-073…089` return 200; home search payload contains the new cases; GIT chapter shows 18; `noindex` present on case pages.
+- The same deploy published the previously-pending site work (patient split, nav/tokens, `/about`, `/contact`, `/privacy`). Those three pages still contain `يُستكمل` lines and await the owner’s final Arabic copy.
