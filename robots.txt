@@ -1,9 +1,20 @@
 User-Agent: *
 Allow: /
-Disallow: /patient
-Disallow: /login
-Disallow: /import
-Disallow: /doctor/inbox
-Disallow: /doctor/categories
+
+User-Agent: OAI-SearchBot
+Allow: /
+
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: Claude-SearchBot
+Allow: /
+
+User-Agent: Claude-User
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
 
 Sitemap: https://drahmedyousefmd-prog.github.io/sitemap.xml
+Sitemap: https://drahmedyousefmd-prog.github.io/estesharah/sitemap.xml
