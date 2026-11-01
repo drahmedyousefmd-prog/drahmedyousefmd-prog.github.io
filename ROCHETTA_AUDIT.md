@@ -701,4 +701,28 @@ Per the site-split plan (separate «استشارة» patient site now live at `h
 
 ---
 
-*End of audit — continuous journal; last update 2026-09-21 (Round 15).*
+*End of audit — continuous journal; last update 2026-10-16 (Round 16).*
+
+---
+
+## Round 16 — SEO / discoverability overhaul (2026-10-16)
+
+Goal: put the brand name in the titles, ship real static HTML for public pages,
+add structured data, robots/sitemap/llms.txt, and stop indexing the doctor-only
+drug pages.
+
+| Item | Detail | Status |
+|---|---|---|
+| **Home title/meta** | `site.ts`: `SITE.homeTitle = "Rochetta \| روشتة — دليل الطبيب لأحدث الروشتات والأدوية في مصر"`, new ~150-char `description`, `alternateNames = ["روشتة","Rochetta Egypt","روشتات مصر"]`, brand-first `heroLine`. Layout `title.default = homeTitle`, `template = "%s \| Rochetta"`, OG/Twitter title = homeTitle | OK |
+| **Home H1 + first paragraph** | `HomeApp.tsx`: H1 accent → «إلى أحدث الروشتات الطبية»؛ و`hero-lead` يحمل «Rochetta (روشتة) دليل مرجعي للأطباء في مصر …» | OK |
+| **JSON-LD** | layout graph rewritten: `WebSite` (alternateName array + publisher `#author`) + `Person` (`د. أحمد يوسف`, jobTitle Physician, sameAs LinkedIn) + `MedicalWebPage` (audience `MedicalAudience: Clinician`, inLanguage ar). Values real only (no invented credentials/ratings) | OK |
+| **Drug pages de-indexed** | `/doctor/case/[id]` + `/doctor/chapter/[slug]` now `robots: { index:false, follow:false }`; removed from sitemap | OK |
+| **New public pages** | `/categories` (chapter hub, real counts), `/about`, `/contact`, `/privacy` — static, canonical, in sitemap. `/about`,`/contact`,`/privacy` carry «يُستكمل» placeholders awaiting owner copy | OK |
+| **robots.txt (root)** | `robots.ts` → **no Disallow** (crawlers must read the noindex tag), explicit allows for OAI-SearchBot/ChatGPT-User/Claude-SearchBot/Claude-User/PerplexityBot, two Sitemap lines (root + `/estesharah`) | OK |
+| **sitemap.xml** | now home + /categories + /about + /contact + /privacy (5 URLs) | OK |
+| **llms.txt** | new `public/llms.txt`; `deploy.ps1` prune updated to keep llms.txt alongside robots.txt | OK |
+| **Nav** | `SiteNav` links now `/categories`, `/about`, `/contact` (real routes via `<Link>`) | OK |
+| Validation | `next build` 105 pages؛ `out/index.html` title/H1/desc/canonical + Person/MedicalAudience/alternateName؛ case/chapter noindex؛ robots/sitemap/llms مُتحقّق منها؛ lint = 4 أخطاء/4 تحذيرات (كما قبل، لا جديد) | OK |
+| Not deployed yet | بانتظار نص «عن روشتة/تواصل/الخصوصية» النهائي | PENDING |
+
+*End of Round 16 (SEO) — not deployed yet.*

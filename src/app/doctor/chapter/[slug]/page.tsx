@@ -23,11 +23,12 @@ export async function generateMetadata({ params }: PageProps<"/doctor/chapter/[s
   const catName = categoryForSlug(slug);
   const count = prescriptions.filter((p) => p.category === catName).length;
   const url = `${SITE_URL}/doctor/chapter/${slug}`;
-  if (!chapter) return { title: "Rochetta" };
+  if (!chapter) return { title: "Rochetta", robots: { index: false, follow: false } };
   return {
     title: `${chapter.name} — ${chapter.arabicName}`,
     description: `دليل حالات ${chapter.arabicName} (${count} حالة) من Rochetta — دليل روشتات مصر: العلاج المقترح، التعليمات، البدائل، والتفاعلات الدوائية.`,
     alternates: { canonical: url },
+    robots: { index: false, follow: false },
     openGraph: {
       type: "website",
       url,

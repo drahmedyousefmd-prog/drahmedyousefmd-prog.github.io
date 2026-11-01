@@ -12,7 +12,7 @@ import data from "@/data/prescriptions.json";
 const prescriptions = data as unknown as Prescription[];
 
 export const metadata: Metadata = {
-  robots: { index: false },
+  robots: { index: false, follow: false },
   alternates: { canonical: "/doctor/categories" },
 };
 
@@ -36,7 +36,6 @@ export default function DoctorCategoriesPage() {
         chapters={chapters}
         prescriptions={prescriptions}
         drugCounts={drugCounts}
-        forceDoctor
       />
     </RequireRole>
   );

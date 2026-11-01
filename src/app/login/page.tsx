@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { PortalLogin } from "@/components/login/PortalLogin";
+import { RedirectToConsult } from "@/components/RedirectToConsult";
 
 export const metadata: Metadata = {
-  title: "اختر بوابتك — Rochetta",
-  alternates: { canonical: "/login" },
-  robots: { index: false },
+  title: "تسجيل الدخول",
+  robots: { index: false, follow: false },
 };
 
 export default function LoginPage() {
-  return <PortalLogin />;
+  return <RedirectToConsult path="/login" />;
 }

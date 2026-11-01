@@ -44,7 +44,7 @@ p {
 .mode-caption {
   font-size: 12px;
   font-weight: 600;
-  color: var(--color-text-secondary, #5c7378);
+  color: var(--color-text-secondary, #5a7089);
   margin-inline-start: 10px;
   white-space: nowrap;
 }
@@ -182,7 +182,7 @@ p {
   position: relative;
   background-color: var(--color-bg-start);
   background-image:
-    linear-gradient(180deg, rgba(250, 253, 253, 0.8) 0%, rgba(250, 253, 253, 0.62) 45%, rgba(234, 246, 248, 0.45) 75%, rgba(234, 246, 248, 0.4) 100%),
+    linear-gradient(180deg, rgba(248, 251, 255, 0.82) 0%, rgba(248, 251, 255, 0.64) 45%, rgba(238, 244, 251, 0.48) 75%, rgba(238, 244, 251, 0.42) 100%),
     url("/doctor-hero.webp");
   background-size: cover;
   background-position: center;
@@ -370,7 +370,7 @@ p {
   min-width: 0;
 }
 .search-card .search-input:focus {
-  box-shadow: 0 0 0 3px rgba(27, 163, 156, 0.14);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
 }
 .search-card .btn-pill {
   padding: 12px 22px;
@@ -846,6 +846,269 @@ p {
 .chat-input:focus {
   outline: none;
   border-color: var(--accent);
+}
+
+/* =====================================================================
+   Mobile-first layout pass
+   Header: single sticky row — logo (start) + hamburger (end) on phones,
+   full links + CTAs + «استشارة» on desktop. Replaces the old two-row bar.
+   ===================================================================== */
+:root {
+  --nav-h: 64px;
+}
+
+.site-nav {
+  position: sticky;
+  inset-inline: 0;
+  top: 0;
+  min-height: var(--nav-h);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.site-nav-inner {
+  height: auto;
+  min-height: var(--nav-h);
+  padding-inline: clamp(16px, 4vw, 24px);
+}
+.site-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-consult {
+  margin-inline-start: 4px;
+}
+
+.nav-burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+.nav-burger:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.nav-drawer {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  inset-inline: 0;
+  z-index: 49;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px clamp(16px, 4vw, 24px) calc(18px + env(safe-area-inset-bottom));
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 18px 34px rgba(20, 20, 15, 0.16);
+  max-height: calc(100dvh - var(--nav-h));
+  overflow-y: auto;
+}
+.nav-drawer.open {
+  display: flex;
+}
+.nav-drawer-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  top: var(--nav-h);
+  z-index: 48;
+  border: 0;
+  padding: 0;
+  background: rgba(20, 20, 15, 0.4);
+  cursor: pointer;
+}
+.nav-drawer-links {
+  display: flex;
+  flex-direction: column;
+}
+.nav-drawer-links a {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding-inline: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+.nav-drawer-links a:hover {
+  color: var(--accent);
+}
+.nav-drawer-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 50px;
+  margin-top: 14px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.nav-drawer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+.nav-drawer-actions .nav-cta {
+  justify-content: center;
+  min-height: 46px;
+}
+
+/* Hero: text column, then photo — never text over the image on phones */
+.hero {
+  padding: 44px clamp(16px, 4vw, 24px) 48px;
+}
+.hero-img-mobile {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .hero {
+    padding-top: 56px;
+  }
+}
+
+/* Floating search card sits in normal flow (no overlap) */
+.search-card {
+  margin: 22px auto 0;
+  width: min(760px, calc(100% - 32px));
+  scroll-margin-top: calc(var(--nav-h) + 16px);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --nav-h: 60px;
+  }
+  .site-nav-links,
+  .site-nav-actions,
+  .nav-consult {
+    display: none;
+  }
+  .nav-burger {
+    display: inline-flex;
+  }
+  .nav-drawer-backdrop {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    background-image: none;
+    background-color: var(--color-bg-start);
+    padding: 26px 16px 30px;
+  }
+  .hero-grid {
+    text-align: start;
+  }
+  .hero-copy {
+    align-items: stretch;
+    text-align: start;
+  }
+  .hero-eyebrow {
+    align-self: flex-start;
+    margin-bottom: 10px;
+  }
+  .hero-title {
+    font-size: clamp(28px, 8vw, 38px);
+  }
+  .hero-lead {
+    max-width: none;
+    font-size: 15.5px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .hero-actions .btn-pill {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+  }
+  .hero-stats {
+    position: static;
+    transform: none;
+    inset: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 22px;
+    width: 100%;
+  }
+  .hero-stats .icon-circle {
+    width: 44px;
+    height: 44px;
+  }
+  .hero-stats strong {
+    font-size: 18px;
+  }
+  .hero .hero-badge {
+    display: none;
+  }
+  .hero-img-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+  .search-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 12px;
+    width: calc(100% - 32px);
+  }
+  .search-card .search-input {
+    flex: none;
+    width: 100%;
+    min-height: 46px;
+  }
+  .search-card .btn-pill {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+  .btn-pill,
+  .nav-cta,
+  .acc-toggle,
+  .case-tab,
+  .search-input {
+    min-height: 44px;
+  }
+  .recent-chip {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Keep the last row of content clear of the floating WhatsApp button */
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom));
+  }
 }
 
 /* --- assistive hint card for doctor sidebar --- */

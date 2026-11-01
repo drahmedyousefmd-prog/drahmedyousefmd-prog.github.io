@@ -3,7 +3,7 @@
 import { useEffect, useSyncExternalStore } from "react";
 import type { ServiceType, TicketStatus } from "./services";
 import { serviceLabel, statusLabel } from "./services";
-import { CONTACT } from "./site";
+import { CONTACT, STORAGE_PREFIX } from "./site";
 
 export type SiteRole = "doctor" | "patient";
 
@@ -53,10 +53,10 @@ export interface PortalUser {
   createdAt: string;
 }
 
-const USERS_KEY = "rochetta-users";
-const TICKETS_KEY = "rochetta-tickets";
-const SESSION_KEY = "rochetta-session";
-const GUEST_KEY = "rochetta-guest-token";
+const USERS_KEY = `${STORAGE_PREFIX}users`;
+const TICKETS_KEY = `${STORAGE_PREFIX}tickets`;
+const SESSION_KEY = `${STORAGE_PREFIX}session`;
+const GUEST_KEY = `${STORAGE_PREFIX}guest-token`;
 
 /** Stable unique guest identity for this browser (no login). */
 function getGuestToken(): string {

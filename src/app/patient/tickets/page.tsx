@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { PatientTicketsApp } from "@/components/patient/PatientTicketsApp";
+import { RedirectToConsult } from "@/components/RedirectToConsult";
 
 export const metadata: Metadata = {
-  title: "تذاكري — Rochetta",
-  alternates: { canonical: "/patient/tickets" },
+  title: "طلباتي",
+  robots: { index: false, follow: false },
 };
 
-export default function TicketsPage() {
-  return <PatientTicketsApp />;
+export default function PatientTicketsPage() {
+  return <RedirectToConsult path="/my-requests" />;
 }

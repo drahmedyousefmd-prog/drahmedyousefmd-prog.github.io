@@ -1,13 +1,14 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { STORAGE_PREFIX } from "./site";
 
 export interface RecentCase {
   id: string;
   title: string;
 }
 
-const KEY = "rochetta_recents";
+const KEY = `${STORAGE_PREFIX}recents`;
 const MAX = 6;
 
 function readRecents(): RecentCase[] {

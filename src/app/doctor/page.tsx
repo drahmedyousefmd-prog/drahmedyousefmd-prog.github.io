@@ -3,7 +3,7 @@ import { RequireRole } from "@/components/portal/RequireRole";
 import { DoctorLanding } from "@/components/doctor/DoctorLanding";
 
 export const metadata: Metadata = {
-  robots: { index: false },
+  robots: { index: false, follow: false },
   alternates: { canonical: "/doctor" },
 };
 

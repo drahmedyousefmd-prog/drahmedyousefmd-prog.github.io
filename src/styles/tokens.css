@@ -17,26 +17,26 @@
   --font-latin: var(--font-inter), "Segoe UI", Arial, sans-serif;
 
   /* Brand palette — mirrors the reference (assets/css/design-tokens.css) */
-  --color-brand: #1ba39c;
-  --color-brand-dark: #14837d;
-  --color-brand-tint: #e3f5f3;
+  --color-brand: #2563eb;
+  --color-brand-dark: #1d4ed8;
+  --color-brand-tint: #dbeafe;
 }
 
 :root {
   /* Neutral base — sourced from the reference design tokens */
-  --bg: #eaf6f8;
+  --bg: #eef4fb;
   --surface: #ffffff;
-  --surface-raised: #f6fbfc;
-  --border: #dceef0;
-  --text-primary: #16323a;
-  --text-secondary: #5c7378;
-  /* #8fa3a7 alone fails AA on white (~3.2:1) — darken via a muted/heading mix. */
-  --text-muted: color-mix(in srgb, #8fa3a7 45%, #16323a);
+  --surface-raised: #f4f8fe;
+  --border: #d9e6f5;
+  --text-primary: #12233b;
+  --text-secondary: #5a7089;
+  /* #8fa3b8 alone fails AA on white (~3.2:1) — darken via a muted/heading mix. */
+  --text-muted: color-mix(in srgb, #8fa3b8 45%, #12233b);
 
-  /* Brand — reference CarePlus turquoise */
-  --brand: #1ba39c;
-  --brand-dark: #14837d;
-  --brand-tint: #e3f5f3;
+  /* Brand — Rochetta medical blue */
+  --brand: #2563eb;
+  --brand-dark: #1d4ed8;
+  --brand-tint: #dbeafe;
 
   /* Category semantic colors — quiet tints, not loud fills */
   --cat-psychiatry: #6e5db3;
@@ -59,8 +59,7 @@
   --tab-rx: #4a8b7c;
   --tab-warning: #8a6d3b;
 
-  /* Mode-aware accent — interactive controls only.
-     Doctor = brand turquoise; Patient = reference accent #2d9cdb. */
+  /* Interactive accent — Rochetta blue */
   --patient-accent: var(--color-accent);
   --accent: var(--brand);
   --accent-dark: var(--brand-dark);

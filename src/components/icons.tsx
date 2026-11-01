@@ -166,8 +166,8 @@ export function LogoMark({
   className?: string;
   variant?: "brand" | "light";
 }) {
-  const tile = variant === "light" ? "#ffffff" : "var(--brand, #1f5b54)";
-  const glyph = variant === "light" ? "var(--brand, #1f5b54)" : "#ffffff";
+  const tile = variant === "light" ? "#ffffff" : "var(--brand, #2563eb)";
+  const glyph = variant === "light" ? "var(--brand, #2563eb)" : "#ffffff";
   return (
     <svg viewBox="0 0 64 64" className={className} aria-hidden="true">
       <rect x="2" y="2" width="60" height="60" rx="14" fill={tile} />

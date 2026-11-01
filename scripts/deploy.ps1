@@ -1,6 +1,7 @@
 # Rochetta deploy script ??? GitHub Pages (user site at repo root).
 #  1. runs `npm run build` (validate-data + icons + OG image + next build)
 #  2. prunes static-export noise (*.txt RSC payloads) from out/
+#     (keeping robots.txt and llms.txt)
 #  3. syncs out/ into the gh-pages working copy
 #  4. commits and force-pushes the gh-pages branch
 #
@@ -30,14 +31,14 @@ if (-not $SkipBuild) {
 
 if (-not (Test-Path $out)) { throw "out/ not found ??? build first" }
 
-Write-Host "==> pruning RSC .txt payloads and __next.* files from out/ (keeping robots.txt)"
+Write-Host "==> pruning RSC .txt payloads and __next.* files from out/ (keeping robots.txt + llms.txt)"
 Get-ChildItem -LiteralPath $out -Recurse -Force |
-  Where-Object { ($_.Name -like "*.txt" -and $_.Name -ne "robots.txt") -or $_.Name -like "__next.*" } |
+  Where-Object { ($_.Name -like "*.txt" -and $_.Name -notin @("robots.txt", "llms.txt")) -or $_.Name -like "__next.*" } |
   ForEach-Object {
     try { $_.Attributes = "Normal" } catch {}
   }
 Get-ChildItem -LiteralPath $out -Recurse -Force |
-  Where-Object { ($_.Name -like "*.txt" -and $_.Name -ne "robots.txt") -or $_.Name -like "__next.*" } |
+  Where-Object { ($_.Name -like "*.txt" -and $_.Name -ne "robots.txt" -and $_.Name -ne "llms.txt") -or $_.Name -like "__next.*" } |
   Remove-Item -Recurse -Force
 
 if (-not (Test-Path $Dist)) { throw "deploy working copy missing: $Dist" }
@@ -55,7 +56,7 @@ $msg = "Deploy: " + (Get-Date -Format "yyyy-MM-dd HH:mm")
 
 Push-Location $Dist
 git add -A | Out-Null
-git commit -m $msg | Out-Null
+git -c user.name="rochetta-bot" -c user.email="rochetta@local" commit -m $msg | Out-Null
 git log --oneline -1
 if (-not $NoPush) {
   Write-Host "==> force-pushing gh-pages"

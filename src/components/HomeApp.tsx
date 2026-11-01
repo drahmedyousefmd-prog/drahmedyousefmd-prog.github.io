@@ -12,7 +12,7 @@ import { SafetyBanner } from "./portal/SafetyBanner";
 import { PatientServices } from "./patient/PatientServices";
 import { Headset, HeartHandshake, Pill, Search, ShieldCheck, Stethoscope } from "lucide-react";
 import { SearchIcon } from "./icons";
-import { useMode } from "@/lib/mode";
+import { SITE, STORAGE_PREFIX } from "@/lib/site";
 
 interface ActiveSearch {
   q: string;
@@ -23,19 +23,18 @@ export function HomeApp({
   chapters,
   prescriptions,
   drugCounts,
-  forceDoctor = false,
 }: {
   chapters: Chapter[];
   prescriptions: Prescription[];
   drugCounts: Record<string, number>;
-  forceDoctor?: boolean;
 }) {
   const [query, setQuery] = useState("");
   const [catSel, setCatSel] = useState("");
   const [active, setActive] = useState<ActiveSearch | null>(null);
   const cardRefs = useRef<(HTMLAnchorElement | null)[]>([]);
-  const { mode } = useMode();
-  const isDoctor = forceDoctor || mode === "doctor";
+  // Patient consultation moved to the separate «استشارة» site; Rochetta shows
+  // the doctor experience only. The patient branch is retained until cleanup.
+  const isDoctor = true;
 
   const results = useMemo(() => {
     if (!active) return null;
@@ -55,7 +54,7 @@ export function HomeApp({
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (sessionStorage.getItem("rochetta-animated")) return;
+    if (sessionStorage.getItem(`${STORAGE_PREFIX}animated`)) return;
     const els = cardRefs.current;
     requestAnimationFrame(() => {
       els.forEach((el, i) => {
@@ -65,7 +64,7 @@ export function HomeApp({
         }
       });
     });
-    sessionStorage.setItem("rochetta-animated", "1");
+    sessionStorage.setItem(`${STORAGE_PREFIX}animated`, "1");
   }, []);
 
   const submit = (e?: { preventDefault?: () => void }) => {
@@ -84,15 +83,15 @@ export function HomeApp({
           <div className="hero-copy">
             <span className="hero-eyebrow">
               <ShieldCheck aria-hidden="true" />
-              رعاية موثوقة، صحة أفضل
+              دليل الطبيب الموثوق
             </span>
             <h1 className="hero-title">
-              <span>صحتك</span>
-              <span className="hero-title-accent">أولويتنا</span>
+              <span>دليلك كطبيب</span>
+              <span className="hero-title-accent">إلى أحدث الروشتات الطبية</span>
             </h1>
             <p className="hero-lead">
               {isDoctor
-                ? "دليل عملي وسريع لكل روشتاتك الطبية، بمعلومات دقيقة وموثوقة تساعدك تفهم علاجك صح."
+                ? SITE.heroLine
                 : "اطلب خدمتك مباشرة — استشارة، قراءة تحليل، اقرألي الروشتة، رسم قلب، نظام غذائي أو خطة علاجية."}
             </p>
             <div className="hero-actions">
@@ -136,6 +135,14 @@ export function HomeApp({
             </ul>
           </div>
         </div>
+        <img
+          className="hero-img-mobile"
+          src="/doctor-hero.webp"
+          alt=""
+          width={900}
+          height={335}
+          fetchPriority="high"
+        />
         <div className="hero-badge">
           <span className="badge-icon">
             <Headset aria-hidden="true" />
@@ -207,7 +214,7 @@ export function HomeApp({
                     <span className="text-sm">لا توجد نتائج — جرّب كلمة أخرى</span>
                   </div>
                 ) : (
-                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="grid grid-cols-1 gap-3 min-[340px]:grid-cols-2 md:grid-cols-3">
                     {results.map((rx) => (
                       <CaseRowCard key={rx.id} rx={rx} drugCount={drugCounts[rx.id]} />
                     ))}
@@ -223,7 +230,7 @@ export function HomeApp({
                 <section id="categories" className="mb-12 scroll-mt-24">
                   <h2 className="section-heading">التصنيفات</h2>
                   <p className="section-sub">اختر التخصص ثم تصفح الحالات والعلاج</p>
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="grid grid-cols-1 gap-3 min-[340px]:grid-cols-2 md:grid-cols-3 md:gap-4">
                     {chapters.map((ch, i) => (
                       <ChapterCard
                         key={ch.slug}

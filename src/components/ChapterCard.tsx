@@ -22,13 +22,13 @@ export function ChapterCard({
       <div className="cat-icon">
         <ChapterIcon name={chapter.icon} className="h-6 w-6" />
       </div>
-      <span className="text-[18px] font-bold leading-tight text-[var(--text-primary)]">
+      <span className="text-[15px] font-bold leading-tight text-[var(--text-primary)] break-words sm:text-[18px]">
         {chapter.name}
       </span>
-      <span className="text-[13px] text-[var(--text-secondary)]">
+      <span className="line-clamp-1 break-words text-[12px] text-[var(--text-secondary)] sm:text-[13px]">
         {chapter.arabicName}
       </span>
-      <span className="mt-1 text-[13px] font-bold text-[var(--text-muted)]">
+      <span className="mt-1 text-[12px] font-bold text-[var(--text-muted)] sm:text-[13px]">
         {chapter.count} حالة
       </span>
     </Link>

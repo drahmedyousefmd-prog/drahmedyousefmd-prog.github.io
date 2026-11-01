@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
-import { PatientHome } from "@/components/patient/PatientHome";
+import { RedirectToConsult } from "@/components/RedirectToConsult";
 
 export const metadata: Metadata = {
-  title: "بوابة المريض — Rochetta",
-  description:
-    "اطلب خدمة من بوابة المريض: استشارة طبية عامة، قراءة تحليل، اقرألي الروشتة، رسم قلب (ECG)، نظام غذائي، خطة علاجية — بدون تسجيل دخول.",
-  alternates: { canonical: "/patient" },
+  title: "الاستشارات الطبية",
+  robots: { index: false, follow: false },
 };
 
 export default function PatientPage() {
-  return <PatientHome />;
+  return <RedirectToConsult />;
 }

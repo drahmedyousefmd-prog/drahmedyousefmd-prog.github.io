@@ -13,7 +13,7 @@ export function RecentsStrip() {
       <h3 className="mb-3 text-[13px] font-bold uppercase tracking-wider text-[var(--text-muted)]">
         آخر الاطلاع
       </h3>
-      <div className="flex flex-wrap gap-2">
+      <div className="recent-row">
         {recents.map((r) => (
           <Link key={r.id} href={`/doctor/case/${r.id}`} className="recent-chip">
             {r.title}

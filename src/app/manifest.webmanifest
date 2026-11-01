@@ -1,14 +1,14 @@
 {
-  "name": "Rochetta — دليل روشتات مصر",
+  "name": "روشتة — دليل الطبيب",
   "short_name": "Rochetta",
-  "description": "دليلك العملي للروشتات الطبية: دواء لكل حالة، التعليمات، البدائل، والتفاعلات.",
+  "description": "دليل الطبيب إلى الروشتات الطبية: دواء لكل حالة، التعليمات، البدائل، والتفاعلات.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "dir": "rtl",
   "lang": "ar",
-  "background_color": "#f7f5f1",
-  "theme_color": "#1f5b54",
+  "background_color": "#f8fbff",
+  "theme_color": "#2563eb",
   "icons": [
     {
       "src": "/app-icon-192.png",

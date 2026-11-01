@@ -1,0 +1,16 @@
+# Rochetta — روشتة
+
+Rochetta (روشتة) is a practical prescription reference for physicians in Egypt:
+medication dosing, alternatives, drug interactions and prices, organized by
+medical chapter. / دليل مرجعي للأطباء في مصر لأحدث الروشتات والأصناف الدوائية:
+الجرعات، البدائل، التداخلات الدوائية والأسعار، منظّمة حسب التخصص.
+
+## Public pages
+- [Rochetta — الرئيسية](https://drahmedyousefmd-prog.github.io/): دليل الطبيب لأحدث الروشتات والأدوية في مصر.
+- [التصنيفات](https://drahmedyousefmd-prog.github.io/categories): قائمة التخصصات الطبية.
+- [عن روشتة](https://drahmedyousefmd-prog.github.io/about): تعريف الموقع والطبيب المسؤول والمراجع.
+- [تواصل](https://drahmedyousefmd-prog.github.io/contact): بيانات التواصل.
+- [الخصوصية](https://drahmedyousefmd-prog.github.io/privacy): سياسة الخصوصية.
+
+## Related site
+- [استشارة / Estesharah](https://drahmedyousefmd-prog.github.io/estesharah): بوابة الاستشارات الطبية للمرضى.

@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cairo, Tajawal, Inter } from "next/font/google";
-import { SITE, SITE_URL, CONTACT } from "@/lib/site";
+import { SITE, SITE_URL, CONTACT, DOCTOR } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { WhatsAppIcon } from "@/components/icons";
 import { ModeProvider } from "@/lib/mode";
@@ -31,15 +31,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE.name} — ${SITE.brandLine}`,
-    template: `%s — ${SITE.name}`,
+    default: SITE.homeTitle,
+    template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
   openGraph: {
     type: "website",
     url: SITE_URL,
     siteName: SITE.name,
-    title: `${SITE.name} — ${SITE.taglineAr}`,
+    title: SITE.homeTitle,
     description: SITE.description,
     locale: "ar_EG",
     alternateLocale: "en_US",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} — ${SITE.taglineAr}`,
+    title: SITE.homeTitle,
     description: SITE.descriptionEn,
     images: ["/og-image.png"],
   },
@@ -68,6 +68,7 @@ export const viewport: Viewport = {
   themeColor: SITE.themeColor,
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -91,18 +92,31 @@ export default function RootLayout({
                   "@type": "WebSite",
                   "@id": `${SITE_URL}/#website`,
                   name: SITE.name,
-                  alternateName: SITE.brandLine,
+                  alternateName: SITE.alternateNames,
                   url: SITE_URL,
                   inLanguage: "ar-EG",
                   description: SITE.descriptionEn,
+                  publisher: { "@id": `${SITE_URL}/#author` },
                 },
                 {
-                  "@type": "Organization",
-                  "@id": `${SITE_URL}/#organization`,
-                  name: CONTACT.creatorName,
+                  "@type": "Person",
+                  "@id": `${SITE_URL}/#author`,
+                  name: DOCTOR.name,
+                  jobTitle: DOCTOR.jobTitle,
+                  sameAs: DOCTOR.sameAs,
+                },
+                {
+                  "@type": "MedicalWebPage",
+                  "@id": `${SITE_URL}/#webpage`,
+                  name: `${SITE.name} | ${SITE.nameAr}`,
                   url: SITE_URL,
-                  email: CONTACT.email,
-                  sameAs: [CONTACT.linkedin, SITE_URL],
+                  inLanguage: "ar",
+                  audience: {
+                    "@type": "MedicalAudience",
+                    audienceType: "Clinician",
+                  },
+                  isPartOf: { "@id": `${SITE_URL}/#website` },
+                  author: { "@id": `${SITE_URL}/#author` },
                 },
               ],
             }}

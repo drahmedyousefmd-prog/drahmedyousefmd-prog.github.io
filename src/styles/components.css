@@ -1003,8 +1003,8 @@
 
 .wa-fab {
   position: fixed;
-  left: 18px;
-  bottom: 18px;
+  inset-inline-start: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
   z-index: 30;
   width: 54px;
   height: 54px;
@@ -1026,5 +1026,59 @@
 @media print {
   .wa-fab {
     display: none;
+  }
+}
+
+/* =====================================================================
+   Mobile-first component tweaks
+   ===================================================================== */
+
+/* Horizontal scroll wrapper for wide tables (drug alternatives) */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Recently-viewed chips become a single scrollable row */
+.recent-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.recent-row::-webkit-scrollbar {
+  display: none;
+}
+.recent-row .recent-chip {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+/* Case title scales down on narrow screens */
+.case-title {
+  font-size: clamp(20px, 5.5vw, 26px);
+}
+
+@media (max-width: 767px) {
+  .category-card {
+    padding: 14px 12px;
+    gap: 4px;
+  }
+  .category-card .cat-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 6px;
+  }
+  .category-card .cat-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  /* Case header back button reaches the 44px touch target */
+  .case-header .no-print.h-9 {
+    width: 44px;
+    height: 44px;
   }
 }

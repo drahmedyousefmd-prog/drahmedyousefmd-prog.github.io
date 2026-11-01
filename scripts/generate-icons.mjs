@@ -1,7 +1,7 @@
 /**
  * Zero-dependency brand asset generator.
  * Produces PNG app icons + apple-touch-icon + favicon.ico from the Rochetta
- * logo geometry (teal tile + white ECG pulse + capsule). Uses only Node
+ * logo geometry (blue tile + white ECG pulse + capsule). Uses only Node
  * built-ins (`node:zlib` for PNG compression, `node:fs`).
  *
  * Usage: node scripts/generate-icons.mjs
@@ -15,7 +15,7 @@ import { dirname, join } from "node:path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 
-const BRAND = [0x1f, 0x5b, 0x54]; // #1F5B54
+const BRAND = [0x25, 0x63, 0xeb]; // #2563EB
 const WHITE = [0xff, 0xff, 0xff];
 
 /* ---------------- PNG encoding ---------------- */
